@@ -1,60 +1,56 @@
-﻿; Important Note: If /* */ is used for comments, both /* and */ must appear at beginning of line.
+﻿; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
 /*Important Note:
 	Use Windows line break (CRLF), not Unix (LF). This is Windows!
-	My git might have auto-converted it for me, so if downloaded from GitHub, first change to CRLF manually.
+	I've set Git to auto-convert to LF on commits, so remember to change manually after download.
 */
 
-/*Important note:
-	(This is just my current understanding, could be wrong.)
-	AutoHotkey scripts don't run from top to bottom. It's more like a list of rules / functions waiting to be called.
-	Therefore you can't do something like this:
-		if (condition) {
-			rule
-		} else {
-			rule
-		}
+/*Note: This syntax is hard to remember, so I try to write enough comments for myself, and write rules in the order of simple to complex.
+*/
+
+/*Style Guide:
+	Use PascalCase, although the language is case insensitive.
 */
 ;==========================================================
 
-
-/* 1.
+/*
 Goal:
 	Remap CapsLock to RCtrl
 Syntax:
-	hotkey::target
+	key::target
+	Everything in AutoHotkey revolves around the double colon :: .
+	Basically it means the left triggers the right.
 Note :
 	Has to be RCtrl, because I need LCtrl for other things.
 	Sometime it's buggy on laptops, so it's more reliable to use KeyTweak on this one. I did on my laptop.
 */
 CapsLock::RControl
 
-/*1.
+/*
 Goal:
-	Show some examples of using ` as a modifier key.
+	Simple examples of using ` as a modifier key.
 Syntax:
-	Everything in AutoHotkey revolves around the double colon :: .
-	Basically it means the left triggers the right.
-	Curly braces means a key. Without curly braces it'll be send as string
+	hotkey::Send KeyName
+	& means key combination. Send can be omitted unless the left side is a key combination
+	Curly braces means a key. Without curly braces it'll be sent as string
 */
 ` & =::Send {Volume_Up}
 ` & -::Send {Volume_Down}
 ` & m::Send {Volume_Mute}
 
-/*1.
+/*
 Goal:
 	Restore the original function of ` key
 Explain:
-	Since ` has become a modifier key, it no longer works.
+	` no longer works since it has become a modifier key
 */
-`::` ;同上, 抬起时打出`
-+`::~ ;同上, 为了能够打出~
-#`::#` ; 同上, 修复Win+`
-^`::^` ; 同上, 修复Ctrl+`
-!`::!` ; 同上, 修复Atl+`
+`::` ; Do this, and ` will be restored, but fires on key up
++`::~ ; + means shift. This restores ~, fires immediately
+#`::#` ; # means Win. Restores #`, fire immediately
+^`::^` ; ^ means Ctrl
+!`::!` ; ! means Alt
 
-
-/* 2.
+/*
 Goal:
 	LCtrl + enter => new line below
 	LCtrl + shift + enter => new line above
@@ -62,8 +58,8 @@ Goal:
 	LCtrl + semicolon => semicolon
 	semicolon => semicolon at line end
 Syntax:
-	hotkey::Send action
-	^ means Ctrl the modifier, <^ means LCtrl, Send means send a bunch of inputs
+	hotkey::Send KeySequence
+	<^ means LCtrl, >^ means RCtrl.
 */
 <^Enter::Send {End}{Enter}
 <^+Enter::Send {Home}{Enter}{Up}
@@ -71,20 +67,21 @@ Syntax:
 <^;::Send {;}
 $;::Send {End}{;} ;the dollor sign prevents the hotkey to trigger itself
 
-/* 3.
+/*
 Goal:
-	If LCtrl was pressed down and up with no other keys combined, fire a mouse click on up
+	If LCtrl was pressed down and up with no other keys combined, fire a mouse click on up.
+	I'm likely the only person on earth who needs this.
 Note:
-	This only works when combined with 2., because if LCtrl isn't set to be a modifier key, the script will fire the mouse click immediately on key down, no need to wait for key up.
+	This works only because LCtrl has been set to be a modifier key, otherwise the script will fire the mouse click immediately on key down
 */
 LControl::Click
 
-/* 4.
+/*
 Goal:
 	Hotstrings and auto-replace
 Syntax:
 	::what you type::what it'll turn into
-	Triggers after you type an "ending character", which is a space / enter / punctuation.
+	Triggers after an "ending character" is typed, which includes space and enter and punctuations.
 	Add O between the first two colons means don't display the ending character
 	Add * between the first two colons means fire immediately without waiting for the ending character.
 	Add ? between the first two colons means fire even the hotstring is the second half of a word
@@ -92,37 +89,47 @@ Syntax:
 Background Story:
 	The hotstrings are inspired by Chinese
 */
-
-:?*:qian::$(''){Left}{Left}
-:?*:meiyuan::$
-:?*R:jing::#
-:?*:baifen::%
-:?*R:jier::^
+:?*:qian::$
+:?*:qier::$(''){Left}{Left}
+:?*:baif::%
 :?*:gong::&
 :?*:tong::&
+:?*:jiah::+ ;jiahao
+:?*:jian::-
+:?*:xian::-
+:?*:xiah::_ ;xiahua
 :?*:xing::*
+:?*:cheng::*
+:?*:chuh::/ ;chuhao
+:?*:gang::/
+:?*:deng::=
+:?*R:jing::#
+:?*R:jier::^
 :?*:duihao::✔
 :?*:wujiao::★
 :?*:shalou::⏳
 :?*:eee::Ⓔ
 :?*:cslg::console.log(){left}
+:?*:csif::console.info(){left}
+:?*:cswn::console.warn(){left}
+:?*:cser::console.error(){left}
+:?*:cstb::console.table(){left}
+:?*:cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
+:?*:csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 :?O:git com::git commit -m ""{left}
 
-/* 5.
+/*
 Goal:
 	When LAlt is pressed, use ijkl as arrow keys, h and ; as home and end, , and . as PgUp and PgDn
 	Shift+, Ctrl+, Shift+Ctrl+ these keys also need to function
 	All these aim to eliminate right hand moving back and forth, so LAlt+BackSpace should be delete
-Syntax:
-	! means alt, ^ means ctrl, + means shift
 Stories:
 	Alt wasn't my first choice as the modifier. It's actually my 5th choice. The first 4 failed as follows:
 	Tab: shift-tab and ctrl-tab got in the way, they always fire
-	q: letter q suffers from firing on key up, and shift-q needs to be bind for Q, and shift-q always fire
+	q: letter q suffers from firing on key up, and shift-q needs to be bound to Q, and shift-q always fires Q
 	LCtrl: can't make LCtrl+RCtrl+keys work
 	LWin: All is good, except Win-L always fire. Any Win hotkey can be disabled by RegEdit, but Win-L can't. Are you kidding me?
 */
-
 
 !j::Send {Left}
 +!j::Send +{Left}
@@ -146,11 +153,11 @@ Stories:
 ^!.::Send ^{PgDn}
 !Backspace::Send {Delete}
 
-/* 6.
+/*
 Goal:
 	Frequently used apps should each have a shortcut. Use alt-tab as little as possible
 Syntax:
-	If more than one line of code is needed
+	If more than one line of code is needed, add Return in the end.
 */
 ` & 1::
 Numpad0 & 1::
