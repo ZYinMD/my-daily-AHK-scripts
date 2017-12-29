@@ -239,6 +239,22 @@ Background Story:
 :?*:cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 :?*:csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 :?O:git com::git commit -m ""{left}
+::Im::I'm
+::Ill::I'll
+::its::it's
+::Its::It's
+::wasnt::wasn't
+::werent::weren't
+::dont::don't
+::doesnt::doesn't
+::didnt::didn't
+::havent::haven't
+::hadnt::hadn't
+::shouldnt::shouldn't
+::wouldnt::wouldn't
+::couldnt::couldn't
+::wont::won't
+
 
 /*
 Goal:
@@ -394,8 +410,19 @@ Goal:
 NumpadClear::Up
 NumpadEnd::Left
 NumpadPgDn::Right
-NumpadLeft::Home
-NumpadRight::End
+NumpadHome::Delete
+NumpadUp::End
+NumpadDiv::
+  If GetKeyState("NumLock", "T")
+    Send {Home}
+NumpadMult::
+  If GetKeyState("NumLock", "T")
+    Send {PgUp}
+NumpadPgUp::PgDn
+NumpadLeft::Send ^{Left}
++NumpadLeft::Send +^{Left}
+NumpadRight::Send ^{Right}
++NumpadRight::Send +^{Right}
 NumpadIns::BackSpace
 
 '::Enter
@@ -410,7 +437,7 @@ NumpadIns::BackSpace
   o::Send ^{Right}
   +o::Send ^+{Right}
 
-  Space::
+  ~Space::
   ~1::
   ~2::
   3::
@@ -432,7 +459,9 @@ NumpadIns::BackSpace
   ~b::
   ~n::
   ~m::
-  /::NavOff()
+  Esc::
+  ~^k::
+  , & m::NavOff()
   ~a::
   ~z::
   ~x::
@@ -444,7 +473,11 @@ NumpadIns::BackSpace
 #If
 
 #If !GetKeyState("ScrollLock", "T")
-    /::NavOn()
+    !i::
+    !j::
+    !k::
+    !l::
+    , & m::NavOn()
 #If
 
 NavOn()
@@ -466,5 +499,7 @@ NavOff()
 backlog:
   ^+i & j
   ^+k
-  that's, I'm, etc
-  Make laptop numpad like the function keys section.
+  ^k
+  ^0
+
+
