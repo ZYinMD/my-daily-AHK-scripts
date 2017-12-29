@@ -432,7 +432,7 @@ NumpadIns::BackSpace
   ~b::
   ~n::
   ~m::
-    /::NavOff()
+  /::NavOff()
   ~a::
   ~z::
   ~x::
@@ -440,6 +440,7 @@ NumpadIns::BackSpace
   ~v::
     If !GetKeyState("CapsLock","p")
     NavOff()
+    Return
 #If
 
 #If !GetKeyState("ScrollLock", "T")
@@ -453,7 +454,6 @@ NavOn()
     ; Progress, b CWWhite ZH0 fs88, Navigation On,,Nav, Courier New
     ; WinSet, Transparent, 100, Nav
     WinSet, TransColor, White, Nav
-
   }
 
 NavOff()
@@ -462,3 +462,9 @@ NavOff()
     SplashImage, Off
     ; Progress, Off
   }
+/*
+backlog:
+  ^+i & j
+  ^+k
+  that's, I'm, etc
+  Make laptop numpad like the function keys section.
