@@ -92,6 +92,10 @@ Why 3:
 3 & u::Send {7}
 3 & i::Send {8}
 3 & o::Send {9}
+3 & 8::Send {/}
+3 & 9::Send {*}
+3 & 0::Send {-}
+3 & p::Send {+}
 3::3
 
 /*
@@ -140,10 +144,10 @@ Goal:
 `; & x::Send {)}
 `; & e::Send {-}
 `; & r::Send {+}
-`; & d::Send {'}
-`; & f::Send {"}
-`; & c::Send {/}
-`; & v::Send {\}
+`; & d::Send {"}
+`; & f::Send {'}
+`; & c::Send {\}
+`; & v::Send {/}
 `; & g::Send {?}
 
 /*
@@ -393,3 +397,68 @@ NumpadPgDn::Right
 NumpadLeft::Home
 NumpadRight::End
 NumpadIns::BackSpace
+
+'::Enter
+
+#If GetKeyState("ScrollLock", "T")
+  i::Up
+  k::Down
+  j::Left
+  l::Right
+  u::Send ^{Left}
+  +u::Send ^+{Left}
+  o::Send ^{Right}
+  +o::Send ^+{Right}
+
+  Space::
+  ~1::
+  ~2::
+  3::
+  ~4::
+  ~5::
+  ~6::
+  ~7::
+  ~0::
+  ~q::
+  ~w::
+  ~e::
+  ~r::
+  ~t::
+  ~y::
+  ~s::
+  ~d::
+  ~f::
+  ~g::
+  ~b::
+  ~n::
+  ~m::
+    /::NavOff()
+  ~a::
+  ~z::
+  ~x::
+  ~c::
+  ~v::
+    If !GetKeyState("CapsLock","p")
+    NavOff()
+#If
+
+#If !GetKeyState("ScrollLock", "T")
+    /::NavOn()
+#If
+
+NavOn()
+  {
+    SetScrollLockState, On
+    SplashImage, nav.gif,b,,,Nav
+    ; Progress, b CWWhite ZH0 fs88, Navigation On,,Nav, Courier New
+    ; WinSet, Transparent, 100, Nav
+    WinSet, TransColor, White, Nav
+
+  }
+
+NavOff()
+  {
+    SetScrollLockState, Off
+    SplashImage, Off
+    ; Progress, Off
+  }
