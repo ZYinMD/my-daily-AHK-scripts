@@ -118,6 +118,11 @@ Goal:
 `; & j::Send +{Home}{Delete}
 `; & l::Send +{End}{BackSpace}
 `; & ,::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
+#IfWinActive ahk_exe sublime_text.exe
+; `; & ,::Send ^+k ; shift home twice to clear indentings
+
+#IfWinActive
+
 
 /*
 Goal:
@@ -328,7 +333,7 @@ Numpad0 & NumpadDiv::
   Send {Volume_Mute}
   Return
 
-; The If all parameters of WinActivate are omitted, the Last Found Window will be used.
+; If all parameters of WinActivate are omitted, the Last Found Window will be used.
 Numpad0 & NumpadMult::
   IfWinExist ahk_class SpotifyMainWindow
     WinActivate
@@ -413,11 +418,13 @@ NumpadPgDn::Right
 NumpadHome::Delete
 NumpadUp::End
 NumpadDiv::
-  If GetKeyState("NumLock", "T")
+  If !GetKeyState("NumLock", "T")
     Send {Home}
+  Return
 NumpadMult::
-  If GetKeyState("NumLock", "T")
+  If !GetKeyState("NumLock", "T")
     Send {PgUp}
+  Return
 NumpadPgUp::PgDn
 NumpadLeft::Send ^{Left}
 +NumpadLeft::Send +^{Left}
@@ -468,7 +475,7 @@ NumpadIns::BackSpace
   ~c::
   ~v::
     If !GetKeyState("CapsLock","p")
-    NavOff()
+      NavOff()
     Return
 #If
 
@@ -495,11 +502,11 @@ NavOff()
     SplashImage, Off
     ; Progress, Off
   }
+^`::
+  IfWinActive ahk_exe sublime_text.exe
+    {
+      Send ^0
+      NavOn()
+    }
+  Return
 /*
-backlog:
-  ^+i & j
-  ^+k
-  ^k
-  ^0
-
-
