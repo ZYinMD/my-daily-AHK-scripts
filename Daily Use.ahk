@@ -97,11 +97,16 @@ Why 3:
 3 & 0::Send {-}
 3 & p::Send {+}
 3::3
+#If !GetKeyState("LWin","p")
+  3::Send 3
+#if
+
+
 
 /*
 Goal:
   Use 8 and 9 as BackSpace and Delete,
-Why 9 and 0:
+Why 8 and 9:
   Just like 2 and 3, make use of the golden location
 */
 8::BackSpace
@@ -209,45 +214,46 @@ Syntax:
   Triggers after an "ending character" is typed, which includes space and enter and punctuations.
   Add O between the first two colons means don't display the ending character
   Add * between the first two colons means fire immediately without waiting for the ending character.
-  Add ? between the first two colons means fire even the hotstring is the second half of a word
+  Add ? between the first two colons means fire even when the hotstring is inside another word
   # and ^ and + needs an R as escape char, forgot why.
 Background Story:
   The hotstrings are inspired by Chinese
 */
-:?*:qian::$
-:?*:qier::$(''){Left}{Left}
-:?*:baif::%
-:?*:gong::&
-:?*:tong::&
-:?*:jian::-
-:?*:xian::-
-:?*:xiah::_ ;xiahua
-:?*:xing::*
-:?*:cheng::*
-:?*:chuh::/ ;chuhao
-:?*:gang::/
-:?*:deng::=
-:?*R:jiah::+ ;jiahao
-:?*R:jing::#
-:?*R:jier::^
-:?*:duihao::✔
-:?*:wujiao::★
-:?*:shalou::⏳
-:?*:eee::Ⓔ
-:?*:shangmian::↑
-:?*:xiamian::↓
-:?*:cslg::console.log(){left}
-:?*:csif::console.info(){left}
-:?*:cswn::console.warn(){left}
-:?*:cser::console.error(){left}
-:?*:cstb::console.table(){left}
-:?*:cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
-:?*:csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
-:?O:git com::git commit -m ""{left}
-::Im::I'm
-::Ill::I'll
+#Hotstring ? *
+::qian::$
+::qier::$(''){Left}{Left}
+::baif::%
+::gong::&
+::tong::&
+::jian::-
+::xian::-
+::xiah::_ ;xiahua
+::xing::*
+::cheng::*
+::chuh::/ ;chuhao
+::gang::/
+::deng::=
+:R:jiah::+ ;jiahao
+:R:jing::#
+:R:jier::^
+::duihao::✔
+::wujiao::★
+::shalou::⏳
+::eee::Ⓔ
+::shangmian::↑
+::xiamian::↓
+::cslg::console.log(){left}
+::csif::console.info(){left}
+::cswn::console.warn(){left}
+::cser::console.error(){left}
+::cstb::console.table(){left}
+::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
+::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
+::gcoma::git commit -a -m ""{left}
+#Hotstring ?0
+:C:Im::I'm
+:C:Ill::I'll
 ::its::it's
-::Its::It's
 ::wasnt::wasn't
 ::werent::weren't
 ::dont::don't
@@ -259,8 +265,8 @@ Background Story:
 ::wouldnt::wouldn't
 ::couldnt::couldn't
 ::wont::won't
-
-
+::whats::what's
+::thats::that's
 /*
 Goal:
   In order to use alt-tab as little as possible, the most frequently used apps should each have a shortcut.
