@@ -253,7 +253,9 @@ Background Story:
 #Hotstring ?0
 :C:Im::I'm
 :C:Ill::I'll
+::youll::you'll
 ::its::it's
+::isnt::isn't
 ::wasnt::wasn't
 ::werent::weren't
 ::dont::don't
@@ -263,9 +265,11 @@ Background Story:
 ::hadnt::hadn't
 ::shouldnt::shouldn't
 ::wouldnt::wouldn't
+::cant::can't
 ::couldnt::couldn't
 ::wont::won't
-::whats::what's
+::whats::whatk's
+::theres::there's
 ::thats::that's
 /*
 Goal:
@@ -469,9 +473,11 @@ NumpadIns::BackSpace
   ~d::
   ~f::
   ~g::
+  ~h::
   ~b::
   ~n::
   ~m::
+  ~p::
   Esc::
   ~^k::
   , & m::NavOff()
