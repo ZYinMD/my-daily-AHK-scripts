@@ -255,6 +255,7 @@ Background Story:
 :C:Ill::I'll
 ::youll::you'll
 ::its::it's
+::itll::it'll
 ::isnt::isn't
 ::wasnt::wasn't
 ::werent::weren't
