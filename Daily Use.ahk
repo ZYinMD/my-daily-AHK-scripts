@@ -118,14 +118,27 @@ Goal:
   ; + j => delete to line beginning
   ; + l => delete to line end
   ; + , => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
+  ; + i => delete line and move to previous line
 */
 `; & k::Send {End}+{Home}{Delete}
 `; & j::Send +{Home}{Delete}
 `; & l::Send +{End}{BackSpace}
 `; & ,::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
-#IfWinActive ahk_exe sublime_text.exe
-; `; & ,::Send ^+k ; shift home twice to clear indentings
+`; & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
 
+
+#IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
+
+`; & ,::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
+
+;to open and focus on the sidebar
+^`::
+  PixelGetColor, color, 120, 20
+  If color != 0xACCCD8 ;if the sidebar is currently closed, open it first
+    Send ^k^b
+  Send ^0 ;^0 is the default hotkey to focus on the sidebar
+  NavOn() ;this is naturally needed after focus
+  Return
 #IfWinActive
 
 
@@ -515,11 +528,4 @@ NavOff()
     SplashImage, Off
     ; Progress, Off
   }
-^`::
-  IfWinActive ahk_exe sublime_text.exe
-    {
-      Send ^0
-      NavOn()
-    }
-  Return
-/*
+
