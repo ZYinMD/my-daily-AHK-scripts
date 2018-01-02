@@ -145,6 +145,8 @@ Goal:
 `; & c::Send {\}
 `; & v::Send {/}
 `; & g::Send {?}
+`; & t::Send {|}
+
 
 /*
 Goal:
@@ -509,4 +511,5 @@ NavOff()
 <!+;::Send +{End}
 <!^;::SendEvent ^{End}
 
-\::Send {AppsKey}
+\::AppsKey
+
