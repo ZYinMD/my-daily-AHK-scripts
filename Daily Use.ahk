@@ -83,12 +83,14 @@ Goal:
   ; + l => delete to line end
   ; + , => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
   ; + i => delete line and move to previous line
+  ; + m => right click key
 */
 `; & k::Send {End}+{Home}{Delete}
 `; & j::Send +{Home}{Delete}
 `; & l::Send +{End}{BackSpace}
 `; & ,::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
 `; & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
+`; & m::Send {AppsKey}
 
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
@@ -506,3 +508,4 @@ NavOff()
 <!;::Send {End}
 <!+;::Send +{End}
 <!^;::SendEvent ^{End}
+
