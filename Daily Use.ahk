@@ -131,13 +131,20 @@ Goal:
 
 `; & ,::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
 
-;to open and focus on the sidebar
+;toggle the sidebar
 ^`::
-  PixelGetColor, color, 120, 20
+  PixelGetColor, color, 120, 20 ;this is the
   If color != 0xACCCD8 ;if the sidebar is currently closed, open it first
-    Send ^k^b
-  Send ^0 ;^0 is the default hotkey to focus on the sidebar
-  NavOn() ;this is naturally needed after focus
+    {
+      Send ^k^b
+      Send ^0 ;^0 is the default hotkey to focus on the sidebar
+      NavOn() ;this is naturally needed after focus
+    }
+  Else ; if sidebar is already open, close it
+    {
+      Send ^k^b
+      Send {Esc} ;this will return the focus to the editor if it's previously on the sidebar
+    }
   Return
 #IfWinActive
 
