@@ -536,3 +536,9 @@ NavOff()
     ; Progress, Off
   }
 
+<!h::Send {Home}
+<!+h::Send +{Home}
+^<!h::SendEvent ^{Home}
+<!;::Send {End}
+<!+;::Send +{End}
+<!^;::SendEvent ^{End}
