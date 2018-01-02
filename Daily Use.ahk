@@ -90,7 +90,7 @@ Goal:
 `; & l::Send +{End}{BackSpace}
 `; & ,::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
 `; & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
-`; & m::Send {AppsKey}
+
 
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
@@ -509,3 +509,4 @@ NavOff()
 <!+;::Send +{End}
 <!^;::SendEvent ^{End}
 
+\::Send {AppsKey}
