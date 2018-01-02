@@ -78,42 +78,6 @@ Explain:
 
 /*
 Goal:
-  Use m,.jkluio as a numpad. Use 3 as a modifier key. Restore 3.
-Why 3:
-  2 and 3 are low frequency keys at a golden location which can be reached by extending the longest two fingers without moving the wrist.
-*/
-3 & Space::Send {0}
-3 & m::Send {1}
-3 & ,::Send {2}
-3 & .::Send {3}
-3 & j::Send {4}
-3 & k::Send {5}
-3 & l::Send {6}
-3 & u::Send {7}
-3 & i::Send {8}
-3 & o::Send {9}
-3 & 8::Send {/}
-3 & 9::Send {*}
-3 & 0::Send {-}
-3 & p::Send {+}
-3::3
-#If !GetKeyState("LWin","p")
-  3::Send 3
-#if
-
-
-
-/*
-Goal:
-  Use 8 and 9 as BackSpace and Delete,
-Why 8 and 9:
-  Just like 2 and 3, make use of the golden location
-*/
-8::BackSpace
-9::Delete
-
-/*
-Goal:
   ; + k => delete line
   ; + j => delete to line beginning
   ; + l => delete to line end
