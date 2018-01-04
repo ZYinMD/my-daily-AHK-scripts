@@ -78,24 +78,22 @@ Explain:
 
 /*
 Goal:
-  ; + k => delete line
-  ; + j => delete to line beginning
-  ; + l => delete to line end
-  ; + , => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
-  ; + i => delete line and move to previous line
-  ; + m => right click key
+  3 + j => delete to line beginning
+  3 + l => delete to line end
+  3 + k => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
+  3 + i => delete line and move to previous line end
+Why 3?
+  3 is at a golden location where you can easily reach by extending the middle finger without moving your wrist
 */
-`; & k::Send {End}+{Home}{Delete}
-`; & j::Send +{Home}{Delete}
-`; & l::Send +{End}{BackSpace}
-`; & ,::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
-`; & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
-
-
+3 & j::Send +{Home}{Delete}
+3 & l::Send +{End}{BackSpace}
+3 & k::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
+3 & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
+3::Send {3} ;3::3 should work, but it doesn't, not sure why.
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
 
-`; & ,::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
+3 & k::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
 
 ;toggle the sidebar
 ^`::
@@ -241,6 +239,7 @@ Background Story:
 #Hotstring ?0
 :C:Im::I'm
 :C:Ill::I'll
+:C:Ive::I've
 ::youll::you'll
 ::its::it's
 ::itll::it'll
@@ -416,14 +415,10 @@ NumpadEnd::Left
 NumpadPgDn::Right
 NumpadHome::Delete
 NumpadUp::End
-NumpadDiv::
-  If !GetKeyState("NumLock", "T")
-    Send {Home}
-  Return
-NumpadMult::
-  If !GetKeyState("NumLock", "T")
-    Send {PgUp}
-  Return
+#If !GetKeyState("NumLock", "T")
+NumpadDiv::Home
+NumpadMult::PgUp
+#If
 NumpadPgUp::PgDn
 NumpadLeft::Send ^{Left}
 +NumpadLeft::Send +^{Left}
