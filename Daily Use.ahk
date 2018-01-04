@@ -78,17 +78,21 @@ Explain:
 
 /*
 Goal:
-  3 + j => delete to line beginning
-  3 + l => delete to line end
-  3 + k => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
-  3 + i => delete line and move to previous line end
+  3 + j or ← => delete to line beginning
+  3 + l or → => delete to line end
+  3 + i or ↑ => delete line and move to previous line end
+  3 + k or ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
 Why 3?
   3 is at a golden location where you can easily reach by extending the middle finger without moving your wrist
 */
+3 & Left::
 3 & j::Send +{Home}{Delete}
+3 & Right::
 3 & l::Send +{End}{BackSpace}
-3 & k::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
+3 & Up::
 3 & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
+3 & Down::
+3 & k::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
 3::3
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
@@ -228,6 +232,8 @@ Background Story:
 ::eee::Ⓔ
 ::shangmian::↑
 ::xiamian::↓
+::zuomian::←
+::youmian::→
 ::cslg::console.log(){left}
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
@@ -438,7 +444,6 @@ NumpadIns::BackSpace
   o::Send ^{Right}
   +o::Send ^+{Right}
 
-  ~Space::
   ~1::
   ~2::
   ~4::
