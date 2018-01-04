@@ -89,7 +89,7 @@ Why 3?
 3 & l::Send +{End}{BackSpace}
 3 & k::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
 3 & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
-3::Send {3} ;3::3 should work, but it doesn't, not sure why.
+3::3
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
 
@@ -441,7 +441,6 @@ NumpadIns::BackSpace
   ~Space::
   ~1::
   ~2::
-  3::
   ~4::
   ~5::
   ~6::
