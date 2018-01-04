@@ -432,7 +432,6 @@ NumpadIns::BackSpace
   ~p::
   Esc::
   ~^k::
-  , & m::NavOff()
   ~a::
   ~z::
   ~x::
