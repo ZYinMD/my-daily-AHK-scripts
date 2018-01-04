@@ -149,43 +149,7 @@ Goal:
 `; & g::Send {?}
 `; & t::Send {|}
 
-
-/*
-Goal:
-  Use , and . as Home and End
-Syntax:
-  hotkey::
-    code block
-    Return
 */
-. & ,::
-  If GetKeyState("Shift","p") ;For mixed modifier keys, use GetKeyState.
-    Send +{Home} ;{} in if-statements can be omitted if there'd be only one line inside the {}.
-  Else If GetKeyState("CapsLock","p")
-    Send ^{Home}
-  Else
-    Send {Home}
-  Return
-
-, & .::
-  If GetKeyState("Shift","p")
-    Send +{End}
-  Else If GetKeyState("CapsLock","p")
-    Send ^{End}
-  Else
-    Send {End}
-  Return
-
-,::,
-.::.
-
-
-, & m::
-  If GetKeyState("CapsLock","p")
-    Send ^{BackSpace}
-  Else
-    Send {BackSpace}
-  Return
 
 /*
 Goal:
@@ -483,8 +447,11 @@ NumpadIns::BackSpace
     !i::
     !j::
     !k::
+    NavOn()
     !l::
-    , & m::NavOn()
+      NavOn()
+      Send {Right}
+      Return
 #If
 
 NavOn()
