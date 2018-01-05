@@ -139,7 +139,6 @@ Goal:
   ; => ; at line end
   LCtrl + ; => ;
   RCtrl + ; => ; at line end and enter
-Syntax:
 */
 $;:: ;$ means prevent the hotkey to trigger itself
   If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
@@ -198,6 +197,7 @@ Background Story:
 ::xiamian::↓
 ::zuomian::←
 ::youmian::→
+#Hotstring ?0
 ::cslg::console.log(){left}
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
@@ -206,7 +206,7 @@ Background Story:
 ::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 ::gcoma::git commit -a -m ""{left}
-#Hotstring ?0
+#Hotstring *0
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
