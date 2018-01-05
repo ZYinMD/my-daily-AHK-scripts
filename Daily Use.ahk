@@ -224,7 +224,6 @@ Background Story:
 ::xiamian::↓
 ::zuomian::←
 ::youmian::→
-#Hotstring ?0
 ::cslg::console.log(){left}
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
@@ -233,7 +232,7 @@ Background Story:
 ::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 ::gcoma::git commit -a -m ""{left}
-#Hotstring *0
+#Hotstring *0 ?0
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
@@ -253,7 +252,7 @@ Background Story:
 ::cant::can't
 ::couldnt::couldn't
 ::wont::won't
-::whats::whatk's
+::whats::what's
 ::theres::there's
 ::thats::that's
 /*
