@@ -78,26 +78,43 @@ Explain:
 
 /*
 Goal:
-  3 + j or ← => delete to line beginning
-  3 + l or → => delete to line end
-  3 + i or ↑ => delete line and move to previous line end
-  3 + k or ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
-Why 3?
-  3 is at a golden location where you can easily reach by extending the middle finger without moving your wrist
+  2 + j or ← => delete to line beginning
+  2 + l or → => delete to line end
+  2 + i or ↑ => delete line and move to previous line end
+  2 + k or ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
+  9 + keys => various symbols
+Why 2 and 9?
+  They are at a golden location where you can easily reach by extending the ring finger without moving your wrist
+Why not 3 and 8?
+  The middle finger is heavier than the ring finger, harder to lift up when pressed, more strain on the ligament
 */
-3 & Left::
-3 & j::Send +{Home}{Delete}
-3 & Right::
-3 & l::Send +{End}{BackSpace}
-3 & Up::
-3 & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
-3 & Down::
-3 & k::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
-3::3
+2 & Left::
+2 & j::Send +{Home}{Delete}
+2 & Right::
+2 & l::Send +{End}{BackSpace}
+2 & Up::
+2 & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
+2 & Down::
+2 & k::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
+2::2
+9 & q::Send {{}
+9 & w::Send {}}
+9 & a::Send {[}
+9 & s::Send {]}
+9 & z::Send {(}
+9 & x::Send {)}
+9 & e::Send {-}
+9 & r::Send {+}
+9 & d::Send {"}
+9 & f::Send {'}
+9 & c::Send {\}
+9 & v::Send {/}
+9 & g::Send {?}
+9 & t::Send {|}
+9::9
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
-
-3 & k::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
+2 & k::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
 
 ;toggle the sidebar
 ^`::
@@ -119,35 +136,18 @@ Why 3?
 
 /*
 Goal:
-  Restore semicolon after it has become a modifier key
   ; => ; at line end
   LCtrl + ; => ;
   RCtrl + ; => ; at line end and enter
 Syntax:
-  Unless appears right after another character, ; needs ` as an escape char.
 */
-`;::Send {end};
-<^;::Send {;}
-+;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
-
-/*
-Goal:
-  More good stuff with ; as modifier
-*/
-`; & q::Send {{}
-`; & w::Send {}}
-`; & a::Send {[}
-`; & s::Send {]}
-`; & z::Send {(}
-`; & x::Send {)}
-`; & e::Send {-}
-`; & r::Send {+}
-`; & d::Send {"}
-`; & f::Send {'}
-`; & c::Send {\}
-`; & v::Send {/}
-`; & g::Send {?}
-`; & t::Send {|}
+$;:: ;$ means prevent the hotkey to trigger itself
+  If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
+    Send {end};{Enter}
+  Else
+    Send {end};
+  Return
+<^;::Send `; ;Unless appears right after another character, ; needs ` as an escape char.
 
 */
 
@@ -409,11 +409,12 @@ NumpadIns::BackSpace
   +o::Send ^+{Right}
 
   ~1::
-  ~2::
+  ~3::
   ~4::
   ~5::
   ~6::
   ~7::
+  ~8::
   ~0::
   ~q::
   ~w::
