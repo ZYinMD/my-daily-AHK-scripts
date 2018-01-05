@@ -90,7 +90,7 @@ Why not 3 and 8?
 */
 2 & Left::Send +{Home}{Delete}
 2 & Right::Send +{End}{BackSpace}
-2 & Up::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
+2 & Up::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentings
 2 & Down::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
 ; same as above, but in ijkl
 2 & j::
