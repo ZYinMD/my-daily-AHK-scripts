@@ -88,14 +88,27 @@ Why 2 and 9?
 Why not 3 and 8?
   The middle finger is heavier than the ring finger, harder to lift up when pressed, more strain on the ligament
 */
-2 & Left::
-2 & j::Send +{Home}{Delete}
-2 & Right::
-2 & l::Send +{End}{BackSpace}
-2 & Up::
-2 & i::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
-2 & Down::
-2 & k::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
+2 & Left::Send +{Home}{Delete}
+2 & Right::Send +{End}{BackSpace}
+2 & Up::Send {End}+{Home}+{Home}{BackSpace}{BackSpace} ; shift home twice to clear indentings
+2 & Down::Send {End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
+; same as above, but in ijkl
+2 & j::
+  NavOn()
+  Send +{Home}{Delete}
+  Return
+2 & l::
+  NavOn()
+  Send +{End}{BackSpace}
+  Return
+2 & i::
+  NavOn()
+  Send {End}+{Home}+{Home}{BackSpace}{BackSpace}
+  Return
+2 & k::
+  NavOn()
+  Send {End}+{Home}+{Home}{Delete}{Delete}
+  Return
 2::2
 9 & q::Send {{}
 9 & w::Send {}}
@@ -114,7 +127,11 @@ Why not 3 and 8?
 9::9
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
-2 & k::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
+2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
+2 & k::
+  NavOn()
+  Send ^+k
+  Return
 
 ;toggle the sidebar
 ^`::
