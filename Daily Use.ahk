@@ -124,6 +124,7 @@ Why not 3 and 8?
 9 & v::Send {/}
 9 & g::Send {?}
 9 & t::Send {|}
+9 & b::Send {=}
 9::9
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
@@ -148,6 +149,15 @@ Why not 3 and 8?
       Send {Esc} ;this will return the focus to the editor if it's previously on the sidebar
     }
   Return
+
+F5:: ;When developing a web page in Sublime, refresh it in Chrome
+  Send #{2}
+  Sleep 500
+  Send ^{1} ;habit: consistently put the page on the leftmost position
+  Sleep 500
+  Send ^{r}
+  Return
+
 #IfWinActive
 
 
