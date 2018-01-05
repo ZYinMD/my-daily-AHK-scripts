@@ -116,8 +116,8 @@ Why not 3 and 8?
 9 & s::Send {]}
 9 & z::Send {(}
 9 & x::Send {)}
-9 & e::Send {-}
-9 & r::Send {+}
+9 & e::Send {+}
+9 & r::Send {-}
 9 & d::Send {"}
 9 & f::Send {'}
 9 & c::Send {\}
