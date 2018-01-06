@@ -255,6 +255,10 @@ Background Story:
 ::whats::what's
 ::theres::there's
 ::thats::that's
+::theres::there's
+::heres::here's
+::todays::today's
+
 /*
 Goal:
   In order to use alt-tab as little as possible, the most frequently used apps should each have a shortcut.
@@ -464,6 +468,8 @@ NumpadIns::BackSpace
   ~x::
   ~c::
   ~v::
+  ~,::
+
     If !GetKeyState("CapsLock","p")
       NavOff()
     Return
