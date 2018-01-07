@@ -7,15 +7,3 @@ I want people to know that I'm pround to be a heavy AutoHotkey user.
 ### What's AutoHotkey?
 A scripting language to create keyboard and mouse macros for Windows.
 (Speaking of Windows, **USE CRLF** or it won't work!)
-
-console.log();
-console.log();
-console.log();
-
-console.log('what: ' + );
-console.log('{Press Tab to delete me: }' + );
-
-console.log(' ' + );
-console.log('Press Tab to delete me: ' + );
-
-fun

@@ -124,7 +124,8 @@ Why not 3 and 8?
 9 & v::Send {/}
 9 & g::Send {?}
 9 & t::Send {|}
-9 & b::Send {=}
+9 & u::Send {=}
+9 & p::Send {:}
 9::9
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
