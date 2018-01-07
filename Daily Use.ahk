@@ -224,7 +224,7 @@ Background Story:
 ::xiamian::↓
 ::zuomian::←
 ::youmian::→
-::cslg::console.log(){left}
+::cslg::console.log(`: $`){left}
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
 ::cser::console.error(){left}
@@ -254,8 +254,8 @@ Background Story:
 ::wont::won't
 ::whats::what's
 ::theres::there's
+::therere::there're
 ::thats::that's
-::theres::there's
 ::heres::here's
 ::todays::today's
 
