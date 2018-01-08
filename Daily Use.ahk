@@ -226,6 +226,7 @@ Background Story:
 ::zuomian::←
 ::youmian::→
 ::cslg::console.log(){left}
+::csdr::console.dir(){left}
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
 ::cser::console.error(){left}
