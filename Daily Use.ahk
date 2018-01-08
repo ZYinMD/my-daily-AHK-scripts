@@ -112,19 +112,19 @@ Why not 3 and 8?
 2::2
 9 & q::Send {{}
 9 & w::Send {}}
-9 & a::Send {[}
-9 & s::Send {]}
-9 & z::Send {(}
-9 & x::Send {)}
-9 & e::Send {+}
-9 & r::Send {-}
+9 & e::Send {[}
+9 & r::Send {]}
+9 & t::Send {(}
+9 & y::Send {)}
+9 & a::Send {-}
+9 & s::Send {+}
 9 & d::Send {"}
 9 & f::Send {'}
-9 & c::Send {\}
-9 & v::Send {/}
+9 & z::Send {_}
+9 & x::Send {=}
 9 & g::Send {?}
-9 & t::Send {|}
-9 & u::Send {=}
+9 & c::Send {/}
+9 & v::Send {\}
 9 & p::Send {:}
 9::9
 
@@ -225,7 +225,7 @@ Background Story:
 ::xiamian::↓
 ::zuomian::←
 ::youmian::→
-::cslg::console.log(`: $`){left}
+::cslg::console.log(){left}
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
 ::cser::console.error(){left}
@@ -510,5 +510,5 @@ NavOff()
 <!+;::Send +{End}
 <!^;::SendEvent ^{End}
 
-\::AppsKey
+\::Send {AppsKey}
 
