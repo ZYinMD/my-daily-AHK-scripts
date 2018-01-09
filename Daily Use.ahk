@@ -78,14 +78,63 @@ Explain:
 
 /*
 Goal:
+  ; => ; at line end
+  LCtrl + ; => ;
+  RCtrl + ; => ; at line end and enter
+*/
+; $;:: ;$ means prevent the hotkey to trigger itself
+;   If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
+;     Send {end};{Enter}
+;   Else
+;     Send {end};
+;   Return
+; <^;::Send `; ;Unless appears right after another character, ; needs ` as an escape char.
+
+/*
+Goal:
+  Use ; as a modifier to type symbols
+*/
+
+`; & q::Send {{}
+`; & w::Send {}}
+`; & e::Send {[}
+`; & r::Send {]}
+`; & t::Send {(}
+`; & y::Send {)}
+`; & a::Send {-}
+`; & s::Send {+}
+`; & d::Send {"}
+`; & f::Send {'}
+`; & z::Send {_}
+`; & x::Send {=}
+`; & g::Send {?}
+`; & c::Send {/}
+`; & v::Send {\}
+
+
+/*
+Goal:
+  Restore semicolon after it has become a modifier key
+  ; => ; at line end
+  LCtrl + ; => ;
+  RCtrl + ; => ; at line end and enter
+Syntax:
+  Unless appears right after another character, ; needs ` as an escape char.
+*/
+`;::Send {end};
+<^;::Send {;}
++;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
+
+
+/*
+Goal:
   2 + j or ← => delete to line beginning
   2 + l or → => delete to line end
   2 + i or ↑ => delete line and move to previous line end
   2 + k or ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
-  9 + keys => various symbols
-Why 2 and 9?
-  They are at a golden location where you can easily reach by extending the ring finger without moving your wrist
-Why not 3 and 8?
+Why 2?
+  2 is at a golden location where you can easily reach by extending the ring finger without moving your wrist
+Why not 3?
   The middle finger is heavier than the ring finger, harder to lift up when pressed, more strain on the ligament
 */
 2 & Left::Send +{Home}{Delete}
@@ -110,23 +159,7 @@ Why not 3 and 8?
   Send {End}+{Home}+{Home}{Delete}{Delete}
   Return
 2::2
-9 & q::Send {{}
-9 & w::Send {}}
-9 & e::Send {[}
-9 & r::Send {]}
-9 & t::Send {(}
-9 & y::Send {)}
-9 & a::Send {-}
-9 & s::Send {+}
-9 & d::Send {"}
-9 & f::Send {'}
-9 & z::Send {_}
-9 & x::Send {=}
-9 & g::Send {?}
-9 & c::Send {/}
-9 & v::Send {\}
-9 & p::Send {:}
-9::9
+
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
 2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
@@ -160,23 +193,6 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
   Return
 
 #IfWinActive
-
-
-/*
-Goal:
-  ; => ; at line end
-  LCtrl + ; => ;
-  RCtrl + ; => ; at line end and enter
-*/
-$;:: ;$ means prevent the hotkey to trigger itself
-  If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
-    Send {end};{Enter}
-  Else
-    Send {end};
-  Return
-<^;::Send `; ;Unless appears right after another character, ; needs ` as an escape char.
-
-*/
 
 /*
 Goal:
@@ -511,5 +527,6 @@ NavOff()
 <!+;::Send +{End}
 <!^;::SendEvent ^{End}
 
-\::Send {AppsKey}
+\::AppsKey
+
 
