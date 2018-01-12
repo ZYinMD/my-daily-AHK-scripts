@@ -39,6 +39,8 @@ Note:
 */
 RAlt::PgUp
 RWin::PgDn
+RAlt & a::Send ^{PgUp}
+RAlt & d::Send ^{PgDn}
 
 /*
 Goal:
