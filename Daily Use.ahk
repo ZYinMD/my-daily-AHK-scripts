@@ -97,18 +97,16 @@ Goal:
   Use ; as a modifier to type symbols
 */
 
-`; & q::Send {{}
-`; & w::Send {}}
-`; & e::Send {[}
-`; & r::Send {]}
+`; & a::Send {{}
+`; & s::Send {}}
+`; & d::Send {[}
+`; & f::Send {]}
 `; & j::Send {(}
 `; & l::Send {)}
-`; & a::Send {-}
-`; & s::Send {+}
-`; & i::
-`; & d::Send {"}
-`; & k::
-`; & f::Send {'}
+`; & q::Send {-}
+`; & w::Send {+}
+`; & i::Send {"}
+`; & k::Send {'}
 `; & z::Send {_}
 `; & x::Send {=}
 `; & g::Send {?}
