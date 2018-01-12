@@ -6,7 +6,7 @@ Important Note:
   I've set Git to auto-convert to LF on commit, so remember to change back manually after download.
 
 Style Guide:
-  Use PascalCase, although the language is case insensitive.
+  Use PascalCase, although the language is case insensitF.
 */
 
 /*
@@ -99,11 +99,13 @@ Goal:
 `; & w::Send {}}
 `; & e::Send {[}
 `; & r::Send {]}
-`; & t::Send {(}
-`; & y::Send {)}
+`; & j::Send {(}
+`; & l::Send {)}
 `; & a::Send {-}
 `; & s::Send {+}
+`; & i::
 `; & d::Send {"}
+`; & k::
 `; & f::Send {'}
 `; & z::Send {_}
 `; & x::Send {=}
@@ -276,6 +278,10 @@ Background Story:
 ::thats::that's
 ::heres::here's
 ::todays::today's
+::theyre::they're
+::theyd::they'd
+::theyve::they've
+
 
 /*
 Goal:
