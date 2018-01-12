@@ -39,7 +39,7 @@ Note:
 */
 RAlt::PgUp
 RWin::PgDn
-RAlt & a::Send ^{PgUp}
+RAlt & a::Send ^{PgUp} ; Don't know why >!a::^PaUp doesn't work
 RAlt & d::Send ^{PgDn}
 
 /*
