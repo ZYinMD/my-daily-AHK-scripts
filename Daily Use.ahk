@@ -251,9 +251,12 @@ Background Story:
 ::cstb::console.table(){left}
 ::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
+::gadd::git add -A
 ::gcom::git commit -m ""{left}
+::gbra::git branch{space}
 ::gche::git checkout{space}
-::gsta::git status{enter}global
+::gsta::git status{enter}
+
 #Hotstring *0 ?0
 :C:Im::I'm
 :C:Ill::I'll
