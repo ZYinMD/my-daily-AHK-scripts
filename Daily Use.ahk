@@ -506,6 +506,7 @@ NumpadIns::BackSpace
     !j::
     !k::
     NavOn()
+    Return
     !l::
       NavOn()
       Send {Right}
