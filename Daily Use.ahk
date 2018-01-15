@@ -489,7 +489,6 @@ NumpadIns::BackSpace
   ~h::
   ~b::
   ~n::
-  ~m::
   ~p::
   Esc::
   ~^k::
@@ -499,6 +498,7 @@ NumpadIns::BackSpace
   ~c::
   ~v::
   ~,::
+  m::
 
     If !GetKeyState("CapsLock","p")
       NavOff()
