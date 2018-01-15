@@ -262,6 +262,7 @@ Background Story:
 :C:Ill::I'll
 :C:Ive::I've
 ::youll::you'll
+::youre::you're
 ::its::it's
 ::itll::it'll
 ::isnt::isn't
