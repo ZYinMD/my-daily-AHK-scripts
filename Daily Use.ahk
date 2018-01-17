@@ -274,6 +274,7 @@ Background Story:
 :C:Ive::I've
 ::youll::you'll
 ::youre::you're
+::youve::you've
 ::its::it's
 ::itll::it'll
 ::isnt::isn't
