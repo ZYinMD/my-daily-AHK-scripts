@@ -251,11 +251,13 @@ Background Story:
 ::cstb::console.table(){left}
 ::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
+::gsta::git status{enter}
 ::gadd::git add -A
 ::gcom::git commit -m ""{left}
-::gbra::git branch{space}
+::gfet::git fetch{enter}
 ::gche::git checkout{space}
-::gsta::git status{enter}
+::gbra::git branch{space}
+
 
 #Hotstring *0 ?0
 :C:Im::I'm
@@ -489,7 +491,6 @@ NumpadIns::BackSpace
   ~h::
   ~b::
   ~n::
-  ~m::
   ~p::
   Esc::
   ~^k::
@@ -499,6 +500,7 @@ NumpadIns::BackSpace
   ~c::
   ~v::
   ~,::
+  m::
 
     If !GetKeyState("CapsLock","p")
       NavOff()
