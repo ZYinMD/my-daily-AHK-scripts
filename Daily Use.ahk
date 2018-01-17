@@ -123,7 +123,16 @@ Goal:
 Syntax:
   Unless appears right after another character, ; needs ` as an escape char.
 */
-`;::Send {end};
+
+
+$;:: ;$ means prevent the hotkey to trigger itself;
+
+  If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
+    Send {end};{Enter}
+  Else
+    Send {end};
+  Return
+
 <^;::Send {;}
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
 
