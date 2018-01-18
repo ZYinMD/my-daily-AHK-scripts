@@ -120,6 +120,7 @@ Goal:
   ; => ; at line end
   LCtrl + ; => ;
   RCtrl + ; => ; at line end and enter
+  Alt + , => right arrow once then comma then space (useful in coding)
 Syntax:
   Unless appears right after another character, ; needs ` as an escape char.
 */
@@ -135,7 +136,7 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 
 <^;::Send {;}
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
-
+!,::Send {right},{space}
 
 /*
 Goal:
