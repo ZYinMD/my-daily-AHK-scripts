@@ -139,7 +139,7 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 
 /*
 Goal:
-  2 + j or ← => delete to line beginning
+  2 + j or ← => ``delete to line beginning
   2 + l or → => delete to line end
   2 + i or ↑ => delete line and move to previous line end
   2 + k or ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
@@ -261,7 +261,7 @@ Background Story:
 ::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 ::gsta::git status{enter}
-::gadd::git add -A
+::gadd::git add -A{enter}
 ::gcom::git commit -m ""{left}
 ::gfet::git fetch{enter}
 ::gche::git checkout{space}
