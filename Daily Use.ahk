@@ -295,6 +295,7 @@ Background Story:
 ::theres::there's
 ::therere::there're
 ::thats::that's
+::thatll::that'll
 ::heres::here's
 ::todays::today's
 ::theyre::they're
