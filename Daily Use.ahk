@@ -120,17 +120,27 @@ Goal:
   ; => ; at line end
   LCtrl + ; => ;
   RCtrl + ; => ; at line end and enter
+  Alt + , => right arrow once then comma then space (useful in coding)
 Syntax:
   Unless appears right after another character, ; needs ` as an escape char.
 */
-`;::Send {end};
+
+
+$;:: ;$ means prevent the hotkey to trigger itself;
+
+  If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
+    Send {end};{Enter}
+  Else
+    Send {end};
+  Return
+
 <^;::Send {;}
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
-
+!,::Send {right},{space}
 
 /*
 Goal:
-  2 + j or ← => delete to line beginning
+  2 + j or ← => ``delete to line beginning
   2 + l or → => delete to line end
   2 + i or ↑ => delete line and move to previous line end
   2 + k or ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
@@ -251,11 +261,13 @@ Background Story:
 ::cstb::console.table(){left}
 ::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
-::gadd::git add -A
-::gcom::git commit -m ""{left}
-::gbra::git branch{space}
-::gche::git checkout{space}
 ::gsta::git status{enter}
+::gadd::git add -A{enter}
+::gcom::git commit -m ""{left}
+::gfet::git fetch{enter}
+::gche::git checkout{space}
+::gbra::git branch{space}
+
 
 #Hotstring *0 ?0
 :C:Im::I'm
@@ -263,6 +275,7 @@ Background Story:
 :C:Ive::I've
 ::youll::you'll
 ::youre::you're
+::youve::you've
 ::its::it's
 ::itll::it'll
 ::isnt::isn't
@@ -282,6 +295,7 @@ Background Story:
 ::theres::there's
 ::therere::there're
 ::thats::that's
+::thatll::that'll
 ::heres::here's
 ::todays::today's
 ::theyre::they're
