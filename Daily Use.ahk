@@ -278,6 +278,7 @@ Background Story:
 ::youve::you've
 ::its::it's
 ::itll::it'll
+::itd::it'd
 ::isnt::isn't
 ::wasnt::wasn't
 ::werent::weren't
