@@ -204,6 +204,13 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
   Send ^{r}
   Return
 
+; When in Sublime, use tab as a modifier key to move texts around
+Tab & Left::Send ^,
+Tab & Right::Send ^.
+Tab & Up::Send ^+{Up}
+Tab & Down::Send ^+{Down}
+Tab::Tab
+
 #IfWinActive
 
 /*
@@ -269,7 +276,7 @@ Background Story:
 ::gbra::git branch{space}
 
 
-#Hotstring *0 ?0
+#Hotstring *0
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
@@ -302,6 +309,8 @@ Background Story:
 ::theyre::they're
 ::theyd::they'd
 ::theyve::they've
+::hows::how's
+::howd::how'd
 
 
 /*
