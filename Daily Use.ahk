@@ -220,8 +220,8 @@ Tab:: ;this is to restore the original tab, but ctrl tab acts weirdly, caps has 
 ; When in Sublime, use 1 as a modifier key to help selection
 1 & Right::Send ^d
 1 & Down::Send ^l
-1 & Up::Send ^+s
-1 & Left::Send ^+a
+1 & Left::Send ^+s
+1 & Up::Send ^+a
 1::1
 
 #IfWinActive
