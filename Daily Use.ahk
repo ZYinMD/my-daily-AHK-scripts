@@ -209,14 +209,27 @@ Tab & Left::Send ^,
 Tab & Right::Send ^.
 Tab & Up::Send ^+{Up}
 Tab & Down::Send ^+{Down}
-Tab::Tab
+<!Tab::AltTab
+Tab:: ;this is to restore the original tab, but ctrl tab acts weirdly, caps has to release before tab, not sure why
+  If !GetKeyState("CapsLock","p")
+    Send ^{Tab}
+  Else
+    Send {Tab}
+  Return
+
+; When in Sublime, use 1 as a modifier key to help selection
+1 & Right::Send ^d
+1 & Down::Send ^l
+1 & Up::Send ^+s
+1 & Left::Send ^+a
+1::1
 
 #IfWinActive
 
 /*
 Goal:
   If LCtrl was pressed down and up with no other keys combined, fire a mouse click on up.
-  I'm likely the only person on earth who needs this.
+  I'1m likely the only person on earth who needs this.
 Note:
   This works only because LCtrl has been set to be a modifier key, otherwise the script will fire   the mouse click immediately on key down
 */
@@ -492,7 +505,8 @@ NumpadIns::BackSpace
   o::Send ^{Right}
   +o::Send ^+{Right}
 
-  ~1::
+  ; ~1::
+  ; ~2:://Can't have 1 and 2 because it's a modifier key, unexpected behavior
   ~3::
   ~4::
   ~5::
