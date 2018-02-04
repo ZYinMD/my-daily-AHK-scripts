@@ -180,20 +180,12 @@ Why not 3?
   Send ^+k
   Return
 
-;toggle the sidebar
-^`::
-  PixelGetColor, color, 120, 20 ;this is the
+^`:: ;toggle the sidebar
+  PixelGetColor, color, 120, 20 ;detect this spot to tell if sidebar is open
   If color != 0xACCCD8 ;if the sidebar is currently closed, open it first
-    {
-      Send ^k^b
-      Send ^0 ;^0 is the default hotkey to focus on the sidebar
-      NavOn() ;this is naturally needed after focus
-    }
-  Else ; if sidebar is already open, close it
-    {
-      Send ^k^b
-      Send {Esc} ;this will return the focus to the editor if it's previously on the sidebar
-    }
+    Send ^k^b
+  Send ^0 ;^0 is the default hotkey to focus on the sidebar
+  NavOn() ;this is naturally needed after focus
   Return
 
 F5:: ;When developing a web page in Sublime, refresh it in Chrome
