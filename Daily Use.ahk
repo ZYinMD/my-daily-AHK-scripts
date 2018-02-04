@@ -215,7 +215,7 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
 /*
 Goal:
   If LCtrl was pressed down and up with no other keys combined, fire a mouse click on up.
-  I'1m likely the only person on earth who needs this.
+  I'm likely the only person on earth who needs this.
 Note:
   This works only because LCtrl has been set to be a modifier key, otherwise the script will fire   the mouse click immediately on key down
 */
@@ -336,14 +336,9 @@ Syntax:
   Return
 
 ` & s::  ; Sublime Text sometimes pops up the register window, deal with it at the same time
+  ShutSublimePop()
   IfWinExist ahk_exe sublime_text.exe
-  { IfWinExist This is an unregistered copy
-    { WinKill This is an unregistered copy
-      WinActivate ahk_exe sublime_text.exe
-      Return
-    }
-    Else WinActivate
-  }
+    WinActivate
   Else Run D:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
   Return
 
@@ -546,6 +541,12 @@ NavOff()
     SetScrollLockState, Off
     SplashImage, Off
     ; Progress, Off
+  }
+
+ShutSublimePop() ;this function kills the sublime popup window
+  {
+    IfWinExist This is an unregistered copy
+      WinKill This is an unregistered copy
   }
 
 <!h::Send {Home}
