@@ -176,7 +176,7 @@ Why not 3?
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
 2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
 2 & k::
-  NavOn()
+  NavOn()a
   Send ^+k
   Return
 
@@ -194,6 +194,7 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
   Send ^{1} ;habit: consistently put the page on the leftmost position
   Sleep 500
   Send ^{r}
+  ShutSublimePop() ;If the register window pops up, close it
   Return
 
 ; When in Sublime, use 1 as a modifier key to help selection
@@ -209,6 +210,10 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
 3 & Up::Send ^+{Up}
 3 & Down::Send ^+{Down}
 3::3 ; restore 3
+
+; When Ctrl PgUp / Ctrl PgDn is pressed in Sublime, which is often when auto save happens, close the potential popup
+~PgUp::
+~PgDn::ShutSublimePop()
 
 #IfWinActive
 
@@ -545,6 +550,7 @@ NavOff()
 
 ShutSublimePop() ;this function kills the sublime popup window
   {
+    Sleep 200
     IfWinExist This is an unregistered copy
       WinKill This is an unregistered copy
   }
