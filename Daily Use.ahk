@@ -204,25 +204,19 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
   Send ^{r}
   Return
 
-; When in Sublime, use tab as a modifier key to move texts around
-Tab & Left::Send ^,
-Tab & Right::Send ^.
-Tab & Up::Send ^+{Up}
-Tab & Down::Send ^+{Down}
-<!Tab::AltTab
-Tab:: ;this is to restore the original tab, but caps tab needs to be done separately
-  If !GetKeyState("CapsLock","p")
-    Send {Tab}
-  Else
-    Send ^{Tab}
-  Return
-
 ; When in Sublime, use 1 as a modifier key to help selection
 1 & Right::Send ^d
 1 & Down::Send ^l
 1 & Left::Send ^+s
 1 & Up::Send ^+a
-1::1
+1::1 ; restore 1
+
+; When in Sublime, use 3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
+3 & Left::Send ^,
+3 & Right::Send ^.
+3 & Up::Send ^+{Up}
+3 & Down::Send ^+{Down}
+3::3 ; restore 3
 
 #IfWinActive
 
@@ -505,15 +499,6 @@ NumpadIns::BackSpace
   o::Send ^{Right}
   +o::Send ^+{Right}
 
-  ; ~1::
-  ; ~2:://Can't have 1 and 2 because it's a modifier key, unexpected behavior
-  ~3::
-  ~4::
-  ~5::
-  ~6::
-  ~7::
-  ~8::
-  ~0::
   ~q::
   ~w::
   ~e::
