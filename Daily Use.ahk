@@ -210,11 +210,11 @@ Tab & Right::Send ^.
 Tab & Up::Send ^+{Up}
 Tab & Down::Send ^+{Down}
 <!Tab::AltTab
-Tab:: ;this is to restore the original tab, but ctrl tab acts weirdly, caps has to release before tab, not sure why
+Tab:: ;this is to restore the original tab, but caps tab needs to be done separately
   If !GetKeyState("CapsLock","p")
-    Send ^{Tab}
-  Else
     Send {Tab}
+  Else
+    Send ^{Tab}
   Return
 
 ; When in Sublime, use 1 as a modifier key to help selection
