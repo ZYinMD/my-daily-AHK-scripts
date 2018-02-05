@@ -104,11 +104,11 @@ Goal:
 `; & j::Send {(}
 `; & l::Send {)}
 `; & q::Send {-}
-`; & w::Send {+}
+`; & w::Send {=}
 `; & i::Send {"}
 `; & k::Send {'}
 `; & z::Send {_}
-`; & x::Send {=}
+`; & x::Send {+}
 `; & g::Send {?}
 `; & c::Send {\}
 `; & v::Send {/}
