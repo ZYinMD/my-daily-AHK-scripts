@@ -211,6 +211,13 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
 3 & Down::Send ^+{Down}
 3::3 ; restore 3
 
+; When in Sublime, use ` as modifier key to collapse and toggle comment
+` & Left::Send ^+[
+` & Right::Send ^+]
+` & Up::Send ^+/
+` & Down::Send ^/
+
+
 ; When Ctrl PgUp / Ctrl PgDn is pressed in Sublime, which is often when auto save happens, close the potential popup
 ~PgUp::
 ~PgDn::ShutSublimePop()
@@ -534,7 +541,7 @@ NumpadIns::BackSpace
 
 NavOn()
   {
-    SetScrollLockState, On
+    SetScrollLockState On
     SplashImage, nav.gif,b,,,Nav
     ; Progress, b CWWhite ZH0 fs88, Navigation On,,Nav, Courier New
     ; WinSet, Transparent, 100, Nav
@@ -543,8 +550,8 @@ NavOn()
 
 NavOff()
   {
-    SetScrollLockState, Off
-    SplashImage, Off
+    SetScrollLockState Off
+    SplashImage Off
     ; Progress, Off
   }
 
