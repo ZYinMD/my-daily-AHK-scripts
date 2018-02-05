@@ -205,8 +205,8 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
 1::1 ; restore 1
 
 ; When in Sublime, use 3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
-3 & Left::Send ^,
-3 & Right::Send ^.
+3 & Left::Send ^[
+3 & Right::Send ^]
 3 & Up::Send ^+{Up}
 3 & Down::Send ^+{Down}
 3::3 ; restore 3
