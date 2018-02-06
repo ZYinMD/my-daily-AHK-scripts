@@ -313,6 +313,7 @@ Background Story:
 ::hadnt::hadn't
 ::shouldnt::shouldn't
 ::wouldnt::wouldn't
+::wouldve::would've
 ::cant::can't
 ::couldnt::couldn't
 ::wont::won't
