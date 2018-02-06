@@ -103,7 +103,7 @@ Goal:
 `; & f::Send {]}
 `; & j::Send {(}
 `; & l::Send {)}
-`; & q::Send {-}
+`; & q::Send {NumpadSub}
 `; & w::Send {=}
 `; & i::Send {"}
 `; & k::Send {'}
@@ -113,6 +113,12 @@ Goal:
 `; & c::Send {\}
 `; & v::Send {/}
 
+/*
+Goal:
+  Use - instead of Backspace to decrease hand movement
+*/
+
+-::Send {BackSpace}
 
 /*
 Goal:
@@ -320,6 +326,7 @@ Background Story:
 ::theyre::they're
 ::theyd::they'd
 ::theyve::they've
+::whos::who's
 ::hows::how's
 ::howd::how'd
 
