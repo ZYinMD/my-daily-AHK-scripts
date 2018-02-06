@@ -217,12 +217,12 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
 3 & Down::Send ^+{Down}
 3::3 ; restore 3
 
-; When in Sublime, use ` as modifier key to collapse and toggle comment
+; When in Sublime, use ` as modifier key to collapse and toggle comment and switch projects
 ` & Left::Send ^+[
 ` & Right::Send ^+]
-` & Up::Send ^+/
-` & Down::Send ^/
-
+` & BackSpace::Send ^+/
+` & Delete::Send ^/
+` & Down::Send !{p}{s}
 
 ; When Ctrl PgUp / Ctrl PgDn is pressed in Sublime, which is often when auto save happens, close the potential popup
 ~PgUp::
