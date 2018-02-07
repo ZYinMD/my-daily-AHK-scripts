@@ -224,7 +224,8 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
 ` & Delete::Send ^/
 ` & Down::Send !{p}{s}
 
-; When Ctrl PgUp / Ctrl PgDn is pressed in Sublime, which is often when auto save happens, close the potential popup
+; When Ctrl and Tab / PgUp / PgDn is pressed in Sublime, which is often when auto save happens, close the potential popup
+~Tab::
 ~PgUp::
 ~PgDn::ShutSublimePop()
 
