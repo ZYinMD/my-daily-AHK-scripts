@@ -118,7 +118,7 @@ Goal:
   Use - instead of Backspace to decrease hand movement
 */
 
--::Send {BackSpace}
+;-::Send {BackSpace}
 
 /*
 Goal:
