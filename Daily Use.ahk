@@ -357,11 +357,28 @@ Syntax:
   WinActivate µTorrent
   Return
 
+<!s::
 ` & s::  ; Sublime Text sometimes pops up the register window, deal with it at the same time
   ShutSublimePop()
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
   Else Run D:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
+  Return
+
+<!c::
+` & c::
+  IfWinExist ahk_exe chrome.exe
+    WinActivate
+  Else Run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+  Return
+
+<!a::
+` & a::
+  IfWinExist Add
+    WinActivate
+  Else IfWinExist ahk_exe anki.exe
+    WinActivate
+  Else Run D:\Program Files (x86)\Anki\anki.exe
   Return
 
 ` & d::
