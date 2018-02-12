@@ -294,8 +294,8 @@ Background Story:
 ::gche::git checkout{space}
 ::gbra::git branch{space}
 
-
 #Hotstring *0
+::fata::=> ;fat arrow
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
