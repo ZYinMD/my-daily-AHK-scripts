@@ -320,6 +320,8 @@ Background Story:
 ::couldnt::couldn't
 ::wont::won't
 ::whats::what's
+::wheres::where's
+::wherere::where're
 ::theres::there's
 ::therere::there're
 ::thats::that's
