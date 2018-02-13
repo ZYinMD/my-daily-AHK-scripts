@@ -442,17 +442,15 @@ Numpad0 & NumpadSub::
   Return
 
 ` & p::
-Numpad0 & p::
   IfWinExist ahk_exe PotPlayerMini64.exe
     WinActivate
   Return
 
-; ` & f::
-; Numpad0 & f::
-;   IfWinExist ahk_exe firefox.exe
-;     WinActivate ahk_exe firefox.exe
-;   Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
-;   Return
+` & x::
+  IfWinExist ahk_exe firefox.exe
+    WinActivate ahk_exe firefox.exe
+  Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+  Return
 
 Numpad0 & Right::
   IfWinExist uTorrent
