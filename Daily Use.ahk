@@ -295,7 +295,7 @@ Background Story:
 ::gbra::git branch{space}
 
 #Hotstring *0
-::fata::=> ;fat arrow
+:O:fata::=> {{}{}};{left 2} ;fat arrow
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
@@ -446,6 +446,7 @@ Numpad0 & NumpadSub::
     WinActivate
   Return
 
+<!x::
 ` & x::
   IfWinExist ahk_exe firefox.exe
     WinActivate ahk_exe firefox.exe
