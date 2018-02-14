@@ -295,7 +295,7 @@ Background Story:
 ::gbra::git branch{space}
 
 #Hotstring *0
-:O:fata::=> {{}{}};{left 2} ;fat arrow
+:O:fata::=> ;fat arrow
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
@@ -586,7 +586,7 @@ NavOff()
 
 ShutSublimePop() ;this function kills the sublime popup window
   {
-    Sleep 200
+    Sleep 100
     IfWinExist This is an unregistered copy
       WinKill This is an unregistered copy
   }
