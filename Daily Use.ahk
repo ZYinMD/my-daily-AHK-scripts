@@ -586,7 +586,7 @@ NavOff()
 
 ShutSublimePop() ;this function kills the sublime popup window
   {
-    Sleep 100
+    Sleep 200
     IfWinExist This is an unregistered copy
       WinKill This is an unregistered copy
   }
