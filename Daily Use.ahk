@@ -6,8 +6,9 @@ Important Note:
   I've set Git to auto-convert to LF on commit, so remember to change back manually after download.
 
 Style Guide:
-  Use PascalCase, although the language is case insensitF.
+  Use PascalCase, although the language is case insensitive.
 */
+
 
 /*
 Goal:
@@ -21,6 +22,7 @@ Syntax:
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+Sql := false ; This global variable needs to be declared for the auto CAPITAL sql keywords to work
 
 /*
 Goal:
@@ -295,7 +297,7 @@ Background Story:
 ::gbra::git branch{space}
 
 #Hotstring *0
-:O:fata::=> ;fat arrow
+::fata::=> ;fat arrow
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
@@ -602,3 +604,42 @@ ShutSublimePop() ;this function kills the sublime popup window
 +\::|
 
 
+
+/*
+Goal:
+  After typing the hotstring SqlOn, Sql keywords will auto capitalize. Type SqlOff to stop.
+*/
+
+SqlOn()
+{
+  global Sql
+  Sql := true
+}
+
+SqlOff()
+{
+  global Sql
+  Sql := false
+}
+
+::SqlOn:: ;if you want a hotstring to call a function, you must put the function call onto a separate line.
+  SqlOn()
+  Return
+::SqlOff::
+  SqlOff()
+  Return
+#If Sql = true
+::select::SELECT
+::from::FROM
+::where::WHERE
+::order::ORDER
+::group::GROUP
+::by::BY
+::join::JOIN
+::insert::INSERT
+::into::INTO
+::update::UPDATE
+::delete::DELETE
+::having::HAVING
+::in::IN
+#If
