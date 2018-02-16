@@ -642,4 +642,10 @@ SqlOff()
 ::delete::DELETE
 ::having::HAVING
 ::in::IN
+::like::LIKE
+::and::AND
+::or::OR
+::is::IS
+::not::NOT
+::null::NULL
 #If
