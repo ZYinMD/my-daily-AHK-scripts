@@ -281,6 +281,8 @@ Background Story:
 ::xiamian::↓
 ::zuomian::←
 ::youmian::→
+::haoping::👍
+::chaping::👎
 ::cslg::console.log(){left}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
@@ -629,6 +631,8 @@ SqlOff()
   SqlOff()
   Return
 #If Sql = true
+::show::SHOW
+::databases::DATABASES
 ::select::SELECT
 ::from::FROM
 ::where::WHERE
