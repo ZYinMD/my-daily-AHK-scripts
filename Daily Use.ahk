@@ -630,6 +630,10 @@ SqlOff()
 ::SqlOff::
   SqlOff()
   Return
+
+#Hotstring *0 ?0
+
+
 #If Sql = true
 ::show::SHOW
 ::use::USE
