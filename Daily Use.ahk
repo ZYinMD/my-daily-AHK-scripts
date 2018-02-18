@@ -653,4 +653,5 @@ SqlOff()
 ::is::IS
 ::not::NOT
 ::null::NULL
+::as::AS
 #If
