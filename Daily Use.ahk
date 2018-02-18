@@ -660,4 +660,5 @@ SqlOff()
 ::as::AS
 ::limit::LIMIT
 ::offset::OFFSET
+::desc::DESC
 #If
