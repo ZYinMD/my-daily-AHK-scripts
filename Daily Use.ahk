@@ -632,6 +632,7 @@ SqlOff()
   Return
 #If Sql = true
 ::show::SHOW
+::use::USE
 ::databases::DATABASES
 ::select::SELECT
 ::from::FROM
