@@ -654,4 +654,6 @@ SqlOff()
 ::not::NOT
 ::null::NULL
 ::as::AS
+::limit::LIMIT
+::offset::OFFSET
 #If
