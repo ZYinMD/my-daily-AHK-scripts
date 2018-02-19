@@ -334,6 +334,7 @@ Background Story:
 ::heres::here's
 ::todays::today's
 ::theyre::they're
+::theyll::they'll
 ::theyd::they'd
 ::theyve::they've
 ::whos::who's
@@ -637,6 +638,7 @@ SqlOff()
 #If Sql = true
 ::show::SHOW
 ::use::USE
+::database::DATABASE
 ::databases::DATABASES
 ::select::SELECT
 ::from::FROM
@@ -661,4 +663,17 @@ SqlOff()
 ::limit::LIMIT
 ::offset::OFFSET
 ::desc::DESC
+::drop::DROP
+::schema::SCHEMA
+::if::IF
+::exists::EXISTS
+::create::CREATE
+::default::DEFAULT
+::primary::PRIMARY
+::key::KEY
+::values::VALUES
+:*:integer::INTEGER
+:*:varchar::VARCHAR
+
+
 #If
