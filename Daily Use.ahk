@@ -676,6 +676,8 @@ SqlOff()
 :*:integer::INTEGER
 :*:int::INT
 :*:varchar::VARCHAR
+:*:text::TEXT
+
 
 
 #If
