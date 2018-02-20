@@ -640,6 +640,7 @@ SqlOff()
 ::use::USE
 ::database::DATABASE
 ::databases::DATABASES
+::table::TABLE
 ::select::SELECT
 ::from::FROM
 ::where::WHERE
