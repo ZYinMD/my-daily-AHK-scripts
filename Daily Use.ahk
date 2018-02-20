@@ -650,6 +650,7 @@ SqlOff()
 ::insert::INSERT
 ::into::INTO
 ::update::UPDATE
+::set::SET
 ::delete::DELETE
 ::having::HAVING
 ::in::IN
@@ -673,6 +674,7 @@ SqlOff()
 ::key::KEY
 ::values::VALUES
 :*:integer::INTEGER
+:*:int::INT
 :*:varchar::VARCHAR
 
 
