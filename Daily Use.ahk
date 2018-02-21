@@ -678,8 +678,10 @@ SqlOff()
 ::key::KEY
 ::values::VALUES
 ::unique::UNIQUE
+::column::COLUMN
+::columns::COLUMNS
 :*:integer::INTEGER
-:*:int::INT
+:*:int(::INT(
 :*:varchar::VARCHAR
 :*:char::CHAR
 :*:text::TEXT
