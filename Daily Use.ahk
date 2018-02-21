@@ -674,9 +674,11 @@ SqlOff()
 ::primary::PRIMARY
 ::key::KEY
 ::values::VALUES
+::unique::UNIQUE
 :*:integer::INTEGER
 :*:int::INT
 :*:varchar::VARCHAR
+:*:char::CHAR
 :*:text::TEXT
 
 
