@@ -564,12 +564,15 @@ NumpadIns::BackSpace
 #If !GetKeyState("ScrollLock", "T")
     !i::
     !j::
-    !k::
-    NavOn()
-    Return
-    !l::
       NavOn()
+      Return
+    !l::
       Send {Right}
+      NavOn()
+      Return
+    !k::
+      Send {Down}
+      NavOn()
       Return
 #If
 
