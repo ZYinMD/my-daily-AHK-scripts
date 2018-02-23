@@ -112,8 +112,8 @@ Goal:
 `; & z::Send {_}
 `; & x::Send {+}
 `; & g::Send {?}
-`; & c::Send {\}
-`; & v::Send {/}
+`; & c::Send {/}
+`; & v::Send {\}
 
 /*
 Goal:
