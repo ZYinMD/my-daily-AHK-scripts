@@ -374,7 +374,7 @@ Syntax:
   Return
 
 <!c::
-` & c::Send #2;
+` & c::Send #2
 
 <!a::
 ` & a::
