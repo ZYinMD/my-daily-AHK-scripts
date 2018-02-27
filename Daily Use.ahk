@@ -676,11 +676,13 @@ SqlOff()
 ::unique::UNIQUE
 ::column::COLUMN
 ::columns::COLUMNS
+::unsigned::UNSIGNED
 :*:integer::INTEGER
 :*:int(::INT(
 :*:varchar::VARCHAR
 :*:char::CHAR
 :*:text::TEXT
+
 
 
 
