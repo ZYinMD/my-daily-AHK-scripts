@@ -374,7 +374,11 @@ Syntax:
   Return
 
 <!c::
-` & c::Send #2
+` & c::
+  IfWinExist ahk_exe chrome.exe
+    WinActivate
+  Else Run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+  Return
 
 <!a::
 ` & a::
