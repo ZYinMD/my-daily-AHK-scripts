@@ -306,7 +306,6 @@ Background Story:
 ::youll::you'll
 ::youre::you're
 ::youve::you've
-::its::it's
 ::itll::it'll
 ::itd::it'd
 ::isnt::isn't
@@ -400,6 +399,12 @@ Syntax:
     WinActivate Google Drive
   Else Run D:\Google Drive
   Return
+
+` & q::
+  IfWinExist MySQL Workbench
+    WinActivate
+  Return
+
 
 Numpad0 & 1::
   SendInput {Home}{Delete 7}-{Left}+{End}{F8} ;在Anki里面format从Collins贴过来的例句
