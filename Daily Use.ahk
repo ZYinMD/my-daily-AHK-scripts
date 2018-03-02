@@ -1,4 +1,4 @@
-﻿; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
+; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
 /*
 Important Note:
@@ -114,6 +114,14 @@ Goal:
 `; & g::Send {?}
 `; & c::Send {/}
 `; & v::Send {\}
+`; & t::Send {|}
+`; & 1::Send {!}
+`; & 2::Send {@}
+`; & 3::Send {#}
+`; & 4::Send {$}
+
+
+
 
 /*
 Goal:
