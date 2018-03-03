@@ -1,4 +1,4 @@
-; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
+﻿; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
 /*
 Important Note:
@@ -263,6 +263,7 @@ Syntax:
 Background Story:
   The hotstrings are inspired by Chinese
 */
+::its::it's
 #Hotstring ? *
 ::qian::$
 ::qier::$(''){Left}{Left}
