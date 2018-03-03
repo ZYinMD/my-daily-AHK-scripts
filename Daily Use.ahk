@@ -459,8 +459,13 @@ Numpad0 & NumpadSub::
   Else Run D:\Dropbox\Portables\Foobar2000\foobar2000.exe
   Return
 
-` & p::
+` & o::
   IfWinExist ahk_exe PotPlayerMini64.exe
+    WinActivate
+  Return
+
+` & p::
+  IfWinExist ahk_exe Postman.exe
     WinActivate
   Return
 
