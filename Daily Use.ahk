@@ -101,12 +101,12 @@ Goal:
 
 `; & a::Send {{}
 `; & s::Send {}}
-`; & d::Send {[}
-`; & f::Send {]}
+`; & e::Send {[}
+`; & r::Send {]}
 `; & j::Send {(}
 `; & l::Send {)}
-`; & q::Send {NumpadSub}
-`; & w::Send {=}
+`; & d::Send {NumpadSub}
+`; & f::Send {=}
 `; & i::Send {"}
 `; & k::Send {'}
 `; & z::Send {_}
@@ -119,8 +119,7 @@ Goal:
 `; & 2::Send {@}
 `; & 3::Send {#}
 `; & 4::Send {$}
-
-
+`; & q::Send {:}
 
 
 /*
