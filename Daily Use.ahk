@@ -105,8 +105,8 @@ Goal:
 `; & r::Send {]}
 `; & j::Send {(}
 `; & l::Send {)}
-`; & d::Send {NumpadSub}
-`; & f::Send {=}
+`; & d::Send {=}
+`; & f::Send {NumpadSub}
 `; & i::Send {"}
 `; & k::Send {'}
 `; & z::Send {_}
