@@ -279,7 +279,7 @@ Background Story:
 ::gang::/
 ::deng::=
 :R:jiah::+ ;jiahao
-:R:jing::#
+;:R:jing::# ;removed because of conflicts with 技能
 :R:jier::^
 ::duihao::✔
 ::wujiao::★
