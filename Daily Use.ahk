@@ -460,59 +460,59 @@ Numpad0 & NumpadSub::
 <!x::
 ` & x::
   IfWinExist ahk_exe firefox.exe
-    WinActivate ahk_exe firefox.exe
+    WinActivate
   Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
   Return
 
-1 & u::
+2 & u::
   IfWinExist uTorrent
     WinActivate
   Else Run D:\Downloads\uTorrent
   Return
 
-1 & o::
+2 & o::
   IfWinExist Download
     WinActivate
   Else Run D:\Downloads
   Return
 
-1 & a::
+2 & a::
   IfWinExist Archive
     WinActivate
   Else Run D:\Archive
   Return
 
-1 & m::
+2 & m::
   IfWinExist Music
     WinActivate
   Else Run D:\Music
   Return
 
-1 & v::
+2 & v::
   IfWinExist Videos
     WinActivate
   Else Run D:\Videos
   Return
 
-1 & s::
+2 & s::
   IfWinExist Study
     WinActivate
   Else Run D:\Archive\Study
   Return
 
-1 & d::
+2 & d::
   IfWinExist Dropbox
     WinActivate
   Else Run D:\Dropbox
   Return
 
-1 & c::
+2 & c::
   IfWinExist Coding
     WinActivate
   Else Run D:\Dropbox\Coding
   Return
 
-1 & g::
+2 & g::
   IfWinExist Google Drive
     WinActivate
   Else Run D:\Google Drive
