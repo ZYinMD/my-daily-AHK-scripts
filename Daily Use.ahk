@@ -396,18 +396,6 @@ Syntax:
   Else Run D:\Program Files (x86)\Anki\anki.exe
   Return
 
-` & d::
-  IfWinExist Dropbox
-    WinActivate Dropbox
-  Else Run D:\Dropbox
-  Return
-
-` & g::
-  IfWinExist Google Drive
-    WinActivate Google Drive
-  Else Run D:\Google Drive
-  Return
-
 ` & q::
   IfWinExist MySQL Workbench
     WinActivate
@@ -476,10 +464,58 @@ Numpad0 & NumpadSub::
   Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
   Return
 
-Numpad0 & Right::
+1 & u::
   IfWinExist uTorrent
-    WinActivate uTorrent
+    WinActivate
   Else Run D:\Downloads\uTorrent
+  Return
+
+1 & o::
+  IfWinExist Download
+    WinActivate
+  Else Run D:\Downloads
+  Return
+
+1 & a::
+  IfWinExist Archive
+    WinActivate
+  Else Run D:\Archive
+  Return
+
+1 & m::
+  IfWinExist Music
+    WinActivate
+  Else Run D:\Music
+  Return
+
+1 & v::
+  IfWinExist Videos
+    WinActivate
+  Else Run D:\Videos
+  Return
+
+1 & s::
+  IfWinExist Study
+    WinActivate
+  Else Run D:\Archive\Study
+  Return
+
+1 & d::
+  IfWinExist Dropbox
+    WinActivate
+  Else Run D:\Dropbox
+  Return
+
+1 & c::
+  IfWinExist Coding
+    WinActivate
+  Else Run D:\Dropbox\Coding
+  Return
+
+1 & g::
+  IfWinExist Google Drive
+    WinActivate
+  Else Run D:\Google Drive
   Return
 
 Numpad0 & Up::
