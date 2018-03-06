@@ -175,17 +175,16 @@ Goal:
   3 + uiopjkl;m, => 1234567890
 */
 
-3 & u::Send {1}
-3 & i::Send {2}
-3 & o::Send {3}
-3 & p::Send {4}
-3 & j::Send {5}
-3 & k::Send {6}
-3 & l::Send {7}
-3 & `;::Send {8}
-3 & m::Send {9}
-3 & ,::Send {0}
-3::3
+2 & u::Send {1}
+2 & i::Send {2}
+2 & o::Send {3}
+2 & p::Send {4}
+2 & j::Send {5}
+2 & k::Send {6}
+2 & l::Send {7}
+2 & `;::Send {8}
+2 & m::Send {9}
+2 & ,::Send {0}
 
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
@@ -464,55 +463,55 @@ Numpad0 & NumpadSub::
   Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
   Return
 
-2 & u::
+1 & u::
   IfWinExist uTorrent
     WinActivate
   Else Run D:\Downloads\uTorrent
   Return
 
-2 & o::
+1 & o::
   IfWinExist Download
     WinActivate
   Else Run D:\Downloads
   Return
 
-2 & a::
+1 & a::
   IfWinExist Archive
     WinActivate
   Else Run D:\Archive
   Return
 
-2 & m::
+1 & m::
   IfWinExist Music
     WinActivate
   Else Run D:\Music
   Return
 
-2 & v::
+1 & v::
   IfWinExist Videos
     WinActivate
   Else Run D:\Videos
   Return
 
-2 & s::
+1 & s::
   IfWinExist Study
     WinActivate
   Else Run D:\Archive\Study
   Return
 
-2 & d::
+1 & d::
   IfWinExist Dropbox
     WinActivate
   Else Run D:\Dropbox
   Return
 
-2 & c::
+1 & c::
   IfWinExist Coding
     WinActivate
   Else Run D:\Dropbox\Coding
   Return
 
-2 & g::
+1 & g::
   IfWinExist Google Drive
     WinActivate
   Else Run D:\Google Drive
