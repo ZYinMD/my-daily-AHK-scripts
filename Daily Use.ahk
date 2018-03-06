@@ -155,10 +155,10 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 
 /*
 Goal:
-  2 + j or ← => ``delete to line beginning
-  2 + l or → => delete to line end
-  2 + i or ↑ => delete line and move to previous line end
-  2 + k or ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
+  2 + ← => delete to line beginning
+  2 + → => delete to line end
+  2 + ↑ => delete line and move to previous line end
+  2 + ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
 Why 2?
   2 is at a golden location where you can easily reach by extending the ring finger without moving your wrist
 Why not 3?
@@ -168,24 +168,24 @@ Why not 3?
 2 & Right::Send +{End}{BackSpace}
 2 & Up::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentings
 2 & Down::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
-; same as above, but in ijkl
-2 & j::
-  NavOn()
-  Send +{Home}{Delete}
-  Return
-2 & l::
-  NavOn()
-  Send +{End}{BackSpace}
-  Return
-2 & i::
-  NavOn()
-  Send {End}+{Home}+{Home}{BackSpace}{BackSpace}
-  Return
-2 & k::
-  NavOn()
-  Send {End}+{Home}+{Home}{Delete}{Delete}
-  Return
 2::2
+
+/*
+Goal:
+  3 + uiopjkl;m, => 1234567890
+*/
+
+3 & u::Send {1}
+3 & i::Send {2}
+3 & o::Send {3}
+3 & p::Send {4}
+3 & j::Send {5}
+3 & k::Send {6}
+3 & l::Send {7}
+3 & `;::Send {8}
+3 & m::Send {9}
+3 & ,::Send {0}
+3::3
 
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
@@ -740,8 +740,7 @@ SqlOff()
 :*:varchar::VARCHAR
 :*:char::CHAR
 :*:text::TEXT
-
-
-
-
 #If
+
+
+
