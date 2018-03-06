@@ -189,7 +189,6 @@ Goal:
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
 2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
-2 & k::
   NavOn()a
   Send ^+k
   Return
@@ -216,7 +215,7 @@ F5:: ;When developing a web page in Sublime, refresh it in Chrome
 1 & Down::Send ^l
 1 & Left::Send ^+s
 1 & Up::Send ^+a
-1::1 ; restore 1
+
 
 ; When in Sublime, use 3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
 3 & Left::Send ^[
@@ -462,6 +461,8 @@ Numpad0 & NumpadSub::
     WinActivate
   Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
   Return
+
+1::1 ; restore 1
 
 1 & u::
   IfWinExist uTorrent
