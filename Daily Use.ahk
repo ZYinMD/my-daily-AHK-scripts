@@ -187,6 +187,10 @@ Goal:
 2 & ,::Send {0}
 
 
+#IfWinActive ahk_exe ConEmu64.exe ;hotkeys when inside ConEmu:
+!Up::Send cd ..{Enter}
+#IfWinActive
+
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
 2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
   NavOn()a
