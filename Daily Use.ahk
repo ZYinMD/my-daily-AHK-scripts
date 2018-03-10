@@ -324,6 +324,7 @@ Background Story:
 ::hadnt::hadn't
 ::hasnt::hasn't
 ::shouldnt::shouldn't
+::shouldve::should've
 ::wouldnt::wouldn't
 ::wouldve::would've
 ::cant::can't
@@ -740,6 +741,8 @@ SqlOff()
 :*:varchar::VARCHAR
 :*:char::CHAR
 :*:text::TEXT
+:*:count::COUNT
+
 #If
 
 
