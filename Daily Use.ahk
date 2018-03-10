@@ -189,6 +189,7 @@ Goal:
 
 #IfWinActive ahk_exe ConEmu64.exe ;hotkeys when inside ConEmu:
 !Up::Send cd ..{Enter}
+!Left::Send cd -{Enter}
 #IfWinActive
 
 #IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
