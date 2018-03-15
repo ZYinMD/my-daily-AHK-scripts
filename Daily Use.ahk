@@ -300,7 +300,6 @@ Background Story:
 ::cswn::console.warn(){left}
 ::cser::console.error(){left}
 ::cstb::console.table(){left}
-::cstm::console.time(){Enter}{Enter}console.timeEnd(){Up}{Tab}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 ::gsta::git status{enter}
 ::gadd::git add -A{enter}
