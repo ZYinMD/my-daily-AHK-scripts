@@ -460,7 +460,7 @@ Numpad0 & NumpadSub::
   Else Run D:\Dropbox\Portables\Foobar2000\foobar2000.exe
   Return
 
-` & space::Send ^!p ; this is for global pause and play for foobar2000
+` & space::Send ^!+5 ; this is for global pause and play for foobar2000
 
 ` & o::
   IfWinExist ahk_exe PotPlayerMini64.exe
