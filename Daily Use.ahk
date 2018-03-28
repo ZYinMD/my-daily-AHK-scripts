@@ -636,7 +636,10 @@ NumpadIns::BackSpace
 
 #If !GetKeyState("ScrollLock", "T")
     !i::
+      NavOn()
+      Return
     !j::
+      Send {Left}
       NavOn()
       Return
     !l::
