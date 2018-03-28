@@ -308,6 +308,7 @@ Background Story:
 ::gche::git checkout{space}
 ::gbra::git branch{space}
 
+
 #Hotstring *0
 ::fata::=> ;fat arrow
 :C:Im::I'm
@@ -665,6 +666,15 @@ NavOff()
 
 ShutSublimePop() ;this function kills the sublime popup window
   {
+    Sleep 300
+    IfWinExist This is an unregistered copy
+      WinKill
+    Sleep 300
+    IfWinExist This is an unregistered copy
+      WinKill
+    Sleep 300
+    IfWinExist This is an unregistered copy
+      WinKill
     Sleep 300
     IfWinExist This is an unregistered copy
       WinKill
