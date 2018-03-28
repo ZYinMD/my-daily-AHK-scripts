@@ -385,6 +385,14 @@ Syntax:
   ShutSublimePop()
   Return
 
+<!x::
+` & x::
+  IfWinExist ahk_exe firefox.exe
+    WinActivate
+  Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+  ShutSublimePop()
+  Return
+
 <!v::
 ` & v::
   IfWinExist ahk_exe Code.exe
@@ -471,13 +479,6 @@ Numpad0 & NumpadSub::
 ` & p::
   IfWinExist ahk_exe Postman.exe
     WinActivate
-  Return
-
-<!x::
-` & x::
-  IfWinExist ahk_exe firefox.exe
-    WinActivate
-  Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
   Return
 
 1::1 ; restore 1
