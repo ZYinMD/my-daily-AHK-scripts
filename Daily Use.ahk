@@ -360,10 +360,10 @@ Syntax:
   If more than one line of code triggered by a hotkey, add Return in the end.
 */
 ` & t::
-  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   IfWinExist ahk_exe ConEmu64.exe
     WinActivate
   Else Run D:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe
+  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   Return
 
 ` & e::
@@ -379,26 +379,26 @@ Syntax:
 
 <!s::
 ` & s::  ; Sublime Text sometimes pops up the register window, deal with it at the same time
-  ShutSublimePop()
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
   Else Run D:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
+  ShutSublimePop()
   Return
 
 <!v::
 ` & v::
-  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   IfWinExist ahk_exe Code.exe
     WinActivate
   Else Run D:\Dropbox\Portables\VSCode\Code.exe
+  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   Return
 
 <!c::
 ` & c::
-  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   IfWinExist ahk_exe chrome.exe
     WinActivate
   Else Run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   Return
 
 <!a::
