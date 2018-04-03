@@ -269,18 +269,11 @@ Background Story:
 ::its::it's
 #Hotstring ? *
 ::qian::$
-::qier::$(''){Left}{Left}
 ::baif::%
 ::gong::&
 ::tong::&
-::jian::-
-::xian::-
-::xiah::_ ;xiahua
 ::xing::*
 ::cheng::*
-::chuh::/ ;chuhao
-::gang::/
-::deng::=
 :R:jiah::+ ;jiahao
 ;:R:jing::# ;removed because of conflicts with 技能
 :R:jier::^
