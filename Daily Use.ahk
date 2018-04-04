@@ -152,6 +152,7 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 <^;::Send {;}
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
 !,::Send {right},{space}
+!.::Send {right}.
 
 /*
 Goal:
@@ -621,6 +622,7 @@ NumpadIns::BackSpace
   ~c::
   ~v::
   ~,::
+  ~.::
   m::
 
     If !GetKeyState("CapsLock","p")
