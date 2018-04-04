@@ -332,6 +332,7 @@ Background Story:
 ::wheres::where's
 ::wherere::where're
 ::theres::there's
+::thered::there'd
 ::therere::there're
 ::thats::that's
 ::thatll::that'll
