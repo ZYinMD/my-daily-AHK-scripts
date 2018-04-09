@@ -185,7 +185,7 @@ Goal:
 2 & l::Send {7}
 2 & `;::Send {8}
 2 & m::Send {9}
-2 & ,::Send {0}
+2 & space::Send {0}
 
 
 #IfWinActive ahk_exe ConEmu64.exe ;hotkeys when inside ConEmu:
