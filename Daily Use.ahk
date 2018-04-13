@@ -115,6 +115,7 @@ Goal:
 `; & c::Send {/}
 `; & v::Send {\}
 `; & t::Send {|}
+`; & `::Send {~}
 `; & 1::Send {!}
 `; & 2::Send {@}
 `; & 3::Send {#}
@@ -499,7 +500,7 @@ Numpad0 & NumpadSub::
 1 & m::
   IfWinExist Music
     WinActivate
-  Else Run D:\Music
+  Else Run D:\Music\挑歌
   Return
 
 1 & v::
