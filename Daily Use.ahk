@@ -315,6 +315,7 @@ Background Story:
 ::itll::it'll
 ::itd::it'd
 ::isnt::isn't
+::arent::aren't
 ::wasnt::wasn't
 ::werent::weren't
 ::dont::don't
