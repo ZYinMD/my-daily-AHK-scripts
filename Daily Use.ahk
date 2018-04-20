@@ -312,6 +312,7 @@ Background Story:
 ::youll::you'll
 ::youre::you're
 ::youve::you've
+::youd::you'd
 ::itll::it'll
 ::itd::it'd
 ::isnt::isn't
