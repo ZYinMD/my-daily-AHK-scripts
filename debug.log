@@ -5,3 +5,6 @@
 [0319/200137.409:ERROR:process_info.cc(359)] UncheckedAllocate
 [0319/200148.258:ERROR:process_info.cc(359)] UncheckedAllocate
 [0319/200545.390:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/184330.547:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/184333.552:ERROR:process_info.cc(359)] UncheckedAllocate
+[0420/184333.576:ERROR:process_info.cc(359)] UncheckedAllocate

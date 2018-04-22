@@ -347,8 +347,10 @@ Background Story:
 ::theyd::they'd
 ::theyve::they've
 ::whos::who's
-::hows::how's
 ::howd::how'd
+
+#Hotstring *0 ?0
+::hows::how's
 
 
 /*
