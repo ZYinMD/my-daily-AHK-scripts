@@ -290,6 +290,8 @@ Background Story:
 ::youmian::→
 ::haoping::👍
 ::chaping::👎
+::<>::<>{left}
+::<<::</>{left}
 ::cslg::console.log(){left}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
