@@ -292,7 +292,7 @@ Background Story:
 ::haoping::👍
 ::chaping::👎
 ::<>::<>{left}
-::<<::</>{left}
+::<<::</>{left 2}
 ::cslg::console.log(){left}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
