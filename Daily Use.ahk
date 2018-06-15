@@ -423,7 +423,9 @@ Syntax:
   Return
 
 ` & q::
-  IfWinExist MySQL Workbench
+  IfWinExist Studio 3T
+    WinActivate
+  Else IfWinExist MySQL Workbench
     WinActivate
   Return
 
