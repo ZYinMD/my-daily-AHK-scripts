@@ -1,9 +1,11 @@
-﻿; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
+﻿; If you don't know the syntax, read from top to bottom, read every comment. It's easy.
+
+; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
 /*
 Important Note:
   Use Windows line break (CRLF), not Unix (LF). This is Windows!
-  I've set Git to auto-convert to LF on commit, so remember to change back manually after download.
+  If you downloaded this file from github, remember to change back to CRLF manually, because I've set my git to auto-convert to LF.
 
 Style Guide:
   Use PascalCase, although the language is case insensitive.
@@ -15,7 +17,7 @@ Goal:
   Auto Execute Zone
 Syntax:
   On load, the script will run from top down, until a Return or :: or Exit is encountered. So put the things you want to autorun on the top.
-  In fact, the things starting with a # are "directives", which runs no matter where you put them. But traditionally these settings are all on the top.
+  In fact, the things starting with a # are "directives", which runs no matter where you put them. But traditionally some directives are also put on the top .
 */
 #SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
@@ -35,14 +37,42 @@ CapsLock::RControl
 
 /*
 Goal:
-  Use the two keys on the right side of spacebar as PageUp and PageDown. On a standard keyboard this is RAlt and RWin.
-Note:
-  On my laptop, these two keys are RAlt and RWin. I had to use Keytweak for the RCtrl because
+  Similarly, remap the following:
+  / => PgUp
+  Right Shift => PgDn
+  + => ↑
+  [ => ←
+  ] => ↓
+  \ => →
+  - => Home
+  BackSpace => End
 */
-RAlt::PgUp
-RWin::PgDn
-RAlt & a::Send ^{PgUp} ; Don't know why >!a::^PaUp doesn't work
-RAlt & d::Send ^{PgDn}
+/::PgUp
+RShift::PgDn
+=::Up
+[::Left
+]::Down
+\::Right
+-::Home
+BackSpace::End
+; RAlt::PgUp
+; RWin::PgDn
+; RAlt & a::Send ^{PgUp} ; Don't know why >!a::^PaUp doesn't work
+; RAlt & d::Send ^{PgDn}
+
+
+/*
+Goal:
+  Alt + , => right arrow once then comma then space (useful in coding).
+  Alt + . => right arrow once then period (useful in coding).
+Syntax:
+  hotkey::function.
+  Key combination is allowed on the left side which is different from a remap.
+  When writing key combinations on the left side, ^ = Ctrl, ! = Alt, + = Shift, # = Win.
+  Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
+*/
+!,::Send {right},{space}
+!.::Send {right}.
 
 /*
 Goal:
@@ -51,11 +81,7 @@ Goal:
 Why do this:
   To mimic the Sublime Text behavior in other apps, but with LCtrl only, because RCtrl + Enter in other apps needs to be reserved for their own settings.
 Syntax:
-  hotkey::function.
-  Key combination is allowed on the left side which is different from a remap.
-  ^ = Ctrl, ! = Alt, + = Shift, # = Win.
-  In this case, <^ means LCtrl, >^ means RCtrl.
-  Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
+  In the following case, <^ means LCtrl, >^ means RCtrl.
 */
 <^Enter::Send {End}{Enter}
 <^+Enter::Send {Home}{Enter}{Up}
@@ -79,20 +105,6 @@ Explain:
   Since ` has become a modifier key, it no longer works when pressed, because the script is always waiting for the potential second key.
 */
 `::` ; Remap it to itself, the script will know you want a restore, but it only fires on key up.
-
-/*
-Goal:
-  ; => ; at line end
-  LCtrl + ; => ;
-  RCtrl + ; => ; at line end and enter
-*/
-; $;:: ;$ means prevent the hotkey to trigger itself
-;   If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
-;     Send {end};{Enter}
-;   Else
-;     Send {end};
-;   Return
-; <^;::Send `; ;Unless appears right after another character, ; needs ` as an escape char.
 
 /*
 Goal:
@@ -122,28 +134,18 @@ Goal:
 `; & 4::Send {$}
 `; & q::Send {:}
 
-
-/*
-Goal:
-  Use - instead of Backspace to decrease hand movement
-*/
-
-;-::Send {BackSpace}
-
 /*
 Goal:
   Restore semicolon after it has become a modifier key
-  ; => ; at line end
-  LCtrl + ; => ;
-  RCtrl + ; => ; at line end and enter
-  Alt + , => right arrow once then comma then space (useful in coding)
+  Restore it by giving it specific instructions:
+    ; => ; at line end
+    LCtrl + ; => ;
+    RCtrl + ; => ; at line end and enter
 Syntax:
   Unless appears right after another character, ; needs ` as an escape char.
 */
 
-
 $;:: ;$ means prevent the hotkey to trigger itself;
-
   If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
     Send {end};{Enter}
   Else
@@ -152,24 +154,35 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 
 <^;::Send {;}
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
-!,::Send {right},{space}
-!.::Send {right}.
 
 /*
 Goal:
-  2 + ← => delete to line beginning
-  2 + → => delete to line end
+  2 + Home => backspace to line beginning
+  2 + End => delete to line end
+  2 + ← => backspace one word
+  2 + → => delete one word
   2 + ↑ => delete line and move to previous line end
   2 + ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
 Why 2?
   2 is at a golden location where you can easily reach by extending the ring finger without moving your wrist
 Why not 3?
   The middle finger is heavier than the ring finger, harder to lift up when pressed, more strain on the ligament
+Syntax:
+  Since = [ ] \ were remapped, it wouldn't work, so remap them separately.
+  If more than one hotkey combinations are mapped to the same functions, stack them on the left side of ::
 */
-2 & Left::Send +{Home}{Delete}
-2 & Right::Send +{End}{BackSpace}
-2 & Up::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentings
-2 & Down::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
+2 & Home::
+2 & -::Send +{Home}{Delete}
+2 & End::
+2 & BackSpace::Send +{End}{BackSpace}
+2 & Left::
+2 & [:: Send ^{BackSpace}
+2 & Right::
+2 & \:: Send ^{Delete}
+2 & Up::
+2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentings
+2 & Down::
+2 & ]::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentings
 2::2
 
 /*
@@ -599,7 +612,7 @@ NumpadRight::Send ^{Right}
 +NumpadRight::Send +^{Right}
 NumpadIns::BackSpace
 
-'::Enter
+'::BackSpace
 
 #If GetKeyState("ScrollLock", "T")
   i::Up
@@ -697,11 +710,6 @@ ShutSublimePop() ;this function kills the sublime popup window
 <!;::Send {End}
 <!+;::Send +{End}
 <!^;::SendEvent ^{End}
-
-\::AppsKey
-+\::|
-
-
 
 /*
 Goal:
