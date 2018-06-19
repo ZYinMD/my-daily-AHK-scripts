@@ -384,7 +384,9 @@ Background Story:
 Goal:
   In order to use alt-tab as little as possible, the most frequently used apps should each have a shortcut.
 Syntax:
-  If more than one line of code triggered by a hotkey, add Return in the end.
+  If more than one line of code needs to be triggered by a hotkey, add Return in the end.
+  If all parameters of WinActivate are omitted, the Last Found Window will be used.
+
 */
 ` & t::
   IfWinExist ahk_exe ConEmu64.exe
@@ -452,13 +454,18 @@ Syntax:
     WinActivate
   Return
 
+/*
+Goal:
+  Some use inside Anki
+*/
 
 Numpad0 & 1::
   SendInput {Home}{Delete 7}-{Left}+{End}{F8} ;在Anki里面format从Collins贴过来的例句
   Return
-
-Numpad0::Numpad0 ;如果没有这一句, 单按Numpad0会失去任何功能, 因为Numpad0已经变成一个功能键。加了这句之后, Numpad0抬起时会打出0
-
+/*
+Goal:
+  Remap Numpad0 + Numpad keys to be Win+number keys, in order to mimic Windows Hotkey to task bar apps
+*/
 
 Numpad0 & Numpad1::Send #1 ;左手可以操作, 故暂时留空, 以后有需要再用,
 Numpad0 & Numpad2::Send #2
@@ -470,15 +477,12 @@ Numpad0 & Numpad7::Send #7
 Numpad0 & Numpad8::Send #8
 Numpad0 & Numpad9::Send #9
 Numpad0 & NumpadDot::Send #0 ;Win+0也是有功能的,用点来代替0
-
-;另外一个思路：在NumLock熄灭的情况下，把NumIns remap到win，把其他的Num键remap到主键盘的数字键。这样NumLock点亮的情况不受影响。缺点是每次想用小键盘输入数字的时候都要点亮NumLock, 不实用
-
+Numpad0::Numpad0 ;restore Numpad0
 
 Numpad0 & NumpadDiv::
   Send {Volume_Mute}
   Return
 
-; If all parameters of WinActivate are omitted, the Last Found Window will be used.
 Numpad0 & NumpadMult::
   IfWinExist ahk_class SpotifyMainWindow
     WinActivate
@@ -509,6 +513,11 @@ Numpad0 & NumpadSub::
   IfWinExist ahk_exe Postman.exe
     WinActivate
   Return
+
+/*
+Goal:
+  Frequently visited folders also need shortcuts. Use 1 as modifier key for folders.
+*/
 
 1::1 ; restore 1
 
@@ -572,154 +581,6 @@ Numpad0 & Up::
   Else Run D:\
   Return
 
-;============以下是两台电脑不同的行为=================
-
-;把Lenovo笔记本的右Alt和右Ctrl换成PageUp和PageDown: 这个问题经过反复测试, 用了很多写法, 都不理想, 所以改用KeyTweak了
-
-; RCtrl::AppsKey ; 把右Alt换成menu键, 这是给Logiteck键盘用的。因为Laptop的右Alt已经用KeyTweak换成PageUp了, 所以不影响
-
-; >!Backspace::Send {Delete} ;其实这个本来已经设置过!Backspace了, 但为了恢复RAlt的功能, 只能随便再设一个, 这样上一行就会变长fires on key up
-
-;我本来想把Desktop的Logitech键盘的Fn换成右键, 但后来发现这个Fn是非常底层的一个按键, AutoHotkey和KeyTweak都搞不定
-
-;我本来想把联想电脑的Fn和Ctrl互换, 但后来发现这个Fn是非常底层的一个按键, AutoHotkey和KeyTweak都搞不定
-
-; RControl::
-;   IfNotExist, D:\Archive
-;     Send,{PgDn}
-;   Return
-
-; RAlt::
-;   IfNotExist, D:\Archive
-;     Send,{PgUp}
-;   Return
-` & l::
-Numpad0 & l::
-  IfWinExist Slack
-    WinActivate Slack
-  Else IfExist, D:\Archive
-    Run C:\Users\Zhi\AppData\Local\slack\slack.exe
-  Else Run C:\Users\zhiyi\AppData\Local\slack\slack.exe ;这两个电脑的User Directory不同好蛋疼啊, 以后重装的时候一定不能直接用Outlook帐号登录
-  Return
-
-/*
-Goal:
-  Adjust the numpad keys when NumLock is off.
-*/
-NumpadClear::Up
-NumpadEnd::Left
-NumpadPgDn::Right
-NumpadHome::Delete
-NumpadUp::End
-#If !GetKeyState("NumLock", "T")
-NumpadDiv::Home
-NumpadMult::PgUp
-#If
-NumpadPgUp::PgDn
-NumpadLeft::Send ^{Left}
-+NumpadLeft::Send +^{Left}
-NumpadRight::Send ^{Right}
-+NumpadRight::Send +^{Right}
-NumpadIns::BackSpace
-
-'::BackSpace
-
-#If GetKeyState("ScrollLock", "T")
-  i::Up
-  k::Down
-  j::Left
-  l::Right
-  u::Send ^{Left}
-  +u::Send ^+{Left}
-  o::Send ^{Right}
-  +o::Send ^+{Right}
-
-  ~q::
-  ~w::
-  ~e::
-  ~r::
-  ~t::
-  ~y::
-  ~s::
-  ~d::
-  ~f::
-  ~g::
-  ~h::
-  ~b::
-  ~n::
-  ~p::
-  Esc::
-  ~^k::
-  ~a::
-  ~z::
-  ~x::
-  ~c::
-  ~v::
-  ~,::
-  ~.::
-  m::
-
-    If !GetKeyState("CapsLock","p")
-      NavOff()
-    Return
-#If
-
-#If !GetKeyState("ScrollLock", "T")
-    !i::
-      NavOn()
-      Return
-    !j::
-      Send {Left}
-      NavOn()
-      Return
-    !l::
-      Send {Right}
-      NavOn()
-      Return
-    !k::
-      Send {Down}
-      NavOn()
-      Return
-#If
-
-NavOn()
-  {
-    SetScrollLockState On
-    SplashImage, nav.gif,b,,,Nav
-    ; Progress, b CWWhite ZH0 fs88, Navigation On,,Nav, Courier New
-    ; WinSet, Transparent, 100, Nav
-    WinSet, TransColor, White, Nav
-  }
-
-NavOff()
-  {
-    SetScrollLockState Off
-    SplashImage Off
-    ; Progress, Off
-  }
-
-ShutSublimePop() ;this function kills the sublime popup window
-  {
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-  }
-
-<!h::Send {Home}
-<!+h::Send +{Home}
-^<!h::SendEvent ^{Home}
-<!;::Send {End}
-<!+;::Send +{End}
-<!^;::SendEvent ^{End}
 
 /*
 Goal:
@@ -797,8 +658,61 @@ SqlOff()
 :*:char::CHAR
 :*:text::TEXT
 :*:count::COUNT
-
 #If
+
+;============以下是两台电脑不同的行为=================
+
+;把Lenovo笔记本的右Alt和右Ctrl换成PageUp和PageDown: 这个问题经过反复测试, 用了很多写法, 都不理想, 所以改用KeyTweak了
+
+; RCtrl::AppsKey ; 把右Alt换成menu键, 这是给Logiteck键盘用的。因为Laptop的右Alt已经用KeyTweak换成PageUp了, 所以不影响
+
+; >!Backspace::Send {Delete} ;其实这个本来已经设置过!Backspace了, 但为了恢复RAlt的功能, 只能随便再设一个, 这样上一行就会变长fires on key up
+
+;我本来想把Desktop的Logitech键盘的Fn换成右键, 但后来发现这个Fn是非常底层的一个按键, AutoHotkey和KeyTweak都搞不定
+
+;我本来想把联想电脑的Fn和Ctrl互换, 但后来发现这个Fn是非常底层的一个按键, AutoHotkey和KeyTweak都搞不定
+
+; RControl::
+;   IfNotExist, D:\Archive
+;     Send,{PgDn}
+;   Return
+
+; RAlt::
+;   IfNotExist, D:\Archive
+;     Send,{PgUp}
+;   Return
+
+` & l::
+Numpad0 & l::
+  IfWinExist Slack
+    WinActivate Slack
+  Else IfExist, D:\Archive
+    Run C:\Users\Zhi\AppData\Local\slack\slack.exe
+  Else Run C:\Users\zhiyi\AppData\Local\slack\slack.exe ;这两个电脑的User Directory不同好蛋疼啊, 以后重装的时候一定不能直接用Outlook帐号登录
+  Return
+
+ShutSublimePop() ;this function kills the sublime popup window
+  {
+    Sleep 300
+    IfWinExist This is an unregistered copy
+      WinKill
+    Sleep 300
+    IfWinExist This is an unregistered copy
+      WinKill
+    Sleep 300
+    IfWinExist This is an unregistered copy
+      WinKill
+    Sleep 300
+    IfWinExist This is an unregistered copy
+      WinKill
+  }
+
+<!h::Send {Home}
+<!+h::Send +{Home}
+^<!h::SendEvent ^{Home}
+<!;::Send {End}
+<!+;::Send +{End}
+<!^;::SendEvent ^{End}
 
 
 
