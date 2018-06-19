@@ -29,12 +29,13 @@ Sql := false ; This global variable needs to be declared for the auto CAPITAL sq
 /*
 Goal:
   Remap CapsLock to RCtrl. (Has to be RCtrl, because LCtrl will have different jobs.)
+  Remap ' to BackSpace
 Syntax:
   key::targetKey
   This means a remap, effect holds even when in combinations with other keys.
 */
 CapsLock::RControl
-
+'::BackSpace
 /*
 Goal:
   Similarly, remap the following:
@@ -386,7 +387,6 @@ Goal:
 Syntax:
   If more than one line of code needs to be triggered by a hotkey, add Return in the end.
   If all parameters of WinActivate are omitted, the Last Found Window will be used.
-
 */
 ` & t::
   IfWinExist ahk_exe ConEmu64.exe
@@ -467,16 +467,16 @@ Goal:
   Remap Numpad0 + Numpad keys to be Win+number keys, in order to mimic Windows Hotkey to task bar apps
 */
 
-Numpad0 & Numpad1::Send #1 ;左手可以操作, 故暂时留空, 以后有需要再用,
+Numpad0 & Numpad1::Send #1
 Numpad0 & Numpad2::Send #2
 Numpad0 & Numpad3::Send #3
-Numpad0 & Numpad4::Send #4 ;以下都是Mirror Win+数字键
+Numpad0 & Numpad4::Send #4
 Numpad0 & Numpad5::Send #5
 Numpad0 & Numpad6::Send #6
 Numpad0 & Numpad7::Send #7
 Numpad0 & Numpad8::Send #8
 Numpad0 & Numpad9::Send #9
-Numpad0 & NumpadDot::Send #0 ;Win+0也是有功能的,用点来代替0
+Numpad0 & NumpadDot::Send #0
 Numpad0::Numpad0 ;restore Numpad0
 
 Numpad0 & NumpadDiv::
@@ -581,7 +581,6 @@ Numpad0 & Up::
   Else Run D:\
   Return
 
-
 /*
 Goal:
   After typing the hotstring SqlOn, Sql keywords will auto capitalize. Type SqlOff to stop.
@@ -607,7 +606,6 @@ SqlOff()
   Return
 
 #Hotstring *0 ?0
-
 
 #If Sql = true
 ::show::SHOW
