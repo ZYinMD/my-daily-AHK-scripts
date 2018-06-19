@@ -201,62 +201,72 @@ Goal:
 2 & m::Send {9}
 2 & space::Send {0}
 
+/*
+Goal:
+  Some hotkeys inside ConEmu
+Syntax:
+  Wrap hotkeys inside #IfWinActive so it's effective only when certain window is active
+*/
 
-#IfWinActive ahk_exe ConEmu64.exe ;hotkeys when inside ConEmu:
+#IfWinActive ahk_exe ConEmu64.exe
 !Up::Send cd ..{Enter}
 !Left::Send cd -{Enter}
 #IfWinActive
 
-#IfWinActive ahk_exe sublime_text.exe ;some hotkeys when inside sublime text:
+/*
+Goal:
+  Some hotkeys when inside sublime text:
+*/
+
+#IfWinActive ahk_exe sublime_text.exe
+2 & ]::
 2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
-  NavOn()a
-  Send ^+k
-  Return
 
 ^`:: ;toggle the sidebar
   PixelGetColor, color, 120, 20 ;detect this spot to tell if sidebar is open
   If color != 0xACCCD8 ;if the sidebar is currently closed, open it first
     Send ^k^b
   Send ^0 ;^0 is the default hotkey to focus on the sidebar
-  NavOn() ;this is naturally needed after focus
-  Return
-
-F5:: ;When developing a web page in Sublime, refresh it in Chrome
-  Send #{2}
-  Sleep 500
-  Send ^{1} ;habit: consistently put the page on the leftmost position
-  Sleep 500
-  Send ^{r}
-  ShutSublimePop() ;If the register window pops up, close it
   Return
 
 ; When in Sublime, use 1 as a modifier key to help selection
-1 & Right::Send ^d
-1 & Down::Send ^l
-1 & Left::Send ^+s
-1 & Up::Send ^+a
-
+1 & Right::
+1 & \::Send ^d
+1 & Down::
+1 & ]::Send ^l
+1 & Left::
+1 & [::Send ^+s
+1 & Up::
+1 & =::Send ^+a
 
 ; When in Sublime, use 3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
-3 & Left::Send ^[
-3 & Right::Send ^]
-3 & Up::Send ^+{Up}
-3 & Down::Send ^+{Down}
+3 & Left::
+3 & [::Send ^[
+3 & Right::
+3 & \::Send ^]
+3 & Up::
+3 & =::Send ^+{Up}
+3 & Down::
+3 & ]::Send ^+{Down}
 3::3 ; restore 3
 
 ; When in Sublime, use ` as modifier key to collapse and toggle comment and switch projects
-` & Left::Send ^+[
-` & Right::Send ^+]
-` & BackSpace::Send ^+/
+` & Left::
+` & [::Send ^+[
+` & Right::
+` & \::Send ^+]
+` & BackSpace::
+` & '::Send ^+/
 ` & Delete::Send ^/
 ` & Up::
-` & Down::Send !{p}{s}
+` & Down::
+` & =::
+` & ]::Send !{p}{s}
 
 ; When Ctrl and Tab / PgUp / PgDn is pressed in Sublime, which is often when auto save happens, close the potential popup
 ~Tab::
 ~PgUp::
 ~PgDn::ShutSublimePop()
-
 #IfWinActive
 
 /*
@@ -281,7 +291,7 @@ Syntax:
 Background Story:
   The hotstrings are inspired by Chinese
 */
-::its::it's
+; ::its::it's
 #Hotstring ? *
 ::qian::$
 ::baif::%
@@ -323,51 +333,51 @@ Background Story:
 
 #Hotstring *0
 ::fata::=> ;fat arrow
-:C:Im::I'm
-:C:Ill::I'll
-:C:Ive::I've
-::youll::you'll
-::youre::you're
-::youve::you've
-::youd::you'd
-::itll::it'll
-::itd::it'd
-::isnt::isn't
-::arent::aren't
-::wasnt::wasn't
-::werent::weren't
-::dont::don't
-::doesnt::doesn't
-::didnt::didn't
-::havent::haven't
-::hadnt::hadn't
-::hasnt::hasn't
-::shouldnt::shouldn't
-::shouldve::should've
-::wouldnt::wouldn't
-::wouldve::would've
-::cant::can't
-::couldnt::couldn't
-::wont::won't
-::whats::what's
-::wheres::where's
-::wherere::where're
-::theres::there's
-::thered::there'd
-::therere::there're
-::thats::that's
-::thatll::that'll
-::heres::here's
-::todays::today's
-::theyre::they're
-::theyll::they'll
-::theyd::they'd
-::theyve::they've
-::whos::who's
-::howd::how'd
+; :C:Im::I'm
+; :C:Ill::I'll
+; :C:Ive::I've
+; ::youll::you'll
+; ::youre::you're
+; ::youve::you've
+; ::youd::you'd
+; ::itll::it'll
+; ::itd::it'd
+; ::isnt::isn't
+; ::arent::aren't
+; ::wasnt::wasn't
+; ::werent::weren't
+; ::dont::don't
+; ::doesnt::doesn't
+; ::didnt::didn't
+; ::havent::haven't
+; ::hadnt::hadn't
+; ::hasnt::hasn't
+; ::shouldnt::shouldn't
+; ::shouldve::should've
+; ::wouldnt::wouldn't
+; ::wouldve::would've
+; ::cant::can't
+; ::couldnt::couldn't
+; ::wont::won't
+; ::whats::what's
+; ::wheres::where's
+; ::wherere::where're
+; ::theres::there's
+; ::thered::there'd
+; ::therere::there're
+; ::thats::that's
+; ::thatll::that'll
+; ::heres::here's
+; ::todays::today's
+; ::theyre::they're
+; ::theyll::they'll
+; ::theyd::they'd
+; ::theyve::they've
+; ::whos::who's
+; ::howd::how'd
 
 #Hotstring *0 ?0
-::hows::how's
+; ::hows::how's
 
 
 /*
