@@ -29,38 +29,37 @@ Sql := false ; This global variable needs to be declared for the auto CAPITAL sq
 /*
 Goal:
   Remap CapsLock to RCtrl. (Has to be RCtrl, because LCtrl will have different jobs.)
-  Remap ' to BackSpace
 Syntax:
   key::targetKey
   This means a remap, effect holds even when in combinations with other keys.
 */
 CapsLock::RControl
-'::BackSpace
 /*
 Goal:
   Similarly, remap the following:
-  / => PgUp
-  Right Shift => PgDn
+  - => Delete
   + => ↑
   [ => ←
   ] => ↓
   \ => →
-  - => Home
-  BackSpace => End
+  ' => Home
+  Enter => End
+  RShift => Enter
+  / => AppsKey
 */
-/::PgUp
-RShift::PgDn
+-::Delete
 =::Up
 [::Left
 ]::Down
 \::Right
--::Home
-BackSpace::End
+'::Home
+Enter::End
+RShift::Enter
+/::AppsKey
 ; RAlt::PgUp
 ; RWin::PgDn
 ; RAlt & a::Send ^{PgUp} ; Don't know why >!a::^PaUp doesn't work
 ; RAlt & d::Send ^{PgDn}
-
 
 /*
 Goal:
@@ -173,9 +172,9 @@ Syntax:
   If more than one hotkey combinations are mapped to the same functions, stack them on the left side of ::
 */
 2 & Home::
-2 & -::Send +{Home}{Delete}
+2 & '::Send +{Home}{Delete}
 2 & End::
-2 & BackSpace::Send +{End}{BackSpace}
+2 & Enter::Send +{End}{BackSpace}
 2 & Left::
 2 & [:: Send ^{BackSpace}
 2 & Right::
@@ -454,6 +453,18 @@ Syntax:
     WinActivate
   Return
 
+` & o::
+  IfWinExist ahk_exe PotPlayerMini64.exe
+    WinActivate
+  Return
+
+` & p::
+  IfWinExist ahk_exe Postman.exe
+    WinActivate
+  Return
+
+` & space::Send ^!+5 ; this is for global pause and play for foobar2000
+
 /*
 Goal:
   Some use inside Anki
@@ -502,17 +513,6 @@ Numpad0 & NumpadSub::
   Else Run D:\Dropbox\Portables\Foobar2000\foobar2000.exe
   Return
 
-` & space::Send ^!+5 ; this is for global pause and play for foobar2000
-
-` & o::
-  IfWinExist ahk_exe PotPlayerMini64.exe
-    WinActivate
-  Return
-
-` & p::
-  IfWinExist ahk_exe Postman.exe
-    WinActivate
-  Return
 
 /*
 Goal:
@@ -704,13 +704,3 @@ ShutSublimePop() ;this function kills the sublime popup window
     IfWinExist This is an unregistered copy
       WinKill
   }
-
-<!h::Send {Home}
-<!+h::Send +{Home}
-^<!h::SendEvent ^{Home}
-<!;::Send {End}
-<!+;::Send +{End}
-<!^;::SendEvent ^{End}
-
-
-
