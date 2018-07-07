@@ -37,29 +37,31 @@ CapsLock::RControl
 /*
 Goal:
   Similarly, remap the following:
-  - => Delete
   + => ↑
   [ => ←
   ] => ↓
   \ => →
-  ' => Home
-  Enter => End
-  RShift => Enter
+  - => Home
+  BackSpace => End
+  ' => Enter
+  Enter => BackSpace
+  RShift => Delete
+  RAlt => PgUp
+  RCtrl => PgDn
   / => AppsKey
 */
--::Delete
 =::Up
 [::Left
 ]::Down
 \::Right
-'::Home
-Enter::End
-RShift::Enter
+-::Home
+BackSpace::End
+'::Enter
+Enter::BackSpace
+RShift::Delete
+RAlt::PgUp
+RCtrl::PgDn
 /::AppsKey
-; RAlt::PgUp
-; RWin::PgDn
-; RAlt & a::Send ^{PgUp} ; Don't know why >!a::^PaUp doesn't work
-; RAlt & d::Send ^{PgDn}
 
 /*
 Goal:
@@ -172,9 +174,9 @@ Syntax:
   If more than one hotkey combinations are mapped to the same functions, stack them on the left side of ::
 */
 2 & Home::
-2 & '::Send +{Home}{Delete}
+2 & -::Send +{Home}{Delete}
 2 & End::
-2 & Enter::Send +{End}{BackSpace}
+2 & BackSpace::Send +{End}{BackSpace}
 2 & Left::
 2 & [:: Send ^{BackSpace}
 2 & Right::
@@ -187,7 +189,7 @@ Syntax:
 
 /*
 Goal:
-  3 + uiopjkl;m, => 1234567890
+  2 + uiopjkl;m, => 1234567890
 */
 
 2 & u::Send {1}
