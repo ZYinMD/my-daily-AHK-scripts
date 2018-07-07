@@ -41,11 +41,10 @@ Goal:
   [ => ←
   ] => ↓
   \ => →
-  - => Home
-  BackSpace => End
+  - => Delete
   ' => Enter
-  Enter => BackSpace
-  RShift => Delete
+  Enter => Home
+  RShift => End
   RAlt => PgUp
   RCtrl => PgDn
   / => AppsKey
@@ -54,11 +53,10 @@ Goal:
 [::Left
 ]::Down
 \::Right
--::Home
-BackSpace::End
+-::Delete
 '::Enter
-Enter::BackSpace
-RShift::Delete
+Enter::Home
+RShift::End
 RAlt::PgUp
 RCtrl::PgDn
 /::AppsKey
@@ -159,28 +157,18 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 
 /*
 Goal:
-  2 + Home => backspace to line beginning
-  2 + End => delete to line end
-  2 + ← => backspace one word
-  2 + → => delete one word
+  2 + ← => backspace to line beginning
+  2 + → => delete to line end
   2 + ↑ => delete line and move to previous line end
   2 + ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
-Why 2?
-  2 is at a golden location where you can easily reach by extending the ring finger without moving your wrist
-Why not 3?
-  The middle finger is heavier than the ring finger, harder to lift up when pressed, more strain on the ligament
 Syntax:
   Since = [ ] \ were remapped, it wouldn't work, so remap them separately.
   If more than one hotkey combinations are mapped to the same functions, stack them on the left side of ::
 */
-2 & Home::
-2 & -::Send +{Home}{Delete}
-2 & End::
-2 & BackSpace::Send +{End}{BackSpace}
 2 & Left::
-2 & [:: Send ^{BackSpace}
+2 & [::Send +{Home}{Delete}
 2 & Right::
-2 & \:: Send ^{Delete}
+2 & \::Send +{End}{BackSpace}
 2 & Up::
 2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentings
 2 & Down::
@@ -259,6 +247,7 @@ Goal:
 ` & \::Send ^+]
 ` & BackSpace::
 ` & '::Send ^+/
+` & -::
 ` & Delete::Send ^/
 ` & Up::
 ` & Down::
@@ -660,7 +649,7 @@ SqlOff()
 :*:count::COUNT
 #If
 
-;============以下是两台电脑不同的行为=================
+  ;============以下是两台电脑不同的行为=================
 
 ;把Lenovo笔记本的右Alt和右Ctrl换成PageUp和PageDown: 这个问题经过反复测试, 用了很多写法, 都不理想, 所以改用KeyTweak了
 
