@@ -199,7 +199,9 @@ Syntax:
 */
 
 #IfWinActive ahk_exe ConEmu64.exe
+!=::
 !Up::Send cd ..{Enter}
+![::
 !Left::Send cd -{Enter}
 #IfWinActive
 
@@ -303,6 +305,7 @@ Background Story:
 ::xiamian::↓
 ::zuomian::←
 ::youmian::→
+::huiche::⏎
 ::haoping::👍
 ::chaping::👎
 ::<>::<>{left}
