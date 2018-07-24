@@ -310,6 +310,7 @@ Background Story:
 ::chaping::👎
 ::'|::'t
 ::']::'r
+::'}::'s
 ::<>::<>{left}
 ::<<::</>{left 2}
 ::cslg::console.log(){left}
@@ -325,7 +326,6 @@ Background Story:
 ::gfet::git fetch{enter}
 ::gche::git checkout{space}
 ::gbra::git branch{space}
-
 
 #Hotstring *0
 ::fata::=> ;fat arrow
