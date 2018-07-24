@@ -308,6 +308,8 @@ Background Story:
 ::huiche::⏎
 ::haoping::👍
 ::chaping::👎
+::'|::'t
+::']::'r
 ::<>::<>{left}
 ::<<::</>{left 2}
 ::cslg::console.log(){left}
