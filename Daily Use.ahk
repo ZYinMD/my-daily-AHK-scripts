@@ -113,7 +113,7 @@ Goal:
 #InputLevel 1
 
 `; & a::Send {{}
-`; & s::SendInput {}}
+`; & s::Send {}}
 `; & e::Send {[}
 `; & r::Send {]}
 `; & j::Send {(}
@@ -121,7 +121,7 @@ Goal:
 `; & d::Send {=}
 `; & f::Send {NumpadSub}
 `; & i::Send {"}
-`; & k::SendInput {'}
+`; & k::Send {'}
 `; & z::Send {_}
 `; & x::Send {+}
 `; & g::Send {?}
