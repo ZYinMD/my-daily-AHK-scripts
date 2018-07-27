@@ -110,9 +110,10 @@ Explain:
 Goal:
   Use ; as a modifier to type symbols
 */
+#InputLevel 1
 
 `; & a::Send {{}
-`; & s::Send {}}
+`; & s::SendInput {}}
 `; & e::Send {[}
 `; & r::Send {]}
 `; & j::Send {(}
@@ -120,12 +121,12 @@ Goal:
 `; & d::Send {=}
 `; & f::Send {NumpadSub}
 `; & i::Send {"}
-`; & k::Send {'}
+`; & k::SendInput {'}
 `; & z::Send {_}
 `; & x::Send {+}
 `; & g::Send {?}
 `; & c::Send {/}
-`; & v::Send {\}
+`; & v::Send \
 `; & t::Send {|}
 `; & `::Send {~}
 `; & 1::Send {!}
@@ -133,6 +134,7 @@ Goal:
 `; & 3::Send {#}
 `; & 4::Send {$}
 `; & q::Send {:}
+#InputLevel 0
 
 /*
 Goal:
@@ -292,8 +294,6 @@ Background Story:
 ::tong::&
 ::xing::*
 ::cheng::*
-:R:jiah::+ ;jiahao
-;:R:jing::# ;removed because of conflicts with 技能
 :R:jier::^
 ::duihao::✔
 ::cuohao::⨯
@@ -308,9 +308,9 @@ Background Story:
 ::huiche::⏎
 ::haoping::👍
 ::chaping::👎
-::'|::'t
-::']::'r
-::'}::'s
+; ::'|::'t ; It's very tricky to make these three work. Gave up.
+; ::']::'r
+; ::'}::'s
 ::<>::<>{left}
 ::<<::</>{left 2}
 ::cslg::console.log(){left}
@@ -329,51 +329,51 @@ Background Story:
 
 #Hotstring *0
 ::fata::=> ;fat arrow
-; :C:Im::I'm
-; :C:Ill::I'll
-; :C:Ive::I've
-; ::youll::you'll
-; ::youre::you're
-; ::youve::you've
-; ::youd::you'd
-; ::itll::it'll
-; ::itd::it'd
-; ::isnt::isn't
-; ::arent::aren't
-; ::wasnt::wasn't
-; ::werent::weren't
-; ::dont::don't
-; ::doesnt::doesn't
-; ::didnt::didn't
-; ::havent::haven't
-; ::hadnt::hadn't
-; ::hasnt::hasn't
-; ::shouldnt::shouldn't
-; ::shouldve::should've
-; ::wouldnt::wouldn't
-; ::wouldve::would've
-; ::cant::can't
-; ::couldnt::couldn't
-; ::wont::won't
-; ::whats::what's
-; ::wheres::where's
-; ::wherere::where're
-; ::theres::there's
-; ::thered::there'd
-; ::therere::there're
-; ::thats::that's
-; ::thatll::that'll
-; ::heres::here's
-; ::todays::today's
-; ::theyre::they're
-; ::theyll::they'll
-; ::theyd::they'd
-; ::theyve::they've
-; ::whos::who's
-; ::howd::how'd
+:C:Im::I'm
+:C:Ill::I'll
+:C:Ive::I've
+::youll::you'll
+::youre::you're
+::youve::you've
+::youd::you'd
+::itll::it'll
+::itd::it'd
+::isnt::isn't
+::arent::aren't
+::wasnt::wasn't
+::werent::weren't
+::dont::don't
+::doesnt::doesn't
+::didnt::didn't
+::havent::haven't
+::hadnt::hadn't
+::hasnt::hasn't
+::shouldnt::shouldn't
+::shouldve::should've
+::wouldnt::wouldn't
+::wouldve::would've
+::cant::can't
+::couldnt::couldn't
+::wont::won't
+::whats::what's
+::wheres::where's
+::wherere::where're
+::theres::there's
+::thered::there'd
+::therere::there're
+::thats::that's
+::thatll::that'll
+::heres::here's
+::todays::today's
+::theyre::they're
+::theyll::they'll
+::theyd::they'd
+::theyve::they've
+::whos::who's
+::howd::how'd
 
 #Hotstring *0 ?0
-; ::hows::how's
+::hows::how's
 
 
 /*
