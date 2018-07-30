@@ -356,6 +356,7 @@ Background Story:
 ::couldnt::couldn't
 ::wont::won't
 ::whats::what's
+::whatre::what're
 ::wheres::where's
 ::wherere::where're
 ::theres::there's
@@ -371,6 +372,7 @@ Background Story:
 ::theyve::they've
 ::whos::who's
 ::howd::how'd
+::shes::she's
 
 #Hotstring *0 ?0
 ::hows::how's
@@ -434,7 +436,6 @@ Syntax:
   Return
 
 <!a::
-` & a::
   IfWinExist Add
     WinActivate
   Else IfWinExist ahk_exe anki.exe
@@ -700,3 +701,13 @@ ShutSublimePop() ;this function kills the sublime popup window
     IfWinExist This is an unregistered copy
       WinKill
   }
+
+; temp: for changing article title in Evernote (needed when archiving 说说咱家娃)
+` & LAlt::
+  MouseGetPos, x, y
+  MouseMove, 1145, 270
+  Send {Click 3}^c{F2}
+  Sleep 200
+  Send ^v
+  MouseMove, x, y
+  Return
