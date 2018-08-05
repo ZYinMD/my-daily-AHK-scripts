@@ -337,6 +337,7 @@ Background Story:
 ::youve::you've
 ::youd::you'd
 ::itll::it'll
+::its::it's
 ::itd::it'd
 ::isnt::isn't
 ::arent::aren't
