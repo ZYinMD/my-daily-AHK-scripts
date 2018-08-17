@@ -329,6 +329,7 @@ Background Story:
 
 #Hotstring *0
 ::fata::=> ;fat arrow
+/*
 :C:Im::I'm
 :C:Ill::I'll
 :C:Ive::I've
@@ -374,7 +375,7 @@ Background Story:
 ::whos::who's
 ::howd::how'd
 ::shes::she's
-
+*/
 #Hotstring *0 ?0
 ::hows::how's
 
