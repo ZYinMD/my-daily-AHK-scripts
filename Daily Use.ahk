@@ -713,3 +713,9 @@ ShutSublimePop() ;this function kills the sublime popup window
   Send ^v
   MouseMove, x, y
   Return
+
+; temp but may be useful in the future when recording videos:
+Numpad0 & Left::
+  MouseGetPos, x, y
+Numpad0 & Right::
+  MouseMove, x, y
