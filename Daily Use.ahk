@@ -72,6 +72,7 @@ Syntax:
   Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
 */
 !,::Send {right},{space}
+!;::Send {right}:{space}
 !.::Send {right}.
 
 /*
@@ -258,10 +259,6 @@ Goal:
 ` & =::
 ` & ]::Send !{p}{s}
 
-; When Ctrl and Tab / PgUp / PgDn is pressed in Sublime, which is often when auto save happens, close the potential popup
-~Tab::
-~PgUp::
-~PgDn::ShutSublimePop()
 #IfWinActive
 
 /*
@@ -311,8 +308,8 @@ Background Story:
 ; ::'|::'t ; It's very tricky to make these three work. Gave up.
 ; ::']::'r
 ; ::'}::'s
-::<>::<>{left}
-::<<::</>{left 2}
+::<<::<>{left}
+::<>::</>{left 2}
 ::cslg::console.log(){left}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
@@ -391,7 +388,6 @@ Syntax:
   IfWinExist ahk_exe ConEmu64.exe
     WinActivate
   Else Run D:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe
-  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   Return
 
 ` & e::
@@ -406,11 +402,10 @@ Syntax:
   Return
 
 <!s::
-` & s::  ; Sublime Text sometimes pops up the register window, deal with it at the same time
+` & s::
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
   Else Run D:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
-  ShutSublimePop()
   Return
 
 <!x::
@@ -418,7 +413,6 @@ Syntax:
   IfWinExist ahk_exe firefox.exe
     WinActivate
   Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
-  ShutSublimePop()
   Return
 
 <!v::
@@ -426,7 +420,6 @@ Syntax:
   IfWinExist ahk_exe Code.exe
     WinActivate
   Else Run D:\Dropbox\Portables\VSCode\Code.exe
-  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   Return
 
 <!c::
@@ -434,7 +427,6 @@ Syntax:
   IfWinExist ahk_exe chrome.exe
     WinActivate
   Else Run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
-  ShutSublimePop() ; Sublime Text sometimes pops up the register window, deal with it at the same time
   Return
 
 <!a::
@@ -687,22 +679,6 @@ Numpad0 & l::
     Run C:\Users\Zhi\AppData\Local\slack\slack.exe
   Else Run C:\Users\zhiyi\AppData\Local\slack\slack.exe ;这两个电脑的User Directory不同好蛋疼啊, 以后重装的时候一定不能直接用Outlook帐号登录
   Return
-
-ShutSublimePop() ;this function kills the sublime popup window
-  {
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-    Sleep 300
-    IfWinExist This is an unregistered copy
-      WinKill
-  }
 
 ; temp: for changing article title in Evernote (needed when archiving 说说咱家娃)
 ` & LAlt::
