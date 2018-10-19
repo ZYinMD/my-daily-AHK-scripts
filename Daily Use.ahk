@@ -1,4 +1,4 @@
-﻿; If you don't know the syntax, read from top to bottom, read every comment. It's easy.
+; If you don't know the syntax, read from top to bottom, read every comment. It's easy.
 
 ; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
@@ -387,7 +387,7 @@ Syntax:
 ` & t::
   IfWinExist ahk_exe ConEmu64.exe
     WinActivate
-  Else Run D:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe
+  Else Run C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe
   Return
 
 ` & e::
@@ -405,7 +405,7 @@ Syntax:
 ` & s::
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
-  Else Run D:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
+  Else Run C:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
   Return
 
 <!x::
@@ -419,7 +419,7 @@ Syntax:
 ` & v::
   IfWinExist ahk_exe Code.exe
     WinActivate
-  Else Run D:\Dropbox\Portables\VSCode\Code.exe
+  Else Run C:\Dropbox\Portables\VSCode\Code.exe
   Return
 
 <!c::
@@ -434,7 +434,7 @@ Syntax:
     WinActivate
   Else IfWinExist ahk_exe anki.exe
     WinActivate
-  Else Run D:\Program Files (x86)\Anki\anki.exe
+  Else Run C:\Program Files (x86)\Anki\anki.exe
   Return
 
 ` & q::
@@ -494,14 +494,14 @@ Numpad0 & NumpadMult::
 Numpad0 & NumpadAdd::
   IfWinExist ahk_class kwmusicmaindlg
     WinActivate
-  Else Run D:\Dropbox\Portables\KwMusic\kuwo\kuwomusic\8.5.2.0_UG6\bin\KwMusic.exe
+  Else Run C:\Dropbox\Portables\KwMusic\kuwo\kuwomusic\8.5.2.0_UG6\bin\KwMusic.exe
   Return
 
 ` & f::
 Numpad0 & NumpadSub::
   IfWinExist ahk_exe foobar2000.exe
     WinActivate
-  Else Run D:\Dropbox\Portables\Foobar2000\foobar2000.exe
+  Else Run C:\Dropbox\Portables\Foobar2000\foobar2000.exe
   Return
 
 
@@ -551,19 +551,19 @@ Goal:
 1 & d::
   IfWinExist Dropbox
     WinActivate
-  Else Run D:\Dropbox
+  Else Run C:\Dropbox
   Return
 
 1 & c::
   IfWinExist Coding
     WinActivate
-  Else Run D:\Dropbox\Coding
+  Else Run C:\Dropbox\Coding
   Return
 
 1 & g::
   IfWinExist Google Drive
     WinActivate
-  Else Run D:\Google Drive
+  Else Run C:\Google Drive
   Return
 
 Numpad0 & Up::
