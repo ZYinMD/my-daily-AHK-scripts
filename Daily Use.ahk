@@ -1,4 +1,4 @@
-; If you don't know the syntax, read from top to bottom, read every comment. It's easy.
+﻿; If you don't know the syntax, read from top to bottom, read every comment. It's easy.
 
 ; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
