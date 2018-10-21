@@ -111,31 +111,27 @@ Explain:
 Goal:
   Use ; as a modifier to type symbols
 */
-#InputLevel 1
-
-`; & a::Send {{}
+`; & a::{
 `; & s::Send {}}
-`; & e::Send {[}
-`; & r::Send {]}
-`; & j::Send {(}
-`; & l::Send {)}
-`; & d::Send {=}
+`; & e::[
+`; & r::]
+`; & j::(
+`; & l::)
+`; & d::=
 `; & f::Send {NumpadSub}
-`; & i::Send {"}
-`; & k::Send {'}
-`; & z::Send {_}
-`; & x::Send {+}
-`; & g::Send {?}
-`; & c::Send {/}
-`; & v::Send \
-`; & t::Send {|}
-`; & `::Send {~}
-`; & 1::Send {!}
-`; & 2::Send {@}
-`; & 3::Send {#}
-`; & 4::Send {$}
-`; & q::Send {:}
-#InputLevel 0
+`; & i::"
+`; & k::'
+`; & z::_
+`; & x::+
+`; & g::?
+`; & c::/
+`; & v::\
+`; & t::|
+`; & `::~
+`; & 1::!
+`; & 2::@
+`; & 3::#
+`; & 4::$
 
 /*
 Goal:
@@ -154,7 +150,6 @@ $;:: ;$ means prevent the hotkey to trigger itself;
   Else
     Send {end};
   Return
-
 <^;::Send {;}
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
 
@@ -191,7 +186,8 @@ Goal:
 2 & k::Send {6}
 2 & l::Send {7}
 2 & `;::Send {8}
-2 & m::Send {9}
+2 & n::
+2 & m::Send {9} ;both m and n will fire 9
 2 & space::Send {0}
 
 /*
@@ -207,6 +203,16 @@ Syntax:
 ![::
 !Left::Send cd -{Enter}
 #IfWinActive
+
+
+/*
+Goal:
+  When in Windows File Explorer, Alt-Down should trigger Enter (to mimic mac habit)
+*/
+
+#IfWinActive ahk_exe explorer.exe
+!Down::
+!]::Send {Enter}
 
 /*
 Goal:
