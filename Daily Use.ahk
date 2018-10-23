@@ -216,6 +216,17 @@ Goal:
 
 /*
 Goal:
+  When in Evernote, 3 + Left / Right should manage indent just like in text editors
+*/
+
+#IfWinActive ahk_exe Evernote.exe
+3 & Left::
+3 & [::Send ^+m
+3 & Right::
+3 & \::Send ^m
+
+/*
+Goal:
   Some hotkeys when inside sublime text:
 */
 
