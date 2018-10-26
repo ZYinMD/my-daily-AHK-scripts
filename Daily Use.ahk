@@ -220,8 +220,10 @@ Goal:
 */
 
 #IfWinActive ahk_exe Evernote.exe
++Tab::
 3 & Left::
 3 & [::Send ^+m
+Tab::
 3 & Right::
 3 & \::Send ^m
 
@@ -343,6 +345,7 @@ Background Story:
 
 #Hotstring *0
 ::fata::=> ;fat arrow
+::portf::https://ZYinMD.github.io ;my online portfolio site
 /*
 :C:Im::I'm
 :C:Ill::I'll
