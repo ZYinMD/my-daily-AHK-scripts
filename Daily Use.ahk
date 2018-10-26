@@ -401,6 +401,9 @@ Syntax:
   If more than one line of code needs to be triggered by a hotkey, add Return in the end.
   If all parameters of WinActivate are omitted, the Last Found Window will be used.
 */
+
+!`::Send +#z ;Executor's default hotkey
+
 ` & t::
   IfWinExist ahk_exe ConEmu64.exe
     WinActivate
