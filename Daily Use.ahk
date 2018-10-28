@@ -226,6 +226,7 @@ Goal:
 Tab::
 3 & Right::
 3 & \::Send ^m
+3::3
 
 /*
 Goal:
