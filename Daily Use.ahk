@@ -1,4 +1,4 @@
-﻿; If you don't know the syntax, read from top to bottom, read every comment. It's easy.
+﻿; If you don't know the syntax, read from top to bottom, read every comment, you'll become a master when you finish.
 
 ; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
@@ -13,29 +13,43 @@ Style Guide:
 
 
 /*
-Goal:
+Purpose:
   Auto Execute Zone
 Syntax:
-  On load, the script will run from top down, until a Return or :: or Exit is encountered. So put the things you want to autorun on the top.
-  In fact, the things starting with a # are "directives", which runs no matter where you put them. But traditionally some directives are also put on the top .
+  On load, the script will run from top down, until a keyword Return or :: or Exit is encountered. So put the things you want to autorun on the top.
 */
-#SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Sql := false ; This global variable needs to be declared for the auto CAPITAL sql keywords to work
 
+; Set paths for my different computers:
+if (A_ComputerName = "ZHI-DESKTOP") { ; A_ComputerName is sort of a environmental variable
+  PathToSublime = C:\Sublime Text\sublime_text.exe
+} else if (A_ComputerName = "ZHI-MI") {
+  PathToSublime = C:\Sublime Text 3\sublime_text.exe
+}
+
+; Things starting with a # are "directives", which will run no matter where you put them. But by tradition, some directives are also put in the Auto Execute Zone.
+#SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#Warn  ; Enable warnings to assist with detecting common errors.
+; #InputLevel, 1
+; b::c
+; #InputLevel, 0
+; ` & a::b
+
+
 /*
-Goal:
+Purpose:
   Remap CapsLock to RCtrl. (Has to be RCtrl, because LCtrl will have different jobs.)
 Syntax:
   key::targetKey
   This means a remap, effect holds even when in combinations with other keys.
 */
 CapsLock::RControl
+
 /*
-Goal:
+Purpose:
   Similarly, remap the following:
   + => ↑
   [ => ←
@@ -62,11 +76,13 @@ RCtrl::PgDn
 /::AppsKey
 
 /*
-Goal:
-  Alt + , => right arrow once then comma then space (useful in coding).
-  Alt + . => right arrow once then period (useful in coding).
+Purpose:
+  Alt + , => right arrow once then comma then space.
+  Alt + ; => right arrow once then colon then space.
+  Alt + . => right arrow once then period.
+  These are often useful when editing JSON like stuff.
 Syntax:
-  hotkey::function.
+  hotkey::function call.
   Key combination is allowed on the left side which is different from a remap.
   When writing key combinations on the left side, ^ = Ctrl, ! = Alt, + = Shift, # = Win.
   Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
@@ -76,7 +92,7 @@ Syntax:
 !.::Send {right}.
 
 /*
-Goal:
+Purpose:
   LCtrl + enter => new line below
   LCtrl + shift + enter => new line above
 Why do this:
@@ -88,7 +104,7 @@ Syntax:
 <^+Enter::Send {Home}{Enter}{Up}
 
 /*
-Goal:
+Purpose:
   ` + Esc => Mute.
   ` + 1 => Volume down.
   ` + 2 => Volume up.
@@ -100,7 +116,7 @@ Syntax:
 ` & 2::Send {Volume_Up}
 
 /*
-Goal:
+Purpose:
   Restore the original function of ` key
 Explain:
   Since ` has become a modifier key, it no longer works when pressed, because the script is always waiting for the potential second key.
@@ -108,11 +124,11 @@ Explain:
 `::` ; Remap it to itself, the script will know you want a restore, but it only fires on key up.
 
 /*
-Goal:
+Purpose:
   Use ; as a modifier to type symbols
 */
 `; & a::{
-`; & s::Send {}}
+`; & s::}
 `; & e::[
 `; & r::]
 `; & j::(
@@ -126,15 +142,14 @@ Goal:
 `; & g::?
 `; & c::/
 `; & v::\
-`; & t::|
 `; & `::~
 `; & 1::!
 `; & 2::@
 `; & 3::#
 `; & 4::$
-
+`; & t::|
 /*
-Goal:
+Purpose:
   Restore semicolon after it has become a modifier key
   Restore it by giving it specific instructions:
     ; => ; at line end
@@ -154,7 +169,7 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
 
 /*
-Goal:
+Purpose:
   2 + ← => backspace to line beginning
   2 + → => delete to line end
   2 + ↑ => delete line and move to previous line end
@@ -174,7 +189,7 @@ Syntax:
 2::2
 
 /*
-Goal:
+Purpose:
   2 + uiopjkl;m, => 1234567890
 */
 
@@ -191,7 +206,7 @@ Goal:
 2 & space::Send {0}
 
 /*
-Goal:
+Purpose:
   Some hotkeys inside ConEmu
 Syntax:
   Wrap hotkeys inside #IfWinActive so it's effective only when certain window is active
@@ -206,7 +221,7 @@ Syntax:
 
 
 /*
-Goal:
+Purpose:
   When in Windows File Explorer, Alt-Down should trigger Enter (to mimic mac habit)
 */
 
@@ -215,7 +230,7 @@ Goal:
 !]::Send {Enter}
 
 /*
-Goal:
+Purpose:
   When in Evernote, 3 + Left / Right should manage indent just like in text editors
 */
 
@@ -229,7 +244,7 @@ Tab::
 3::3
 
 /*
-Goal:
+Purpose:
   Some hotkeys when inside sublime text:
 */
 
@@ -282,7 +297,7 @@ Goal:
 #IfWinActive
 
 /*
-Goal:
+Purpose:
   If LCtrl was pressed down and up with no other keys combined, fire a mouse click on up.
   I'm likely the only person on earth who needs this.
 Note:
@@ -290,116 +305,10 @@ Note:
 */
 LControl::Click
 
-/*
-Goal:
-  Hotstrings and auto-replace
-Syntax:
-  ::what you type::what it'll turn into
-  Triggers after an "ending character" is typed, which includes space and enter and punctuations.
-  Add O between the first two colons means don't display the ending character
-  Add * between the first two colons means fire immediately without waiting for the ending character.
-  Add ? between the first two colons means fire even when the hotstring is inside another word
-  # and ^ and + needs an R as escape char, forgot why.
-Background Story:
-  The hotstrings are inspired by Chinese
-*/
-; ::its::it's
-#Hotstring ? *
-::qian::$
-::baif::%
-::gong::&
-::tong::&
-::xing::*
-::cheng::*
-:R:jier::^
-::duihao::✔
-::cuohao::⨯
-::dacha::⨯
-::wujiao::★
-::shalou::⏳
-::eee::Ⓔ
-::shangmian::↑
-::xiamian::↓
-::zuomian::←
-::youmian::→
-::huiche::⏎
-::haoping::👍
-::chaping::👎
-; ::'|::'t ; It's very tricky to make these three work. Gave up.
-; ::']::'r
-; ::'}::'s
-::<<::<>{left}
-::<>::</>{left 2}
-::cslg::console.log(){left}
-::csdr::console.dir(){left}
-::csif::console.info(){left}
-::cswn::console.warn(){left}
-::cser::console.error(){left}
-::cstb::console.table(){left}
-::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
-::gsta::git status{enter}
-::gadd::git add -A{enter}
-::gcom::git commit -m ""{left}
-::gfet::git fetch{enter}
-::gche::git checkout{space}
-::gbra::git branch{space}
-
-#Hotstring *0
-::fata::=> ;fat arrow
-::portf::https://ZYinMD.github.io ;my online portfolio site
-/*
-:C:Im::I'm
-:C:Ill::I'll
-:C:Ive::I've
-::youll::you'll
-::youre::you're
-::youve::you've
-::youd::you'd
-::itll::it'll
-::its::it's
-::itd::it'd
-::isnt::isn't
-::arent::aren't
-::wasnt::wasn't
-::werent::weren't
-::dont::don't
-::doesnt::doesn't
-::didnt::didn't
-::havent::haven't
-::hadnt::hadn't
-::hasnt::hasn't
-::shouldnt::shouldn't
-::shouldve::should've
-::wouldnt::wouldn't
-::wouldve::would've
-::cant::can't
-::couldnt::couldn't
-::wont::won't
-::whats::what's
-::whatre::what're
-::wheres::where's
-::wherere::where're
-::theres::there's
-::thered::there'd
-::therere::there're
-::thats::that's
-::thatll::that'll
-::heres::here's
-::todays::today's
-::theyre::they're
-::theyll::they'll
-::theyd::they'd
-::theyve::they've
-::whos::who's
-::howd::how'd
-::shes::she's
-*/
-#Hotstring *0 ?0
-::hows::how's
-
+#Include HotStrings.ahk
 
 /*
-Goal:
+Purpose:
   In order to use alt-tab as little as possible, the most frequently used apps should each have a shortcut.
 Syntax:
   If more than one line of code needs to be triggered by a hotkey, add Return in the end.
@@ -429,7 +338,8 @@ Syntax:
 ` & s::
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
-  Else Run C:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
+  ; Else Run C:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
+  Else Run %PathToSublime%
   Return
 
 <!x::
@@ -481,7 +391,7 @@ Syntax:
 ` & space::Send ^!+5 ; this is for global pause and play for foobar2000
 
 /*
-Goal:
+Purpose:
   Some use inside Anki
 */
 
@@ -489,7 +399,7 @@ Numpad0 & 1::
   SendInput {Home}{Delete 7}-{Left}+{End}{F8} ;在Anki里面format从Collins贴过来的例句
   Return
 /*
-Goal:
+Purpose:
   Remap Numpad0 + Numpad keys to be Win+number keys, in order to mimic Windows Hotkey to task bar apps
 */
 
@@ -530,7 +440,7 @@ Numpad0 & NumpadSub::
 
 
 /*
-Goal:
+Purpose:
   Frequently visited folders also need shortcuts. Use 1 as modifier key for folders.
 */
 
@@ -597,7 +507,7 @@ Numpad0 & Up::
   Return
 
 /*
-Goal:
+Purpose:
   After typing the hotstring SqlOn, Sql keywords will auto capitalize. Type SqlOff to stop.
 */
 
