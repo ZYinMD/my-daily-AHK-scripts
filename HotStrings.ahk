@@ -105,7 +105,7 @@ Background Story:
 ::whos::who's
 ::howd::how'd
 ::shes::she's
-*/
 #Hotstring *0 ?0
 ::hows::how's
+*/
 

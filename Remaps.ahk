@@ -163,3 +163,12 @@ Purpose:
 2 & n::
 2 & m::Send {9} ;both m and n will fire 9
 2 & space::Send {0}
+
+/*
+Purpose:
+  If LCtrl was pressed down and up with no other keys combined, fire a mouse click on up.
+  I'm likely the only person on earth who needs this.
+Note:
+  This works only because LCtrl has been set to be a modifier key, otherwise the script will fire the mouse click immediately on key down
+*/
+LControl::Click

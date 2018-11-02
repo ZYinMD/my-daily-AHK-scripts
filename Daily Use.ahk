@@ -22,121 +22,23 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Sql := false ; This global variable needs to be declared for the auto CAPITAL sql keywords to work
 
-; Set paths for my different computers:
-if (A_ComputerName = "ZHI-DESKTOP") { ; A_ComputerName is sort of a environmental variable
-  PathToSublime = C:\Sublime Text\sublime_text.exe
-} else if (A_ComputerName = "ZHI-MI") {
-  PathToSublime = C:\Sublime Text 3\sublime_text.exe
-}
-
 ; Things starting with a # are "directives", which will run no matter where you put them. But by tradition, some directives are also put in the Auto Execute Zone.
 #SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
 
+; #Include means import another file as if it's copied into this position.
+; If you're learning the syntax from reading the comments, follow the order of these files, one by one, don't jump around.
+#Include PathToApps.ahk
 #Include Remaps.ahk
-
-/*
-Purpose:
-  Some hotkeys inside ConEmu
-Syntax:
-  Wrap hotkeys inside #IfWinActive so it's effective only when certain window is active
-*/
-
-#IfWinActive ahk_exe ConEmu64.exe
-!=::
-!Up::Send cd ..{Enter}
-![::
-!Left::Send cd -{Enter}
-#IfWinActive
-
-
-/*
-Purpose:
-  When in Windows File Explorer, Alt-Down should trigger Enter (to mimic mac habit)
-*/
-
-#IfWinActive ahk_class CabinetWClass
-!Down::
-!]::Send {Enter}
-
-/*
-Purpose:
-  When in Evernote, 3 + Left / Right should manage indent just like in text editors
-*/
-
-#IfWinActive ahk_exe Evernote.exe
-+Tab::
-3 & Left::
-3 & [::Send ^+m
-Tab::
-3 & Right::
-3 & \::Send ^m
-3::3
-
-/*
-Purpose:
-  Some hotkeys when inside sublime text:
-*/
-
-#IfWinActive ahk_exe sublime_text.exe
-2 & ]::
-2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
-
-^`:: ;toggle the sidebar
-  PixelGetColor, color, 120, 20 ;detect this spot to tell if sidebar is open
-  If color != 0xACCCD8 ;if the sidebar is currently closed, open it first
-    Send ^k^b
-  Send ^0 ;^0 is the default hotkey to focus on the sidebar
-  Return
-
-; When in Sublime, use 1 as a modifier key to help selection
-1 & Right::
-1 & \::Send ^d
-1 & Down::
-1 & ]::Send ^l
-1 & Left::
-1 & [::Send ^+s
-1 & Up::
-1 & =::Send ^+a
-
-; When in Sublime, use 3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
-3 & Left::
-3 & [::Send ^[
-3 & Right::
-3 & \::Send ^]
-3 & Up::
-3 & =::Send ^+{Up}
-3 & Down::
-3 & ]::Send ^+{Down}
-3::3 ; restore 3
-
-; When in Sublime, use ` as modifier key to collapse and toggle comment and switch projects
-` & Left::
-` & [::Send ^+[
-` & Right::
-` & \::Send ^+]
-` & BackSpace::
-` & '::Send ^+/
-` & -::
-` & Delete::Send ^/
-` & Up::
-` & Down::
-` & =::
-` & ]::Send !{p}{s}
-
-#IfWinActive
-
-/*
-Purpose:
-  If LCtrl was pressed down and up with no other keys combined, fire a mouse click on up.
-  I'm likely the only person on earth who needs this.
-Note:
-  This works only because LCtrl has been set to be a modifier key, otherwise the script will fire   the mouse click immediately on key down
-*/
-LControl::Click
-
 #Include HotStrings.ahk
+
+; App specific hotkeys: hotkeys that work only inside certain apps
+#Include AppSpecific\ConEmu.ahk
+#Include AppSpecific\FileExplorer.ahk
+#Include AppSpecific\Evernote.ahk
+#Include AppSpecific\SublimeText.ahk
+
 
 /*
 Purpose:
@@ -169,7 +71,6 @@ Syntax:
 ` & s::
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
-  ; Else Run C:\Dropbox\Portables\Sublime Text 3\sublime_text.exe
   Else Run %PathToSublime%
   Return
 
@@ -187,11 +88,12 @@ Syntax:
   Else Run C:\Dropbox\Portables\VSCode\Code.exe
   Return
 
+
 <!c::
 ` & c::
   IfWinExist ahk_exe chrome.exe
     WinActivate
-  Else Run C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+  Else Run %PathToChrome%
   Return
 
 <!a::
