@@ -33,11 +33,6 @@ if (A_ComputerName = "ZHI-DESKTOP") { ; A_ComputerName is sort of a environmenta
 #SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
-; #InputLevel, 1
-; b::c
-; #InputLevel, 0
-; ` & a::b
-
 
 /*
 Purpose:
@@ -100,8 +95,9 @@ Why do this:
 Syntax:
   In the following case, <^ means LCtrl, >^ means RCtrl.
 */
-<^Enter::Send {End}{Enter}
-<^+Enter::Send {Home}{Enter}{Up}
+<^'::Send {End}{Enter} ; Remember, Enter is already remapped to '
+<^+'::Send {Home}{Enter}{Up}
+
 
 /*
 Purpose:
