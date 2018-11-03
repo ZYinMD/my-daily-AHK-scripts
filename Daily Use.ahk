@@ -29,17 +29,17 @@ Sql := false ; This global variable needs to be declared for the auto CAPITAL sq
 
 ; #Include means import another file as if it's copied into this position.
 ; If you're learning the syntax from reading the comments, follow the order of these files, one by one, don't jump around.
-#Include Paths.ahk
-#Include Remaps.ahk
-#Include HotStrings.ahk
-#Include ActivateApps.ahk
-#Include OpenPaths.ahk
+#Include SubScripts\Paths.ahk
+#Include SubScripts\Remaps.ahk
+#Include SubScripts\HotStrings.ahk
+#Include SubScripts\ActivateApps.ahk
+#Include SubScripts\OpenPaths.ahk
 
 ; App specific hotkeys: hotkeys that work only inside certain apps
-#Include AppSpecific\ConEmu.ahk
-#Include AppSpecific\FileExplorer.ahk
-#Include AppSpecific\Evernote.ahk
-#Include AppSpecific\SublimeText.ahk
+#Include SubScripts\AppSpecific\ConEmu.ahk
+#Include SubScripts\AppSpecific\FileExplorer.ahk
+#Include SubScripts\AppSpecific\Evernote.ahk
+#Include SubScripts\AppSpecific\SublimeText.ahk
 
 
 /*
