@@ -1,8 +1,15 @@
 ; Variables are declared when first used.
 ; := means assignment
+
 PathToSublime := "C:\Sublime Text 3\sublime_text.exe"
+PathToVSCode := "C:\Users\Zhi\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+PathToFirefox := "C:\Program Files (x86)\Mozilla Firefox\firefox.exe"
 PathToConEmu := "C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe"
+PathToSpotify := "C:\Users\Zhi\AppData\Roaming\Spotify\Spotify.exe"
+PathToFoobar2000 := "C:\Dropbox\Portables\Foobar2000\foobar2000.exe"
+PathToAnki := "C:\Program Files (x86)\Anki\anki.exe"
+PathToSlack := "C:\Users\Zhi\AppData\Local\slack\slack.exe"
 
 ; I have more than one computers, and sometimes apps are installed in different paths:
 if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation
@@ -12,4 +19,5 @@ if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation
   PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
   PathToDownloads := "C:\Users\Zhi\Downloads"
 }
+
 

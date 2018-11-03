@@ -35,16 +35,15 @@ Syntax:
 ` & x::
   IfWinExist ahk_exe firefox.exe
     WinActivate
-  Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+  Else Run %PathToFirefox%
   Return
 
 <!v::
 ` & v::
   IfWinExist ahk_exe Code.exe
     WinActivate
-  Else Run C:\Dropbox\Portables\VSCode\Code.exe
+  Else Run %PathToVSCode%
   Return
-
 
 <!c::
 ` & c::
@@ -53,12 +52,18 @@ Syntax:
   Else Run %PathToChrome%
   Return
 
+` & l::
+  IfWinExist Slack
+    WinActivate Slack
+  Else Run %PathToSlack%
+  Return
+
 <!a::
   IfWinExist Add
     WinActivate
   Else IfWinExist ahk_exe anki.exe
     WinActivate
-  Else Run C:\Program Files (x86)\Anki\anki.exe
+  Else Run %PathToAnki%
   Return
 
 ` & q::
@@ -77,7 +82,4 @@ Syntax:
   IfWinExist ahk_exe Postman.exe
     WinActivate
   Return
-
-` & space::Send ^!+5 ; this is for global pause and play for foobar2000
-!`::Send +#z ;Executor's default hotkey
 
