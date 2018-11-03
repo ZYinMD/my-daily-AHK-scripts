@@ -1,0 +1,2 @@
+# ahk files need crlf as line-endings
+*.ahk text eol=crlf
