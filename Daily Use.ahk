@@ -29,9 +29,11 @@ Sql := false ; This global variable needs to be declared for the auto CAPITAL sq
 
 ; #Include means import another file as if it's copied into this position.
 ; If you're learning the syntax from reading the comments, follow the order of these files, one by one, don't jump around.
-#Include PathToApps.ahk
+#Include Paths.ahk
 #Include Remaps.ahk
 #Include HotStrings.ahk
+#Include ActivateApps.ahk
+#Include OpenPaths.ahk
 
 ; App specific hotkeys: hotkeys that work only inside certain apps
 #Include AppSpecific\ConEmu.ahk
@@ -39,89 +41,6 @@ Sql := false ; This global variable needs to be declared for the auto CAPITAL sq
 #Include AppSpecific\Evernote.ahk
 #Include AppSpecific\SublimeText.ahk
 
-
-/*
-Purpose:
-  In order to use alt-tab as little as possible, the most frequently used apps should each have a shortcut.
-Syntax:
-  If more than one line of code needs to be triggered by a hotkey, add Return in the end.
-  If all parameters of WinActivate are omitted, the Last Found Window will be used.
-*/
-
-!`::Send +#z ;Executor's default hotkey
-
-` & t::
-  IfWinExist ahk_exe ConEmu64.exe
-    WinActivate
-  Else Run C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe
-  Return
-
-` & e::
-  IfWinExist ahk_exe Evernote.exe
-    WinActivate
-  Else Run C:\Users\Zhi\AppData\Local\Apps\Evernote\Evernote\Evernote.exe
-  Return
-
-` & u::  ; µTorrent minimizes to tray, so need to WinShow first
-  WinShow µTorrent
-  WinActivate µTorrent
-  Return
-
-<!s::
-` & s::
-  IfWinExist ahk_exe sublime_text.exe
-    WinActivate
-  Else Run %PathToSublime%
-  Return
-
-<!x::
-` & x::
-  IfWinExist ahk_exe firefox.exe
-    WinActivate
-  Else Run C:\Program Files (x86)\Mozilla Firefox\firefox.exe
-  Return
-
-<!v::
-` & v::
-  IfWinExist ahk_exe Code.exe
-    WinActivate
-  Else Run C:\Dropbox\Portables\VSCode\Code.exe
-  Return
-
-
-<!c::
-` & c::
-  IfWinExist ahk_exe chrome.exe
-    WinActivate
-  Else Run %PathToChrome%
-  Return
-
-<!a::
-  IfWinExist Add
-    WinActivate
-  Else IfWinExist ahk_exe anki.exe
-    WinActivate
-  Else Run C:\Program Files (x86)\Anki\anki.exe
-  Return
-
-` & q::
-  IfWinExist Studio 3T
-    WinActivate
-  Else IfWinExist MySQL Workbench
-    WinActivate
-  Return
-
-` & o::
-  IfWinExist ahk_exe PotPlayerMini64.exe
-    WinActivate
-  Return
-
-` & p::
-  IfWinExist ahk_exe Postman.exe
-    WinActivate
-  Return
-
-` & space::Send ^!+5 ; this is for global pause and play for foobar2000
 
 /*
 Purpose:
@@ -171,73 +90,6 @@ Numpad0 & NumpadSub::
   Else Run C:\Dropbox\Portables\Foobar2000\foobar2000.exe
   Return
 
-
-/*
-Purpose:
-  Frequently visited folders also need shortcuts. Use 1 as modifier key for folders.
-*/
-
-1::1 ; restore 1
-
-1 & u::
-  IfWinExist uTorrent
-    WinActivate
-  Else Run D:\Downloads\uTorrent
-  Return
-
-1 & o::
-  IfWinExist Download
-    WinActivate
-  Else Run D:\Downloads
-  Return
-
-1 & a::
-  IfWinExist Archive
-    WinActivate
-  Else Run D:\Archive
-  Return
-
-1 & m::
-  IfWinExist Music
-    WinActivate
-  Else Run D:\Music\挑歌
-  Return
-
-1 & v::
-  IfWinExist Videos
-    WinActivate
-  Else Run D:\Videos
-  Return
-
-1 & s::
-  IfWinExist Study
-    WinActivate
-  Else Run D:\Archive\Study
-  Return
-
-1 & d::
-  IfWinExist Dropbox
-    WinActivate
-  Else Run C:\Dropbox
-  Return
-
-1 & c::
-  IfWinExist Coding
-    WinActivate
-  Else Run C:\Dropbox\Coding
-  Return
-
-1 & g::
-  IfWinExist Google Drive
-    WinActivate
-  Else Run C:\Google Drive
-  Return
-
-Numpad0 & Up::
-  IfWinExist (D:) ;只需要窗口Title里面包含(D:)就行了
-    WinActivate (D:)
-  Else Run D:\
-  Return
 
 /*
 Purpose:
