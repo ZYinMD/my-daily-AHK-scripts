@@ -11,15 +11,17 @@ Purpose:
   ` & Right::
   ` & \::Send ^+]
 
-; use 1 as modifier  key for selection
+; use 1 as modifier key for selection.
+  ; for left and right, I installed the plugin "Very Smart Select"
   1 & Left::
   1 & [::Send +!{Right}
   1 & Right::
   1 & \::Send +!{Left}
+  ; for up and down, I installed the plugin "Better Line Select"
   1 & Up::
-  1 & =::Send ^!d
+  1 & =::Send ^+l
   1 & Down::
-  1 & ]::Send ^d
+  1 & ]::Send ^l
 
 ; Use 2 to delete line. To make this work, I set "Delete all left" and "Delete all right" to ^+Backspace and ^+Delete. It's turned off by default
   2 & \::
@@ -38,7 +40,6 @@ Purpose:
   3 & =::Send ^!+{Up}
   3 & Down::
   3 & ]::Send ^!+{Down}
-
   3::3 ; restore 3
 
 ; Use `Delete and `Backspace to toggle line comment and block comment
