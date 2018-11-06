@@ -42,16 +42,11 @@ Syntax:
 ` & v::
   IfWinExist ahk_exe Code.exe
     WinActivate
-  Else Run %PathToVSCode%
+  Else Run %ComSpec% /c "code --disable-gpu",,hide
   Return
 
 <!c::
 ` & c::Send #2
-  ; IfWinExist ahk_exe chrome.exe
-  ;   WinActivate
-  ; Else Run %PathToChrome%
-  ; Else Send #2
-  ; Return
 
 ` & l::
   IfWinExist Slack

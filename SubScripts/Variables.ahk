@@ -3,7 +3,6 @@
 
 PathToSublime := "C:\Sublime Text 3\sublime_text.exe"
 PathToVSCode := "C:\Users\Zhi\AppData\Local\Programs\Microsoft VS Code\Code.exe"
-PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 PathToConEmu := "C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe"
 PathToSpotify := "C:\Users\Zhi\AppData\Roaming\Spotify\Spotify.exe"
 PathToFoobar2000 := "C:\Dropbox\Portables\Foobar2000\foobar2000.exe"
