@@ -11,6 +11,12 @@ Purpose:
   ` & Right::
   ` & \::Send ^+]
 
+; use 1 as modifier key for selection
+  1 & Left::
+  1 & [::Send +!{Right}
+  1 & Right::
+  1 & \::Send +!{Left}
+
 ; Use 2 to delete line. To make this work, I set "Delete all left" and "Delete all right" to ^+Backspace and ^+Delete. It's turned off by default
   2 & \::
   2 & Right::Send ^+{Delete}
