@@ -46,11 +46,12 @@ Syntax:
   Return
 
 <!c::
-` & c::
-  IfWinExist ahk_exe chrome.exe
-    WinActivate
-  Else Run %PathToChrome%
-  Return
+` & c::Send #2
+  ; IfWinExist ahk_exe chrome.exe
+  ;   WinActivate
+  ; Else Run %PathToChrome%
+  ; Else Send #2
+  ; Return
 
 ` & l::
   IfWinExist Slack

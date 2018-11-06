@@ -52,11 +52,3 @@ Purpose:
     WinActivate
   Else Run C:\Google Drive
   Return
-
-Numpad0 & Up::
-  IfWinExist (D:) ;只需要窗口Title里面包含(D:)就行了
-    WinActivate (D:)
-  Else Run D:\
-  Return
-
-
