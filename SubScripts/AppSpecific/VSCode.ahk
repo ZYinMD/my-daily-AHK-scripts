@@ -11,6 +11,15 @@ Purpose:
   ` & Right::
   ` & \::Send ^+]
 
+; Use 2 to delete line
+  2 & \::
+  2 & Right::Send ^+{Delete}
+  2 & ]::
+  2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
+  2 & =::
+  2 & Up::Send {End}^+{BackSpace}{BackSpace}
+
+
 ; Use 3 as a modifier key to move texts around.
   3 & Left::
   3 & [::Send ^[
