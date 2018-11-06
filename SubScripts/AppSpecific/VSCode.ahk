@@ -47,3 +47,9 @@ Purpose:
   ` & Delete::Send ^/
   ` & BackSpace::Send +!a
 #IfWinActive
+
+; Use `up for breadcrumb, `down for workspace selecting
+  ` & Up::
+  ` & =::Send ^+.
+  ` & down::
+  ` & ]::Send ^r
