@@ -5,21 +5,32 @@ Purpose:
 
 #IfWinActive ahk_exe Code.exe
 
-; use ` as modifier key to fold
-  ` & Left::
-  ` & [::Send ^+[
-  ` & Right::
-  ` & \::Send ^+]
+; use ` as modifier key in VSCode to do things:
+  ; `left and `right for folding:
+    ` & Left::
+    ` & [::Send ^+[
+    ` & Right::
+    ` & \::Send ^+]
+
+  ; `up for breadcrumb, `down for workspace selecting
+    ` & Up::
+    ` & =::Send ^+.
+    ` & down::
+    ` & ]::Send ^r
+  ; `Delete and `Backspace to toggle line comment and block comment
+    ` & -::
+    ` & Delete::Send ^/
+    ` & BackSpace::Send +!a
 
 ; use 1 as modifier key for selection.
-  ; for left and right, I installed the plugin "Very Smart Select"
-  1 & Left::
-  1 & [::Send +!{Right}
-  1 & Right::
-  1 & \::Send +!{Left}
-  ; for up and down, I installed the plugin "Better Line Select"
+  ; 1Left and 1Right for expanding and shrinking selection, I installed the plugin "Very Smart Select"
+    1 & Left::
+    1 & [::Send +!{Right}
+    1 & Right::
+    1 & \::Send +!{Left}
+  ; 1up and 1down for line selection, I installed the plugin "Better Line Select"
   1 & Up::
-  1 & =::Send ^+l
+  1 & =::Send ^!l
   1 & Down::
   1 & ]::Send ^l
 
@@ -42,14 +53,5 @@ Purpose:
   3 & ]::Send ^!+{Down}
   3::3 ; restore 3
 
-; Use `Delete and `Backspace to toggle line comment and block comment
-  ` & -::
-  ` & Delete::Send ^/
-  ` & BackSpace::Send +!a
-#IfWinActive
 
-; Use `up for breadcrumb, `down for workspace selecting
-  ` & Up::
-  ` & =::Send ^+.
-  ` & down::
-  ` & ]::Send ^r
+#IfWinActive
