@@ -11,7 +11,7 @@ Purpose:
   ` & Right::
   ` & \::Send ^+]
 
-; Use 2 to delete line
+; Use 2 to delete line. To make this work, I set "Delete all left" and "Delete all right" to ^+Backspace and ^+Delete. It's turned off by default
   2 & \::
   2 & Right::Send ^+{Delete}
   2 & ]::
