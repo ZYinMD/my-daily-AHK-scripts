@@ -21,4 +21,4 @@ if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation
   PathToDownloads := "C:\Users\Zhi\Downloads"
 }
 
-
+Sql := false ; This is a global variable for writing SQL queries, see SQL.ahk
