@@ -11,7 +11,7 @@ Purpose:
   ` & Right::
   ` & \::Send ^+]
 
-; use 1 as modifier key for selection
+; use 1 as modifier  key for selection
   1 & Left::
   1 & [::Send +!{Right}
   1 & Right::
