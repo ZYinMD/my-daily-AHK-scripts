@@ -19,7 +19,7 @@ Purpose:
   1 & Up::
   1 & =::Send ^d
   1 & Down::
-  1 & ]::Send ^d
+  1 & ]::Send ^+d
 
 ; Use 2 to delete line. To make this work, I set "Delete all left" and "Delete all right" to ^+Backspace and ^+Delete. It's turned off by default
   2 & \::
