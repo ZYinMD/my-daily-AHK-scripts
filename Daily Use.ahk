@@ -30,5 +30,5 @@ If you don't know the syntax:
 #Include SubScripts\AppSpecific\FileExplorer.ahk
 #Include SubScripts\AppSpecific\Evernote.ahk
 #Include SubScripts\AppSpecific\SublimeText.ahk
+#Include SubScripts\AppSpecific\VSCode.ahk
 #Include SubScripts\AppSpecific\Anki.ahk
-
