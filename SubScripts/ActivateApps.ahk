@@ -46,7 +46,7 @@ Syntax:
   Return
 
 <!c::
-` & c::Send #2
+` & c::Send #2 ; This is to activate Chrome, which is better done by Win-2, because there's open other SPA open
 
 ` & l::
   IfWinExist Slack

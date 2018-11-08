@@ -59,5 +59,11 @@ Purpose:
   3 & ]::Send ^!+{Down}
   3::3 ; restore 3
 
+; In VSCode, Chrome seems to be hard to activate by #2, so fall back to WinActivate
+<!c::
+` & c::Send #2
+  IfWinExist Google Chrome
+    WinActivate
+  Else Send #2
 
 #IfWinActive
