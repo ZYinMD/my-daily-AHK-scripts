@@ -33,4 +33,3 @@ If you don't know the syntax:
 #Include SubScripts\AppSpecific\VSCode.ahk
 #Include SubScripts\AppSpecific\Anki.ahk
 #Include SubScripts\AppSpecific\Gmail.ahk
-
