@@ -16,6 +16,13 @@ Syntax:
 
 /*
 Purpose:
+  Win + CapsLock => CapsLock
+  Since CapsLock is remapped to Ctrl, there needs to be a way to press it.
+*/
+#CapsLock::CapsLock
+
+/*
+Purpose:
   LCtrl + enter => new line below
   LCtrl + shift + enter => new line above
 Why do this:
@@ -44,7 +51,8 @@ Purpose:
 Explain:
   Since ` has become a modifier key, it no longer works when pressed, because the script is always waiting for the potential second key.
 */
-`::` ; Remap it to itself, the script will know you want a restore, but it only fires on key up.
+`::` ; Remap ` to itself, the script will know you want a restore, but it only fires on key up.
+
 
 /*
 Purpose:
