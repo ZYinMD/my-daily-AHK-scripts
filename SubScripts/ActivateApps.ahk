@@ -42,7 +42,9 @@ Syntax:
 ` & v::
   IfWinExist ahk_exe Code.exe
     WinActivate
-  Else Run %ComSpec% /c "code --disable-gpu",,hide ; %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
+  Else Run %ComSpec% /c "code --disable-gpu",,hide
+    ; have to disable gpu, otherwise it flickers on full screen
+    ; this is equivalent to running `code --disable-gup` in CLI. %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
   Return
 
 <!c::
