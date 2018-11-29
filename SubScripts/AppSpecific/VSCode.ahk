@@ -61,9 +61,10 @@ Purpose:
 
 ; In VSCode, Chrome seems to be hard to activate by #2, so fall back to WinActivatez
 <!c::
-` & c::Send #2
+` & c::
   IfWinExist Google Chrome
     WinActivate
   Else Send #2
+  Return
 
 #IfWinActive
