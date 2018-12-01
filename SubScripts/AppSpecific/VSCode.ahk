@@ -17,10 +17,11 @@ Purpose:
     ` & =::Send ^+.
     ` & down::
     ` & ]::Send ^r
+
   ; `Delete and `Backspace to toggle line comment and block comment
     ` & -::
     ` & Delete::Send ^/
-    ` & BackSpace::Send +!a
+    ` & BackSpace::Send ^+/
 
 ; use 1 as modifier key for selection.
   ; 1Left and 1Right for expanding and shrinking selection, I installed the plugin "Very Smart Select"
