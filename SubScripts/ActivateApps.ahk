@@ -24,7 +24,6 @@ Syntax:
   WinActivate µTorrent
   Return
 
-<!s::
 ` & s::
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
@@ -39,6 +38,7 @@ Syntax:
   Return
 
 <!v::
+<!s::
 ` & v::
   IfWinExist ahk_exe Code.exe
     WinActivate
