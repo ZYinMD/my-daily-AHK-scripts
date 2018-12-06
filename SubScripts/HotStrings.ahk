@@ -41,7 +41,7 @@ Background Story:
 ::'}::'s
 */
 ::<<::<>{left}
-::<>::</>{left 2}
+::<>::</>{left}
 ::cslg::console.log(){left}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
@@ -108,4 +108,3 @@ Background Story:
 #Hotstring *0 ?0
 ::hows::how's
 */
-
