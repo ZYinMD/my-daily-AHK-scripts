@@ -5,6 +5,9 @@ Purpose:
 
 #IfWinActive ahk_exe Code.exe
 
+; use alt space to call out the command palette:
+  !Space::Send ^+p
+
 ; use ` as modifier key in VSCode to do things:
   ; `left and `right for folding:
     ` & Left::
