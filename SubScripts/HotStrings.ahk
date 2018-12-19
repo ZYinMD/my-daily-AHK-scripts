@@ -15,6 +15,7 @@ Background Story:
 */
 ; ::its::it's
 #Hotstring ? *
+
 ::qian::$
 ::baif::%
 ::gong::&
@@ -39,6 +40,7 @@ Background Story:
 ::'|::'t
 ::']::'r
 ::'}::'s
+:://:://{space}
 */
 ::<<::<>{left}
 ::<>::</>{left}

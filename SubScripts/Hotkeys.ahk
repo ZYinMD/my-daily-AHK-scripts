@@ -160,3 +160,15 @@ Numpad0 & Left::
   MouseGetPos, x, y
 Numpad0 & Right::
   MouseMove, x, y
+
+/*
+Purpose:
+  Restart the Script. Sometimes some modifier keys get stuck, restarting may help.
+  The following scripts were copied exactly from the doc.
+*/
+^!F12::
+  Reload
+  Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
+  MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
+  IfMsgBox, Yes, Edit
+return
