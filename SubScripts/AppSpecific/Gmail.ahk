@@ -2,7 +2,7 @@
 
 #IfWinActive ari.yin@gmail.com - Gmail
 
-9::[
-0::]
+PgDn::[
+PgUp::]
 
 #IfWinActive
