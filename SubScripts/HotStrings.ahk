@@ -14,6 +14,7 @@ Background Story:
   The hotstrings are inspired by Chinese
 */
 ; ::its::it's
+
 #Hotstring ? *
 
 ::qian::$
@@ -51,16 +52,23 @@ Background Story:
 ::cser::console.error(){left}
 ::cstb::console.table(){left}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
+
+; some hotstrings in ConEmu:
+#Hotstring ?0
 ::gsta::git status{enter}
 ::gadd::git add -A{enter}
 ::gcom::git commit -m ""{left}
 ::gfet::git fetch{enter}
+::glog::git log --oneline{enter}
 ::gche::git checkout{space}
 ::gbra::git branch{space}
 
 #Hotstring *0
 ::fata::=> ;fat arrow
 ::portf::https://ZYinMD.github.io ;my online portfolio site
+
+
+
 /*
 :C:Im::I'm
 :C:Ill::I'll

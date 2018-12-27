@@ -71,4 +71,10 @@ Purpose:
   Else Send #2
   Return
 
+; not successful, stopped trying
+; ` & F5::
+; Numpad0 & Up::
+; ControlSend,,{Up}{Enter},ahk_exe ConEmu64.exe
+; Return
+
 #IfWinActive
