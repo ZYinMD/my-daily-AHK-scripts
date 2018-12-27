@@ -104,8 +104,8 @@ $;:: ;$ means prevent the hotkey to trigger itself;
 Purpose:
   2 + Home => backspace to line beginning
   2 + End => delete to line end
-  2 + ← => backspace a word
-  2 + → => delete a word
+  2 + ← => same as 2 + Home
+  2 + → => same as 2 + End
   2 + ↑ => delete line and move to previous line end
   2 + ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
 Syntax:
@@ -118,9 +118,9 @@ Syntax:
 2 & RShift::Send +{End}{BackSpace}
 
 2 & Left::
-2 & [::Send ^{BackSpace}
+2 & [::Send +{Home}{Delete}
 2 & Right::
-2 & \::Send ^{Delete}
+2 & \::Send +{End}{BackSpace}
 
 2 & Up::
 2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentations
