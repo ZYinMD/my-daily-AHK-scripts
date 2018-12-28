@@ -8,8 +8,11 @@ Syntax:
 #IfWinActive ahk_exe ConEmu64.exe
 !=::
 !Up::Send cd ..{Enter}
+
 ![::
 !Left::Send cd -{Enter}
+
+^s::Send sudo {!}{!}{Enter}
 
 ; In ConEmu, Chrome seems to be hard to activate by #2, so fall back to WinActivatez
 <!c::
