@@ -64,7 +64,8 @@ Background Story:
 ::gbra::git branch{space}
 
 #Hotstring *0
-::fata::=> ;fat arrow
+::fata::=> ; fat arrow
+::nara::-> ; narrow arrow
 ::portf::https://ZYinMD.github.io ;my online portfolio site
 
 
