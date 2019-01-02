@@ -15,5 +15,3 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
-
-SetTitleMatchMode 2 ; Set how a keyword is searched against window titles. 1 for "starting with", and 2 for "including".
