@@ -43,6 +43,8 @@ Purpose:
 
   ; 2home and 2end to backspace to line start and delete to line end. The vscode's native 2end is better than mine:
   ; I set "Delete all left" and "Delete all right" to ^+Backspace and ^+Delete. It's turned off by default
+    2 & Right::
+    2 & \::
     2 & End::
     2 & RShift::Send ^+{Delete}
 
