@@ -30,6 +30,7 @@ Background Story:
 ::wujiao::★
 ::shalou::⏳
 ::zailai::⇆
+::jiandao::✂
 ::eee::Ⓔ
 ::shangmian::↑
 ::xiamian::↓
