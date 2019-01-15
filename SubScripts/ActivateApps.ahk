@@ -38,8 +38,13 @@ Syntax:
   Return
 
 <!v::
-<!s::
 ` & v::
+  IfWinExist ahk_exe vivaldi.exe
+    WinActivate
+  Else Run %PathToVivaldi%
+  Return
+
+<!s::
   IfWinExist ahk_exe Code.exe
     WinActivate
   Else Run %ComSpec% /c "code --disable-gpu",,hide
