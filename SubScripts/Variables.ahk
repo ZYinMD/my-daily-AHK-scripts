@@ -9,6 +9,7 @@ PathToFoobar2000 := "C:\Dropbox\Portables\Foobar2000\foobar2000.exe"
 PathToAnki := "C:\Program Files (x86)\Anki\anki.exe"
 PathToSlack := "C:\Users\Zhi\AppData\Local\slack\slack.exe"
 PathToVivaldi := "C:\sudo\Vivaldi\Application\vivaldi.exe"
+PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 
 ; I have more than one computers, and sometimes apps are installed in different paths:
 if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation

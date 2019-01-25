@@ -53,7 +53,11 @@ Syntax:
   Return
 
 <!c::
-` & c::Send #2 ; This is to activate Chrome, which is better done by Win-2
+` & c::
+  IfWinExist ahk_exe chrome.exe
+    WinActivate
+  Else Run %PathToChrome%
+  Return
 
 ` & l::
   IfWinExist Slack
