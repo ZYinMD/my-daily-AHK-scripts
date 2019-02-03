@@ -130,15 +130,15 @@ Syntax:
 
 /*
 Purpose:
-  2 + uiopjkl;m, => 1234567890
+  2 + jkluioh;m{space} => 1234567890
 */
-2 & u::Send {1}
-2 & i::Send {2}
-2 & o::Send {3}
-2 & p::Send {4}
-2 & j::Send {5}
-2 & k::Send {6}
-2 & l::Send {7}
+2 & j::Send {1}
+2 & k::Send {2}
+2 & l::Send {3}
+2 & u::Send {4}
+2 & i::Send {5}
+2 & o::Send {6}
+2 & h::Send {7}
 2 & `;::Send {8}
 2 & n::
 2 & m::Send {9} ;both m and n will fire 9
