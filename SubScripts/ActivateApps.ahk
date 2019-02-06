@@ -54,10 +54,17 @@ Syntax:
 
 <!c::
 ` & c::
-  IfWinExist ahk_exe chrome.exe
-    WinActivate
-  Else Run %PathToChrome%
-  Return
+  IfWinActive ahk_exe xnview.exe
+  {
+    Send !{c}
+    Return
+  }
+  Else {
+    IfWinExist ahk_exe chrome.exe
+      WinActivate
+    Else Run %PathToChrome%
+    Return
+  }
 
 ` & l::
   IfWinExist Slack
