@@ -64,11 +64,10 @@ Background Story:
 ::glog::git log --oneline{enter}
 ::gche::git checkout{space}
 ::gbra::git branch{space}
-
+::.,::。
 #Hotstring *0
 ::fata::=> ; fat arrow
 ::nara::-> ; narrow arrow
-::portf::https://ZYinMD.github.io ;my online portfolio site
 
 
 
