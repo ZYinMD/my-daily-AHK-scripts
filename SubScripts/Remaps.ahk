@@ -7,7 +7,15 @@ Purpose:
 */
 LControl::Click
 
-#If (A_ComputerName = "ZHI-DESKTOP") ; The following are only needed in my desktop, because I use keytweak on my laptop. Undesired behavior happens if I use both keytweak and AutoHotkey together.
+/*
+Purpose:
+  Except the one above↑, all the following remaps can be done with either AutoHotkey or keytweak, but not both together (will cause undesired behavior). On some computers, like my Mi laptop, AutoHotkey doesn't always work well, so I use keytweak.
+
+Syntax:
+  Things between #If(expression) and #If are only effective when condition is met. For operators, search AutoHotkey Doc for "operators in expressions"
+*/
+
+#If (!A_ComputerName = "ZHI-MI") ;
 
 /*
 Purpose:
@@ -44,4 +52,5 @@ RShift::End
 RAlt::PgUp
 RCtrl::PgDn
 /::AppsKey
+
 #If
