@@ -15,7 +15,7 @@ Syntax:
   Things between #If(expression) and #If are only effective when condition is met. For operators, search AutoHotkey Doc for "operators in expressions"
 */
 
-#If (!A_ComputerName = "ZHI-MI") ;
+#If !(A_ComputerName = "ZHI-MI")
 
 /*
 Purpose:
