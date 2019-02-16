@@ -58,20 +58,21 @@ Explain:
 Purpose:
   Use ; as a modifier to type symbols
 Syntax:
-  Unless appears right after another character, ; needs ` as an escape char.
+  1. Unless appears right after another character, ; needs ` as an escape char.
+  2. The Send {keyname} was the traditional syntax, and the bare key name is the new syntax introduced after 2018 version. However, I found it creates a bug where j; / l; / d; etc doesn't output the semicolon if you press too fast. So the old syntax if more reliable.
 */
 `; & a::{
 `; & s::}
 `; & e::[
 `; & r::]
-`; & j::(
-`; & l::)
-`; & d::=
+`; & j::Send {(}
+`; & l::Send {)}
+`; & d::Send {=}
 `; & f::Send {NumpadSub}
 `; & i::"
 `; & k::'
 `; & z::_
-`; & x::+
+`; & x::Send {+}
 `; & g::?
 `; & c::/
 `; & v::\
