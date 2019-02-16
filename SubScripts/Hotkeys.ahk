@@ -3,7 +3,7 @@ Purpose:
   Alt + , => right arrow once then comma then space.
   Alt + ; => right arrow once then colon then space.
   Alt + . => right arrow once then period.
-  These are often useful when editing JSON like stuff.
+  These are often useful in JS and JSON.
 Syntax:
   hotkey::function call.
   Key combination is allowed on the left side which is different from a remap.
@@ -57,6 +57,8 @@ Explain:
 /*
 Purpose:
   Use ; as a modifier to type symbols
+Syntax:
+  Unless appears right after another character, ; needs ` as an escape char.
 */
 `; & a::{
 `; & s::}
@@ -87,18 +89,22 @@ Purpose:
     ; => ; at line end
     LCtrl + ; => ;
     RCtrl + ; => ; at line end and enter
-Syntax:
-  Unless appears right after another character, ; needs ` as an escape char.
+      (this is commented out now, because I rarely use it)
 */
 
-$;:: ;$ means prevent the hotkey to trigger itself;
-  If GetKeyState("CapsLock","p") ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way
-    Send {end};{Enter}
-  Else
-    Send {end};
-  Return
-<^;::Send {;}
-+;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap.
+/*
+$;::
+if GetKeyState("CapsLock","p")
+  Send {end};{Enter}
+else
+  Send {end}{;}
+Return
+;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way. "p" means retrive the phisical state of the key
+*/
+
+$;::Send {end}{;} ;$ means prevent the hotkey to trigger itself;
+^;::Send {;}
++;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap, which doesn't need to explicitly restore "~"
 
 /*
 Purpose:
