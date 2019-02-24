@@ -1,14 +1,22 @@
 /*
 Purpose:
+  Win + z => Ctrl + PgUp
+  Win + x => Ctrl + PgDn
+Syntax:
+  hotkey::function call.
+  Key combination is allowed on the left side which is different from a remap.
+  ^ = Ctrl, ! = Alt, + = Shift, # = Win.
+  Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
+*/
+#z::Send ^{PgUp}
+#x::Send ^{PgDn}
+
+/*
+Purpose:
   Alt + , => right arrow once then comma then space.
   Alt + ; => right arrow once then colon then space.
   Alt + . => right arrow once then period.
   These are often useful in JS and JSON.
-Syntax:
-  hotkey::function call.
-  Key combination is allowed on the left side which is different from a remap.
-  When writing key combinations on the left side, ^ = Ctrl, ! = Alt, + = Shift, # = Win.
-  Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
 */
 !,::Send {right},{space}
 !;::Send {right}:{space}
