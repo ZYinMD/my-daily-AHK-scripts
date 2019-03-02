@@ -45,8 +45,9 @@ Background Story:
 ::'}::'s
 :://:://{space}
 */
-::<<::<>{left}
-::<>::</>{left}
+::<<::<>{left} ;output <|>
+::>>::</>{left} ;output </|>
+::<>::< />{left 3} ;output <| />
 ::cslg::console.log(){left}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
