@@ -4,6 +4,10 @@ Purpose:
 */
 
 #IfWinActive ahk_exe sublime_text.exe
+
+; use alt space to call out the command palette:
+!Space::Send ^+p
+
 2 & ]::
 2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
 
