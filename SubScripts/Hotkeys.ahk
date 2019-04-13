@@ -67,7 +67,8 @@ Purpose:
   Use ; as a modifier to type symbols
 Syntax:
   1. Unless appears right after another character, ; needs ` as an escape char.
-  2. The Send {keyname} was the traditional syntax, and the bare key name is the new syntax introduced after 2018 version. However, I found it creates a bug where j; / l; / d; etc doesn't output the semicolon if you press too fast. So the old syntax if more reliable.
+  2. The Send {keyname} was the traditional syntax, and the bare key name is the new syntax introduced after 2018 version. However, I found it creates a bug where j; / l; / d; etc doesn't output the semicolon if you press too fast. So the old syntax is more reliable.
+  3. Also, when using MS PinYin, symbols like ? and ! will trigger the shift key and switch the input to English, the old method doesn't have this issue.
 */
 `; & a::{
 `; & s::}
@@ -79,15 +80,15 @@ Syntax:
 `; & l::Send {)}
 `; & d::Send {=}
 `; & f::Send {NumpadSub}
-`; & i::"
-`; & k::'
+`; & i::Send {"}
+`; & k::Send {'}
 `; & z::_
 `; & x::Send {+}
-`; & g::?
+`; & g::Send {?}
 `; & c::/
 `; & v::\
 `; & `::~
-`; & 1::!
+`; & 1::Send {!}
 `; & 2::@
 `; & 3::#
 `; & 4::$
