@@ -9,7 +9,9 @@ Purpose:
 !Space::Send ^+p
 
 2 & ]::
-2 & Down::Send ^+k ; Sublime's native line delete is better than my line delete (when next line is indented)
+2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
+2 & =::
+2 & Up:: Send ^+k{Up}
 
 ; When in Sublime, use 1 as a modifier key to help selection
 1 & Right::

@@ -52,7 +52,7 @@ Purpose:
     2 & ]::
     2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
     2 & =::
-    2 & Up::Send {End}^+{BackSpace}{BackSpace}
+    2 & Up:: Send ^+k{Up}
 
 ; Use 3 as a modifier key to move texts around.
   3 & Left::
