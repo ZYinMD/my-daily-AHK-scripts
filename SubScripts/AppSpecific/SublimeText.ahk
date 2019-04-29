@@ -34,6 +34,16 @@ Purpose:
 3 & ]::Send ^+{Down}
 3::3 ; restore 3
 
+; alt + ↑↓←→ to move cursor fast
+!Left::
+![::Send {left 10}
+!Right::
+!\::Send {right 10}
+!Up::
+!=::Send {Up 4}
+!Down::
+!]::Send {Down 4}
+
 ; When in Sublime, use ` as modifier key to collapse and toggle comment and switch projects
 ` & Left::
 ` & [::Send ^+[
