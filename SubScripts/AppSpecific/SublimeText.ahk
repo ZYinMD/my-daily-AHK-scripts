@@ -34,6 +34,18 @@ Purpose:
 3 & ]::Send ^+{Down}
 3::3 ; restore 3
 
+; Use 4 as modifier key to move focus:
+4 & Left::
+4 & [::Send ^+{e} ; focus on file explorer
+4 & Right::
+4 & \::Send ^{1} ; focus on editor
+4 & Up::
+4 & =::Send {F1} ; focus on panel
+4 & Down::
+4 & ]::Send {F1} ; close panel
+4::4 ; restore 3
+
+
 ; alt + ↑↓←→ to move cursor fast
 !Left::
 ![::Send {left 10}
