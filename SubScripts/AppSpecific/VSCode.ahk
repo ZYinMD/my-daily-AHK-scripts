@@ -75,6 +75,8 @@ Purpose:
   !Down::
   !]::Send {Down 4}
 
+; to activate jumpy:
+  3 & r::Send ^{F11}
 ; not successful, stopped trying
 ; ` & F5::
 ; Numpad0 & Up::
