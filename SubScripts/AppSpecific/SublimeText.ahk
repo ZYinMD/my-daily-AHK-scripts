@@ -38,7 +38,7 @@ Purpose:
 4 & Left::
 4 & [::Send ^+{e} ; focus on file explorer
 4 & Right::
-4 & \::Send ^{1} ; focus on editor
+4 & \::Send ^{1}^{b} ; focus on editor
 4 & Up::
 4 & =::Send {F1} ; focus on panel
 4 & Down::
