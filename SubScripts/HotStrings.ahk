@@ -19,14 +19,12 @@ Background Story:
 
 ::qian::$
 ::baif::%
-::gong::&
 ::tong::&
 ::xing::*
-::cheng::*
 :R:jier::^
+::dunhao::、
 ::duihao::✔
 ::cuohao::⨯
-::dacha::⨯
 ::wujiao::★
 ::shalou::⏳
 ::zailai::⇆
