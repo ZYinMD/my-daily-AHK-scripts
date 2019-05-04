@@ -22,6 +22,7 @@ Background Story:
 ::tong::&
 ::xing::*
 :R:jier::^
+::.,::。
 ::dunhao::、
 ::duihao::✔
 ::cuohao::⨯
@@ -54,13 +55,9 @@ Background Story:
 ::cstb::console.table(){left}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 
-; some hotstrings in ConEmu:
-#Hotstring ?0
-::.,::。
-#Hotstring *0
+#Hotstring *0 ?0
 ::fata::=> ; fat arrow
 ::nara::-> ; narrow arrow
-
 
 /*
 :C:Im::I'm
