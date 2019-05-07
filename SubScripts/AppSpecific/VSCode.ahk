@@ -67,7 +67,7 @@ Purpose:
 
 ; Use 4 as modifier key to move focus:
   4 & Left::
-  4 & [::Send ^+{e} ; focus on file explorer
+  4 & [::Send ^{F1}^+{e} ; focus on file explorer
   4 & Right::
   4 & \::Send ^{b} ; focus on editor
   4 & Up::
