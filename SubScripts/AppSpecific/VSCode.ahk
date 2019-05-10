@@ -65,16 +65,8 @@ Purpose:
   3 & ]::Send ^!+{Down}
   3::3 ; restore 3
 
-; Use 4 as modifier key to move focus:
-  4 & Left::
-  4 & [::Send ^{F1}^+{e} ; focus on file explorer
-  4 & Right::
-  4 & \::Send ^{b} ; focus on editor
-  4 & Up::
-  4 & =::Send {F1} ; focus on panel
-  4 & Down::
-  4 & ]::Send {F1} ; close panel
-  4::4 ; restore 3
+; Alt 1 to collapse all folders in the file explorer and then focus on it
+  !1::Send ^{F1}^+{e} ; focus on file explorer
 
 ; alt + ↑↓←→ to move cursor fast
   !Left::
