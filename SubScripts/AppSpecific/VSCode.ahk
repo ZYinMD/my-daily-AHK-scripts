@@ -65,8 +65,8 @@ Purpose:
   3 & ]::Send ^!+{Down}
   3::3 ; restore 3
 
-; Alt 1 to collapse all folders in the file explorer and then focus on it
-  !1::Send ^{F1}^+{e} ; focus on file explorer
+; Alt ` to collapse all folders in the file explorer and then focus on it
+  !`::Send ^{F1}^+{e} ; focus on file explorer
 
 ; alt + ↑↓←→ to move cursor fast
   !Left::

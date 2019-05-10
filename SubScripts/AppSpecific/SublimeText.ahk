@@ -34,8 +34,8 @@ Purpose:
 3 & ]::Send ^+{Down}
 3::3 ; restore 3
 
-; alt 1 to open the sidebar, alt 2 to close it:
-!1::Send ^+{e}
+; alt ` to focus the sidebar:
+!`::Send ^+{e}
 
 ; alt + ↑↓←→ to move cursor fast
 !Left::
