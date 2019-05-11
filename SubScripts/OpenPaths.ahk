@@ -20,7 +20,7 @@ Purpose:
 1 & m::
   IfWinExist Music
     WinActivate
-  Else Run D:\Music\挑歌
+  Else Run D:\Music\
   Return
 
 1 & v::
