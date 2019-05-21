@@ -24,6 +24,11 @@ Syntax:
   WinActivate µTorrent
   Return
 
+` & r::
+  IfWinExist Redux DevTools
+    WinActivate
+  Return
+
 ` & s::
   IfWinExist ahk_exe sublime_text.exe
     WinActivate
@@ -62,7 +67,7 @@ Syntax:
   Else {
     IfWinExist ahk_exe chrome.exe
       WinActivate
-    Else Run %PathToChrome%
+    Else Send #{2}
     Return
   }
 
