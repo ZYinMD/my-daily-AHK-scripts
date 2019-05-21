@@ -65,9 +65,9 @@ Syntax:
     Return
   }
   Else {
-    IfWinExist ahk_exe chrome.exe
-      WinActivate
-    Else Send #{2}
+    ; IfWinExist ahk_exe chrome.exe
+    ;   WinActivate
+    Send #{2}
     Return
   }
 
