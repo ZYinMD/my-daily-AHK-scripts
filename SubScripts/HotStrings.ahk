@@ -55,9 +55,10 @@ Background Story:
 ::cstb::console.table(){left}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 
-#Hotstring *0 ?0
-::fata::=> ; fat arrow
-::nara::-> ; narrow arrow
+; #Hotstring *0 ?0
+#Hotstring *0
+::fata:: => ; fat arrow
+::nara:: -> ; narrow arrow
 
 /*
 :C:Im::I'm
