@@ -3,7 +3,8 @@ Purpose:
   Some hotkeys when inside sublime text:
 */
 
-#IfWinActive ahk_exe Code.exe
+; Different than the other apps, #If is used instead of #IfWinActive here, because I need an expression
+#If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe")
 
 ; use alt space to call out the command palette:
   !Space::Send ^+p
@@ -86,4 +87,4 @@ Purpose:
 ; ControlSend,,{Up}{Enter},ahk_exe ConEmu64.exe
 ; Return
 
-#IfWinActive
+#If

@@ -30,10 +30,17 @@ Syntax:
   Return
 
 ` & s::
-  IfWinExist ahk_exe sublime_text.exe
+
+  IfWinExist ahk_exe Code - Insiders.exe
     WinActivate
-  Else Run %PathToSublime%
+  Else Run %PathToVSCodeInsiders%
   Return
+
+  ; ` & s used to be sublime↓, but now it's vscode insiders
+  ; IfWinExist ahk_exe sublime_text.exe
+  ;   WinActivate
+  ; Else Run %PathToSublime%
+  ; Return
 
 <!x::
 ` & x::

@@ -3,6 +3,7 @@
 
 PathToSublime := "C:\Sudo\Sublime Text 3\sublime_text.exe"
 PathToVSCode := "C:\Users\Zhi\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+PathToVSCodeInsiders := "C:\Program Files\Microsoft VS Code Insiders\Code - Insiders.exe"
 PathToConEmu := "C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe"
 PathToSpotify := "C:\Users\Zhi\AppData\Roaming\Spotify\Spotify.exe"
 PathToSlack := "C:\Users\Zhi\AppData\Local\slack\slack.exe"
