@@ -69,7 +69,8 @@ Purpose:
 ; Alt ` to collapse all folders in the file explorer and then focus on it
   !`::Send ^{F1}!{NumpadSub} ; focus on file explorer
 
-; alt + ↑↓←→ to move cursor fast
+; alt + ↑↓←→ to move cursor fast (no longer used)
+/*
   !Left::
   ![::Send {left 10}
   !Right::
@@ -78,7 +79,7 @@ Purpose:
   !=::Send {Up 4}
   !Down::
   !]::Send {Down 4}
-
+ */
 ; to activate jumpy:
   `; & Space::Send ^{F11}
 ; not successful, stopped trying

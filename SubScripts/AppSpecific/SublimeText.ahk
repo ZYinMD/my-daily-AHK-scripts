@@ -37,7 +37,8 @@ Purpose:
 ; alt ` to focus the sidebar:
 !`::Send ^+{e}
 
-; alt + ↑↓←→ to move cursor fast
+; alt + ↑↓←→ to move cursor fast (no longer used)
+/*
 !Left::
 ![::Send {left 10}
 !Right::
@@ -46,7 +47,7 @@ Purpose:
 !=::Send {Up 4}
 !Down::
 !]::Send {Down 4}
-
+ */
 ; When in Sublime, use ` as modifier key to collapse and toggle comment and switch projects
 ` & Left::
 ` & [::Send ^+[
