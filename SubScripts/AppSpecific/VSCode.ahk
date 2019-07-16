@@ -80,8 +80,9 @@ Purpose:
   !Down::
   !]::Send {Down 4}
  */
-; to activate jumpy:
-  `; & Space::Send ^{F11}
+; to activate AceJump:
+  `; & Space::
+  !d::Send ^{F11}
 ; not successful, stopped trying
 ; ` & F5::
 ; Numpad0 & Up::
