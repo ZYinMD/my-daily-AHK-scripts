@@ -30,7 +30,6 @@ Syntax:
   Return
 
 ` & s::
-
   IfWinExist ahk_exe Code - Insiders.exe
     WinActivate
   Else Run %PathToVSCodeInsiders%
@@ -57,13 +56,19 @@ Syntax:
   Return
 
 <!s::
-  IfWinExist ahk_exe Code.exe
-    WinActivate
-  Else Run %ComSpec% /c "code --disable-gpu",,hide
-    ; have to disable gpu, otherwise it flickers on full screen
-    ; this is equivalent to running `code --disable-gup` in CLI. %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
-  Return
-
+  IfWinActive ahk_exe Code.exe
+  {
+    Send ^{p}
+    Return
+  }
+  Else {
+    IfWinExist ahk_exe Code.exe
+      WinActivate
+    Else Run %ComSpec% /c "code --disable-gpu",,hide
+      ; have to disable gpu, otherwise it flickers on full screen
+      ; this is equivalent to running `code --disable-gup` in CLI. %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
+    Return
+  }
 <!c::
 ` & c::
   IfWinActive ahk_exe xnview.exe
