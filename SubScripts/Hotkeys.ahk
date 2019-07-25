@@ -190,3 +190,10 @@ Purpose:
   MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
   IfMsgBox, Yes, Edit
 return
+
+/*
+Purpose:
+
+*/
+^0::Send ^{=}
+^9::Send ^{-}
