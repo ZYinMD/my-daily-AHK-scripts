@@ -6,9 +6,6 @@ Purpose:
 ; Different than the other apps, #If is used instead of #IfWinActive here, because I need an expression
 #If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe")
 
-; use alt space to call out the command palette:
-  !Space::Send ^+p
-
 ; use ` as modifier key in VSCode to do things:
   ; `left and `right for folding:
   ` & Left::
@@ -82,7 +79,7 @@ Purpose:
  */
 ; to activate AceJump:
   `; & Space::
-  !d::Send ^{F11}
+  !Space::Send ^{F11}
 ; not successful, stopped trying
 ; ` & F5::
 ; Numpad0 & Up::
