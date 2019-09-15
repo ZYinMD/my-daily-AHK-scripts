@@ -23,11 +23,11 @@ Purpose:
   !\::
   Send ^{PgDn}
   return
+
   !Up::
   !=::
   ` & Up::
   ` & =::Send {PgUp}
-
 
   !Down::
   !]::
@@ -84,6 +84,15 @@ Purpose:
   4 & [::Send ^+[
   4 & Right::
   4 & \::Send ^+]
+  ; 4Home to fold all, 4End to unfold all
+  4 & Home::Send ^+![
+  4 & End::Send ^+!]
+  ; 4Up and 4Down for finding errors:
+  4 & Up::
+  4 & =::Send ^+{j}
+  4 & Down::
+  4 & ]::Send ^{j}
+
   4::4
 ; Alt ` to collapse all folders in the file explorer and then focus on it
   !`::Send ^{F1}!{NumpadSub} ; focus on file explorer
