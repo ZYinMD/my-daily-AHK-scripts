@@ -7,32 +7,27 @@ Purpose:
 #If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe")
 
 ; use ` as modifier key in VSCode to do things:
-  ; `left and `right focusing on panels:
+  ; `left and `right to move between tabs
   ` & Left::
-  ` & [::Send ^{Numpad4}
-  ` & Right::
-  ` & \::Send ^{Numpad6}
-
-  ; !up and !down for PgUp and PgDn. !left !right for Ctrl PgUp and Ctrl PgDn.
-  ; For now, make ` Up/Down do the same thing as alt up/down, see how it goes
-  !Left::
-  ![::
+  ` & [::
   Send ^{PgUp}
   return
-  !Right::
-  !\::
+  ` & Right::
+  ` & \::
   Send ^{PgDn}
   return
 
-  !Up::
-  !=::
+  ; `up and `down to move between panes
   ` & Up::
-  ` & =::Send {PgUp}
+  ` & =::Send ^{Numpad8}
+  ` & down::
+  ` & ]::Send ^{Numpad2}
+
+  !Up::
+  !=::Send {PgUp}
 
   !Down::
-  !]::
-  ` & down::
-  ` & ]::Send {PgDn}
+  !]::Send {PgDn}
 
   ; `Delete and `Backspace to toggle line comment and block comment
   ` & -::
