@@ -1,2 +1,2 @@
-; ~LButton::SoundPlay, click.wav
-~LButton UP::SoundPlay, click.wav
+; ~LButton::SoundPlay, mouse-down.wav
+; ~LButton UP::SoundPlay, mouse-up.wav
