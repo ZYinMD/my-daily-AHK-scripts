@@ -8,8 +8,10 @@ Syntax:
   ^ = Ctrl, ! = Alt, + = Shift, # = Win.
   Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
 */
-#z::Send ^{PgUp}
-#x::Send ^{PgDn}
+
+; disabled for now, as I never use them
+; #z::Send ^{PgUp}
+; #x::Send ^{PgDn}
 
 /*
 Purpose:
@@ -52,6 +54,23 @@ Syntax:
 ` & Esc::Send {Volume_Mute}
 ` & 1::Send {Volume_Down}
 ` & 2::Send {Volume_Up}
+
+/*
+Purpose:
+  ` + left / right to move between tabs
+  ` + left => Ctrl + PgUp
+  ` + right=> Ctrl + PgDn
+Syntax:
+  Sometimes if there's mysterious bugs, add return in the end helps.
+*/
+  ` & Left::
+  ` & [::
+  Send ^{PgUp}
+  return
+  ` & Right::
+  ` & \::
+  Send ^{PgDn}
+  return
 
 /*
 Purpose:

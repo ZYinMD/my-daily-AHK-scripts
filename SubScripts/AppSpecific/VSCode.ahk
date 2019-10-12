@@ -7,16 +7,6 @@ Purpose:
 #If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe")
 
 ; use ` as modifier key in VSCode to do things:
-  ; `left and `right to move between tabs
-  ` & Left::
-  ` & [::
-  Send ^{PgUp}
-  return
-  ` & Right::
-  ` & \::
-  Send ^{PgDn}
-  return
-
   ; `up and `down to move between panes
   ` & Up::
   ` & =::Send ^{Numpad8}
