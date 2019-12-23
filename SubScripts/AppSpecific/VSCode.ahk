@@ -71,7 +71,7 @@ Purpose:
   4 & \::Send ^+]
   ; 4Home to fold all, 4End to unfold all
   4 & Enter::
-  4 & Home::Send ^+![
+  4 & Home::Send ^+!u
   4 & RShift::
   4 & End::Send ^+!]
   ; 4Up and 4Down for finding errors:
