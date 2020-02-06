@@ -48,6 +48,12 @@ Syntax:
   Else Run %PathToFirefox%
   Return
 
+<!b::
+  IfWinExist ahk_exe brave.exe
+    WinActivate
+  Else Run %PathToBrave%
+  Return
+
 <!v::
 ` & v::
   IfWinExist ahk_exe vivaldi.exe
