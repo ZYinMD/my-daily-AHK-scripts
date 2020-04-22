@@ -30,7 +30,7 @@ Background Story:
 ::shalou::⏳
 ::zailai::⇆
 ::jiandao::✂
-::eee::Ⓔ
+:R:eee::${props => props.theme.test}
 ::shangmian::↑
 ::xiamian::↓
 ::zuomian::←
@@ -53,7 +53,6 @@ Background Story:
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
 ::cser::console.error(){left}
-::cstb::console.table(){left}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 
 ; #Hotstring *0 ?0
