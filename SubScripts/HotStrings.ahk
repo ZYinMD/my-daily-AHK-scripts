@@ -30,6 +30,7 @@ Background Story:
 ::shalou::⏳
 ::zailai::⇆
 ::jiandao::✂
+::chilun::⚙️
 :R:eee::${props => props.theme.test}
 ::shangmian::↑
 ::xiamian::↓
