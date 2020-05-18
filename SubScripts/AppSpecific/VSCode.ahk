@@ -104,4 +104,7 @@ Purpose:
 ; ControlSend,,{Up}{Enter},ahk_exe ConEmu64.exe
 ; Return
 
+; use Appskey to open up the lightbulb (mainly for auto correct of spell check)
+/::Send ^{.}
+AppsKey::Send ^{.}
 #If
