@@ -212,7 +212,7 @@ return
 
 /*
 Purpose:
-
+  Simulate ctrl+ and ctrl- to zoom in and out. Since + and - have been remapped, I need to find a way to simulate them.
 */
 ^0::Send ^{=}
 ^9::Send ^{-}
