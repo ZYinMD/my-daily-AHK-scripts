@@ -192,11 +192,12 @@ Purpose:
 /*
 Purpose:
   Remember current mouse location, and resume this position later. Useful when recording videos
-*/
-Numpad0 & Left::
+F9::
   MouseGetPos, x, y
-Numpad0 & Right::
+  return
+F10::
   MouseMove, x, y
+*/
 
 /*
 Purpose:
