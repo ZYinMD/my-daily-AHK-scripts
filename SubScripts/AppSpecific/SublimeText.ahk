@@ -57,5 +57,6 @@ Purpose:
 ` & '::Send ^+/
 ` & -::
 ` & Delete::Send ^/
+4::4
 
 #IfWinActive
