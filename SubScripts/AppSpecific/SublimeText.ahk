@@ -48,18 +48,14 @@ Purpose:
 !Down::
 !]::Send {Down 4}
  */
-; When in Sublime, use ` as modifier key to collapse and toggle comment and switch projects
-` & Left::
-` & [::Send ^+[
-` & Right::
-` & \::Send ^+]
+; When in Sublime, use 4 as modifier key to collapse, use ` to toggle
+4 & Left::
+4 & [::Send ^+[
+4 & Right::
+4 & \::Send ^+]
 ` & BackSpace::
 ` & '::Send ^+/
 ` & -::
 ` & Delete::Send ^/
-` & Up::
-` & Down::
-` & =::
-` & ]::Send !{p}{s}
 
 #IfWinActive
