@@ -31,7 +31,7 @@ Background Story:
 ::zailai::⇆
 ::jiandao::✂
 ::chilun::⚙️
-:R:eee::${props => props.theme.test}
+:R:rrr::${props => props.theme.test}
 ::shangmian::↑
 ::xiamian::↓
 ::zuomian::←
