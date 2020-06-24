@@ -24,6 +24,7 @@ Background Story:
 :R:jier::^
 ::.,::。
 ::dunhao::、
+::maohao::：
 ::duihao::✔
 ::cuohao::⨯
 ::wujiao::★
