@@ -105,6 +105,10 @@ Purpose:
 ; Return
 
 ; use Appskey to open up the lightbulb (mainly for auto correct of spell check)
-/::Send ^{.}
-AppsKey::Send ^{.}
+/::
+  Send ^+{8}
+  return
+AppsKey::
+  Send ^+{8}
+  return
 #If
