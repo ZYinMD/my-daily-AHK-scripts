@@ -7,6 +7,12 @@ Syntax:
   If all parameters of WinActivate are omitted, the Last Found Window will be used.
 */
 
+#d::
+  If WinExist("Desktop","Explorer.EXE")
+    WinActivate
+  Else Run %PathToDesktop%
+  Return
+
 ` & t::
   IfWinExist ahk_exe ConEmu64.exe
     WinActivate
