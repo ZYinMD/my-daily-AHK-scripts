@@ -22,7 +22,6 @@ Background Story:
 ::tong::&
 ::xing::*
 :R:jier::^
-::.,::。
 ::dunhao::、
 ::maohao::：
 ::duihao::✔
@@ -47,9 +46,6 @@ Background Story:
 ::'}::'s
 :://:://{space}
 */
-::<<::<>{left} ;output <|>
-::>>::</>{left} ;output </|>
-::<>::< />{left 3} ;output <| />
 ::cslg::console.log(){left}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
@@ -57,57 +53,13 @@ Background Story:
 ::cser::console.error(){left}
 ::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
 
-; #Hotstring *0 ?0
+#IfWinNotActive ahk_class PotPlayer64
+::<<::<>{left} ;output <|>
+::>>::</>{left} ;output </|>
+::<>::< />{left 3} ;output <| />
+::.,::。
+#IfWinNotActive
+
 #Hotstring *0
 ::fata:: => ; fat arrow
 ::nara:: -> ; narrow arrow
-
-/*
-:C:Im::I'm
-:C:Ill::I'll
-:C:Ive::I've
-::youll::you'll
-::youre::you're
-::youve::you've
-::youd::you'd
-::itll::it'll
-::its::it's
-::itd::it'd
-::isnt::isn't
-::arent::aren't
-::wasnt::wasn't
-::werent::weren't
-::dont::don't
-::doesnt::doesn't
-::didnt::didn't
-::havent::haven't
-::hadnt::hadn't
-::hasnt::hasn't
-::shouldnt::shouldn't
-::shouldve::should've
-::wouldnt::wouldn't
-::wouldve::would've
-::cant::can't
-::couldnt::couldn't
-::wont::won't
-::whats::what's
-::whatre::what're
-::wheres::where's
-::wherere::where're
-::theres::there's
-::thered::there'd
-::therere::there're
-::thats::that's
-::thatll::that'll
-::heres::here's
-::todays::today's
-::theyre::they're
-::theyll::they'll
-::theyd::they'd
-::theyve::they've
-::whos::who's
-::howd::how'd
-::shes::she's
-#Hotstring *0 ?0
-::hows::how's
-*/
