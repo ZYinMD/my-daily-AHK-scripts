@@ -48,10 +48,14 @@ Syntax:
   ; Return
 
 <!x::
-` & x::
   IfWinExist ahk_exe firefox.exe
     WinActivate
   Else Run %PathToFirefox%
+  Return
+
+` & x::
+  IfWinExist ahk_exe EXCEL.exe
+    WinActivate
   Return
 
 <!b::
