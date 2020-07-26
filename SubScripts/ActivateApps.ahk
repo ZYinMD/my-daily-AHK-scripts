@@ -111,7 +111,9 @@ Syntax:
   Return
 
 ` & q::
-  IfWinExist Studio 3T
+  IfWinExist ahk_exe tableau.exe
+    WinActivate
+  Else IfWinExist Studio 3T
     WinActivate
   Else IfWinExist MySQL Workbench
     WinActivate
