@@ -3,7 +3,12 @@ Cycle between multiple instances/windows of the same app that stack together.
 Code found on https://superuser.com/questions/435602/shortcut-in-windows-7-to-switch-between-same-applications-windows-like-cmd
 
  */
-!`::
+^`::
+  if WinActive("ahk_class CabinetWClass") {
+    Send ^#{3} ; change the number 3 to whichever position your explorer is pinned at the Taskbar
+    Return
+  }
+
   WinGetClass, ActiveClass, A
   WinGet, WinClassCount, Count, ahk_class %ActiveClass%
 
