@@ -13,6 +13,12 @@ Syntax:
   Else Run %PathToDesktop%
   Return
 
+1 & y::
+  If WinExist("youtube-dl one time download","Explorer.EXE")
+    WinActivate
+  Else Run %PathToYoutubeDownloads%
+  Return
+
 ` & t::
   IfWinExist ahk_exe ConEmu64.exe
     WinActivate

@@ -2,6 +2,8 @@
 ; := means assignment
 
 PathToDesktop := "C:\Users\Zhi\Desktop"
+PathToYoutubeDownloads := "C:\Users\Zhi\Desktop\youtube-dl one time download"
+PathToDownloads := "C:\Users\Zhi\Downloads"
 PathToSublime := "C:\Sudo\Sublime Text 3\sublime_text.exe"
 PathToVSCode := "C:\Users\Zhi\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 PathToVSCodeInsiders := "C:\Program Files\Microsoft VS Code Insiders\Code - Insiders.exe"
@@ -12,7 +14,6 @@ PathToVivaldi := "C:\sudo\Vivaldi\Application\vivaldi.exe"
 PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 PathToFirefox := "C:\Program Files\Mozilla Firefox\firefox.exe"
 PathToBrave := "C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe"
-PathToDownloads := "C:\Users\Zhi\Downloads"
 PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
 ; I have more than one computers, and sometimes apps are installed in different paths:
 if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation
