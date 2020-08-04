@@ -13,12 +13,6 @@ Purpose:
   ` & down::
   ` & ]::Send ^{Numpad2}
 
-  !Up::
-  !=::Send {PgUp}
-
-  !Down::
-  !]::Send {PgDn}
-
   ; `Delete and `Backspace to toggle line comment and block comment
   ` & -::
   ` & Delete::Send ^/
