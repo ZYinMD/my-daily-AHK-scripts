@@ -46,7 +46,8 @@ Background Story:
 ::'}::'s
 :://:://{space}
 */
-::cslg::console.log(){left}
+::cslg::console.log({{}{}}){left 2}
+::cstb::console.table({{}{}}){left 2}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
 ::cswn::console.warn(){left}
