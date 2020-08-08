@@ -19,7 +19,7 @@ PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
 
 ; the following portable apps need to be installed in different paths on different computers so that the dropbox syncing doesn't interfere with each other
 if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation
-  PathToAnki := "C:\sudo\Anki\anki.bat"
+  PathToAnki := "C:\Dropbox\Portables\ZHI-DESKTOP\Anki\Anki.bat"
   PathToConEmu := "C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe"
   PathToFoobar2000 := "C:\sudo\foobar2000\foobar2000.exe"
 } else if (A_ComputerName = "ZHI-MI") { ; A_ComputerName is sort of an environmental variable
