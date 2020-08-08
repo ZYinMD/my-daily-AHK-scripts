@@ -59,6 +59,12 @@ Syntax:
   Else Run %PathToFirefox%
   Return
 
+<!e::
+  IfWinExist ahk_exe msedge.exe
+    WinActivate
+  Else Run %PathToEdge%
+  Return
+
 ` & x::
   IfWinExist ahk_exe EXCEL.exe
     WinActivate

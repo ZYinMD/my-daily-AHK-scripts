@@ -14,14 +14,16 @@ PathToVivaldi := "C:\sudo\Vivaldi\Application\vivaldi.exe"
 PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 PathToFirefox := "C:\Program Files\Mozilla Firefox\firefox.exe"
 PathToBrave := "C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe"
+PathToEdge := "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
-; I have more than one computers, and sometimes apps are installed in different paths:
+
+; the following portable apps need to be installed in different paths on different computers so that the dropbox syncing doesn't interfere with each other
 if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation
   PathToAnki := "C:\sudo\Anki\anki.bat"
   PathToConEmu := "C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe"
   PathToFoobar2000 := "C:\sudo\foobar2000\foobar2000.exe"
 } else if (A_ComputerName = "ZHI-MI") { ; A_ComputerName is sort of an environmental variable
-  PathToAnki := "C:\Program Files\Anki\anki.exe"
+  PathToAnki := "C:\Dropbox\Portables\MI\Anki\Anki.bat"
   PathToConEmu := "C:\Dropbox\Portables\MI\ConEmuPack.200615\ConEmu64.exe"
   PathToFoobar2000 := "C:\Dropbox\Portables\MI\foobar2000\foobar2000.exe"
 }
