@@ -26,6 +26,7 @@ If you don't know the syntax:
 #Include SubScripts\Numpad.ahk
 #Include SubScripts\SQL.ahk
 #Include SubScripts\MouseClick.ahk
+#Include SubScripts\RememberMousePosition.ahk
 
 ; App specific hotkeys: hotkeys that work only inside certain apps
 #Include SubScripts\AppSpecific\ConEmu.ahk
