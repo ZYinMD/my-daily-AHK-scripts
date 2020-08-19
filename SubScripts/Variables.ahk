@@ -16,16 +16,15 @@ PathToFirefox := "C:\Program Files\Mozilla Firefox\firefox.exe"
 PathToBrave := "C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe"
 PathToEdge := "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
+PathToFoobar2000 := "C:\sudo\foobar2000\foobar2000.exe"
 
 ; the following portable apps need to be installed in different paths on different computers so that the dropbox syncing doesn't interfere with each other
 if (A_ComputerName = "ZHI-DESKTOP") { ; single equal sign means evaluation
   PathToAnki := "C:\Dropbox\Portables\ZHI-DESKTOP\Anki\Anki.bat"
   PathToConEmu := "C:\Dropbox\Portables\ConEmu Portable - PreviewVersion171109\ConEmu64.exe"
-  PathToFoobar2000 := "C:\Dropbox\Portables\ZHI-DESKTOP\foobar2000\foobar2000.exe"
 } else if (A_ComputerName = "ZHI-MI") { ; A_ComputerName is sort of an environmental variable
   PathToAnki := "C:\Dropbox\Portables\MI\Anki\Anki.bat"
   PathToConEmu := "C:\Dropbox\Portables\MI\ConEmuPack.200615\ConEmu64.exe"
-  PathToFoobar2000 := "C:\sudo\foobar2000\foobar2000.exe"
 }
 
 Sql := false ; This is a global variable for writing SQL queries, see SQL.ahk
