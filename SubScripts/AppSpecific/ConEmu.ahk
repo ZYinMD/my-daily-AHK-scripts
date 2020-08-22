@@ -34,6 +34,9 @@ Syntax:
 2 & RShift::Send ^k
 
 ; when pressing ctrl+w, type exit⏎ to exit properly. This ensures history is saved properly
-^w::Send exit{Enter}
+^w::
+CapsLock & w::
+  Send exit{Enter}
+  Return
 
 #IfWinActive
