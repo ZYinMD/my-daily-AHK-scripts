@@ -78,17 +78,6 @@ Purpose:
 ; Alt ` to collapse all folders in the file explorer and then focus on it
   !`::Send ^{F1}!{NumpadSub} ; focus on file explorer
 
-; alt + ↑↓←→ to move cursor fast (no longer used)
-/*
-  !Left::
-  ![::Send {left 10}
-  !Right::
-  !\::Send {right 10}
-  !Up::
-  !=::Send {Up 4}
-  !Down::
-  !]::Send {Down 4}
- */
 ; to activate AceJump:
   `; & Space::
   !Space::Send ^{F11}
