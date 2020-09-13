@@ -207,3 +207,11 @@ Purpose:
 */
 ^0::Send ^{=}
 ^9::Send ^{-}
+
+/*
+A demo of how to use clicpboard.
+To try, go to voidtools everything and find a mp3, then right click to copy full path. Then fire the hotkey.
+To understand it, first read cheat sheet autohotkeys, then read doc about `clicboard`, then read doc about `run`
+*/
+
+#F12::Run, %PathToFoobar2000% "%clipboard%"
