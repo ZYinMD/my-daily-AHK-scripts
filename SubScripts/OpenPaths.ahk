@@ -8,7 +8,7 @@ Purpose:
 1 & o::
   IfWinExist Download
     WinActivate
-  Else Run %PathToDownloads%
+  Else Run %DirDownloads%
   Return
 
 1 & a::
@@ -38,17 +38,17 @@ Purpose:
 1 & d::
   IfWinExist Dropbox
     WinActivate
-  Else Run C:\Dropbox
+  Else Run %DirDropbox%
   Return
 
 1 & c::
   IfWinExist Coding
     WinActivate
-  Else Run C:\Dropbox\Coding
+  Else Run %DirDropbox%\Coding
   Return
 
 1 & g::
   IfWinExist Google Drive
     WinActivate
-  Else Run C:\Google Drive
+  Else Run %HOME%\Google Drive
   Return

@@ -10,7 +10,7 @@ Syntax:
 #d::
   If WinExist("Desktop","Explorer.EXE")
     WinActivate
-  Else Run %PathToDesktop%
+  Else Run %A_Desktop%
   Return
 
 1 & y::
