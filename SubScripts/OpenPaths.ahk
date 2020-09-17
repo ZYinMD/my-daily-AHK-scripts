@@ -52,3 +52,9 @@ Purpose:
     WinActivate
   Else Run %HOME%\Google Drive
   Return
+
+1 & h::
+  IfWinExist Zhi Yin
+    WinActivate
+  Else Run %HOME%
+  Return

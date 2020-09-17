@@ -1,5 +1,5 @@
 ; get env var value from windows native env var, because there're a couple that's not included in the AHK env vars.
-EnvGet, HOME, HOMEPATH ; HOME is the new var name, HOMEPATH is the native windows env var.
+EnvGet, HOME, HOMEPATH ; HOME is the new var name, HOMEPATH is the native windows env var which points to ~ .
 ; This file uses "expression mode" for strings. A dot means concat. Read cheat sheet autoHotkeys for details
 APPDATA := HOME . "\AppData"
 DirDropbox := HOME . "\Dropbox"
@@ -20,17 +20,11 @@ PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
 PathToFoobar2000 := "C:\sudo\foobar2000\foobar2000.exe"
 
 ; the following portable apps need to be installed in different paths on different computers so that the dropbox syncing doesn't interfere with each other
-; A_xxx is env variable of AHK
+; A_xxx is env var of AHK
 ; assigning variable using "traditional mode" (= instead of :=), read cheat sheet autoHotkeys to understand the syntax
-PathToAnki := DirPortables . "\" . A_ComputerName . "\Anki\Anki.bat"
+PathToAnki := A_ProgramFiles . "\Anki\Anki.exe"
 PathToConEmu := DirPortables . "\" . A_ComputerName . "\ConEmu\ConEmu64.exe"
 
-if (A_ComputerName = "ZHI-D13") { ; single equal sign means evaluation, read cheat sheet autoHotkeys to understand the syntax
-  ; PathToAnki := DirDropbox . "\Portables\ZHI-DESKTOP\Anki\Anki.bat" ; read cheat sheet autoHotkeys to understand the syntax
-  PathToConEmu := DirPortables . "\ZHI-DESKTOP\ConEmu\ConEmu64.exe"
-} else if (A_ComputerName = "ZHI-MI") { ;
-  ; PathToAnki := DirDropbox . "\Portables\MI\Anki\Anki.bat"
-  PathToConEmu := DirDropbox . "\Portables\MI\ConEmuPack.200615\ConEmu64.exe"
-}
+
 
 Sql := false ; This is a global variable for writing SQL queries, see SQL.ahk
