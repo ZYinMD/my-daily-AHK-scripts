@@ -11,13 +11,9 @@ PathToVSCode := APPDATA . "\Local\Programs\Microsoft VS Code\Code.exe"
 PathToVSCodeInsiders := "C:\Program Files\Microsoft VS Code Insiders\Code - Insiders.exe"
 PathToSpotify := APPDATA . "\Roaming\Spotify\Spotify.exe"
 PathToSlack := APPDATA . "\Local\slack\slack.exe"
-PathToVivaldi := "C:\sudo\Vivaldi\Application\vivaldi.exe"
 PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-PathToFirefox := "C:\Program Files\Mozilla Firefox\firefox.exe"
-PathToBrave := "C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe"
-PathToEdge := "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
-PathToFoobar2000 := "C:\sudo\foobar2000\foobar2000.exe"
+PathToFoobar2000 := HOME . "\apps\foobar2000\foobar2000.exe"
 
 ; the following portable apps need to be installed in different paths on different computers so that the dropbox syncing doesn't interfere with each other
 ; A_xxx is env var of AHK

@@ -56,13 +56,13 @@ Syntax:
 <!x::
   IfWinExist ahk_exe firefox.exe
     WinActivate
-  Else Run %PathToFirefox%
+  Else Run firefox
   Return
 
 <!e::
   IfWinExist ahk_exe msedge.exe
     WinActivate
-  Else Run %PathToEdge%
+  Else Run msedge
   Return
 
 ` & x::
@@ -73,14 +73,14 @@ Syntax:
 <!b::
   IfWinExist ahk_exe brave.exe
     WinActivate
-  Else Run %PathToBrave%
+  Else Run brave
   Return
 
 <!v::
 ` & v::
   IfWinExist ahk_exe vivaldi.exe
     WinActivate
-  Else Run %PathToVivaldi%
+  Else Run vivaldi
   Return
 
 <!s::

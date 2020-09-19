@@ -25,14 +25,6 @@ Numpad0 & NumpadMult::
   Else Run %PathToSpotify%
   Return
 
-/* Kuwo, unavailable for now
-Numpad0 & NumpadAdd::
-  IfWinExist ahk_class kwmusicmaindlg
-    WinActivate
-  Else Run C:\Dropbox\Portables\KwMusic\kuwo\kuwomusic\8.5.2.0_UG6\bin\KwMusic.exe
-  Return
-*/
-
 ` & f::
 Numpad0 & NumpadSub::
   IfWinExist ahk_exe foobar2000.exe
