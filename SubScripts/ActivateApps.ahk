@@ -16,7 +16,7 @@ Syntax:
 1 & y::
   If WinExist("youtube-dl one time download","Explorer.EXE")
     WinActivate
-  Else Run %PathToYoutubeDownloads%
+  Else Run %DirYoutubeDownloads%
   Return
 
 ` & t::
@@ -28,7 +28,7 @@ Syntax:
 ` & e::
   IfWinExist ahk_exe Evernote.exe
     WinActivate
-  Else Run %PathToEvernote%
+  Else Run Evernote
   Return
 
 ` & u::  ; µTorrent minimizes to tray, so need to WinShow first

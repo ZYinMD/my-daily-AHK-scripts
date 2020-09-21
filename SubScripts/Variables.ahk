@@ -4,7 +4,7 @@ EnvGet, HOME, UserProfile ; HOME is the new var name, UserProfile is the native 
 APPDATA := HOME . "\AppData"
 DirDropbox := HOME . "\Dropbox"
 DirPortables := DirDropbox . "\Portables"
-DirYoutubeDownloads := HOME . "\Desktop\youtube-dl one time download"
+DirYoutubeDownloads := A_Desktop . "\youtube-dl one time download"
 DirDownloads := HOME . "\Downloads"
 PathToSublime := "C:\Sudo\Sublime Text 3\sublime_text.exe"
 PathToVSCode := APPDATA . "\Local\Programs\Microsoft VS Code\Code.exe"
@@ -12,7 +12,6 @@ PathToVSCodeInsiders := "C:\Program Files\Microsoft VS Code Insiders\Code - Insi
 PathToSpotify := APPDATA . "\Roaming\Spotify\Spotify.exe"
 PathToSlack := APPDATA . "\Local\slack\slack.exe"
 PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
-PathToEvernote := "C:\Program Files (x86)\Evernote\Evernote.exe"
 PathToFoobar2000 := HOME . "\apps\foobar2000\foobar2000.exe"
 PathToBash := A_ProgramFiles . "\Git\bin\bash.exe"
 
