@@ -1,3 +1,5 @@
+#IfWinActive ahk_exe foobar2000.exe
+
 ; Ctrl-Shift-N when dropbox has focus: add 5 randoms songs into the default playlist.
 ^+n::
 ; calling bash explicitly here, I could also omit it, and rely on windows file association to directly run .sh files with the correct bash.exe, but sometimes it seems bug in that I have created the correct file association, but it doesn't work.
@@ -18,8 +20,6 @@ Purpose:
 
   F12 is remapped to ScrollLock (only in Foobar2000) because of this.
 */
-
-#IfWinActive ahk_exe foobar2000.exe
 
 Space::
   If GetKeyState("ScrollLock","t") {

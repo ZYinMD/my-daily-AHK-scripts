@@ -22,6 +22,4 @@ PathToBash := A_ProgramFiles . "\Git\bin\bash.exe"
 PathToAnki := A_ProgramFiles . "\Anki\Anki.exe"
 PathToConEmu := DirPortables . "\" . A_ComputerName . "\ConEmu\ConEmu64.exe"
 
-
-
 Sql := false ; This is a global variable for writing SQL queries, see SQL.ahk
