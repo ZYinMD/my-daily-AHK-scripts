@@ -32,7 +32,7 @@ Background Story:
 ::jiandao::✂
 ::chilun::⚙️
 ::chengyi::×
-:R:rrr::${props => props.theme.test}
+:R:zzz::${props => props.theme.test}
 ::shangmian::↑
 ::xiamian::↓
 ::zuomian::←

@@ -97,6 +97,7 @@ Syntax:
       ; this is equivalent to running `code --disable-gup` in CLI. %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
     Return
   }
+/* ; chrome还是用win-2吧
 <!c::
 ` & c::
   IfWinActive ahk_exe xnview.exe
@@ -111,7 +112,7 @@ Syntax:
     ; Send #{2}
     Return
   }
-
+*/
 ` & l::
   IfWinExist Slack
     WinActivate Slack
