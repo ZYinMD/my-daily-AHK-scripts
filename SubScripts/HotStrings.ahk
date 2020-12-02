@@ -41,6 +41,7 @@ Background Story:
 ::haoping::👍
 ::chaping::👎
 ::dotdotdot::⋮
+::shuminghao::《》{left}
 /* It's very tricky to make these three work↓. Gave up.
 ::'|::'t
 ::']::'r
