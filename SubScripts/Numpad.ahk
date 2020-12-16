@@ -31,3 +31,9 @@ Numpad0 & NumpadSub::
     WinActivate
   Else Run %PathToFoobar2000%
   Return
+
+Numpad0 & NumpadAdd::
+  IfWinExist ahk_exe calibre.exe
+    WinActivate
+  Else Run %PathToCalibre%
+  Return

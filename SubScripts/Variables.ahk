@@ -14,6 +14,7 @@ PathToSlack := APPDATA . "\Local\slack\slack.exe"
 PathToChrome := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 PathToFoobar2000 := HOME . "\apps\foobar2000\foobar2000.exe"
 PathToBash := A_ProgramFiles . "\Git\bin\bash.exe"
+PathToCalibre := DirPortables . "\Calibre\calibre-portable.exe"
 
 ; the following portable apps need to be installed in different paths on different computers so that the dropbox syncing doesn't interfere with each other
 ; A_xxx is env var of AHK
