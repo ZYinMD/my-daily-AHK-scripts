@@ -49,7 +49,7 @@ Background Story:
 ::'}::'s
 :://:://{space}
 */
-::cslg::console.log({{}{}}){left 2}
+::cslg::console.log('');{left 3}
 ::cstb::console.table({{}{}}){left 2}
 ::csdr::console.dir(){left}
 ::csif::console.info(){left}
