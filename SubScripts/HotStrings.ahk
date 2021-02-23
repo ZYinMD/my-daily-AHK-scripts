@@ -42,7 +42,7 @@ Background Story:
 ::haoping::👍
 ::chaping::👎
 ::dotdotdot::⋮
-::shuminghao::《》{left}
+; ::shuminghao::《》{left} // I used to need this because I used to use English punctuations with Chinese input
 /* It's very tricky to make these three work↓. Gave up.
 ::'|::'t
 ::']::'r
@@ -62,7 +62,7 @@ Background Story:
 ::<<::<>{left} ;output <|>
 ::>>::</>{left} ;output </|>
 ::<>::< />{left 3} ;output <| />
-::.,::。
+; ::.,::。 // I used to need this because I used to use English punctuations with Chinese input
 #IfWinNotActive
 
 #Hotstring *0

@@ -9,7 +9,7 @@ LControl::Click
 
 /*
 Purpose:
-  Except the one above↑, all the following remaps can be done with either AutoHotkey or keytweak, but not both together (will cause undesired behavior). On some computers, like my Mi laptop, AutoHotkey doesn't always work well, so I use keytweak.
+  Except the one above↑, all the following remaps can be done with either AutoHotkey or keytweak, but not both together (will cause undesired behavior, e.g. CapsLock -> Right Control -> PgDn). On some computers, like my Mi laptop, AutoHotkey doesn't always work well, so I use keytweak.
 
 Syntax:
   Things between #If(expression) and #If are only effective when condition is met. For operators, search AutoHotkey Doc for "operators in expressions"
