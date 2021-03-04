@@ -101,7 +101,6 @@ Syntax:
 ` & c::
   IfWinExist ahk_exe calibre.exe
     WinActivate
-  Else Run %PathToCalibre%
   Return
 
 /* ; chrome还是用win-2吧
