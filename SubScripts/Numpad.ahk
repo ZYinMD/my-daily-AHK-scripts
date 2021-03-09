@@ -32,6 +32,11 @@ Numpad0 & NumpadSub::
   Else Run %PathToFoobar2000%
   Return
 
+Numpad0 & NumpadEnter::
+  IfWinExist ahk_exe EXCEL.exe
+    WinActivate
+  Return
+
 Numpad0 & NumpadAdd::
   IfWinExist ahk_exe calibre.exe
     WinActivate
