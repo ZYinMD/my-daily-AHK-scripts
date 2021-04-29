@@ -89,12 +89,14 @@ Syntax:
   2. The Send {keyname} was the traditional syntax, and the bare key name is the new syntax introduced after 2018 version. However, I found it creates a bug where j; / l; / d; etc doesn't output the semicolon if you press too fast. So the old syntax is more reliable.
   3. Also, when using MS PinYin, symbols like ? and ! will trigger the shift key and switch the input to English, the old method doesn't have this issue.
 */
+`; & q::Send `%
+`; & w::^
+`; & e::&
+`; & r::*
 `; & a::{
 `; & s::}
-`; & u::
-`; & e::[
-`; & o::
-`; & r::]
+`; & u::[
+`; & o::]
 `; & j::Send {(}
 `; & l::Send {)}
 `; & d::Send {=}

@@ -17,11 +17,11 @@ Background Story:
 
 #Hotstring ? *
 
-::qian::$
-::baif::%
-::tong::&
-::xing::*
-:R:jier::^
+; ::qian::$
+; ::baif::%
+; ::tong::&
+; ::xing::*
+; :R:jier::^
 ::dunhao::、
 ::maohao::：
 ::duihao::✔
