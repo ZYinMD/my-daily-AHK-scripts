@@ -50,12 +50,7 @@ Background Story:
 :://:://{space}
 */
 ::cslg::console.log('');{left 3}
-; ::cstb::console.table({{}{}}){left 2}
-::csdr::console.dir(){left}
-::csif::console.info(){left}
-::cswn::console.warn(){left}
-::cser::console.error(){left}
-::csgp::console.groupCollapsed(){Enter}{Enter}console.groupEnd(){Up}{Tab}
+::csdb::console.debug(){left}
 
 ; the following affects the hotkey in PotPlayer, so need not to work in PotPlayer
 #IfWinNotActive ahk_class PotPlayer64
