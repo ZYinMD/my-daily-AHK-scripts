@@ -89,6 +89,7 @@ Syntax:
   2. The Send {keyname} was the traditional syntax, and the bare key name is the new syntax introduced after 2018 version. However, I found it creates a bug where j; / l; / d; etc doesn't output the semicolon if you press too fast. So the old syntax is more reliable.
   3. Also, when using MS PinYin, symbols like ? and ! will trigger the shift key and switch the input to English, the old method doesn't have this issue.
 */
+
 `; & q::Send `%
 `; & w::^
 `; & e::&
@@ -135,9 +136,13 @@ Return
 ;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way. "p" means retrive the phisical state of the key
 */
 
-$;::Send {end}{;} ;$ means prevent the hotkey to trigger itself;
+`;::; ; Restore ; in the normal way, after the block below was disabled (haven't been very useful, while causing other inconveniences).
+/*
+
+$;::Send {end}{;} ; `$` means prevent the hotkey to trigger itself;
 ^;::Send {;}
 +;::Send {:} ;Because ; was restored by a hotkey as opposed to a remap, any modifier key with ; needs to be separately restored, which is different from restoring the ` using a remap, which doesn't need to explicitly restore "~"
+ */
 
 /*
 Purpose:
@@ -169,19 +174,33 @@ Syntax:
 
 /*
 Purpose:
-  2 + jkluioh;m{space} => 1234567890
+  2 + uiopjkl;m{space} => 1234567890
 */
-2 & j::Send {1}
-2 & k::Send {2}
-2 & l::Send {3}
-2 & u::Send {4}
-2 & i::Send {5}
-2 & o::Send {6}
-2 & h::Send {7}
+2 & u::Send {1}
+2 & i::Send {2}
+2 & o::Send {3}
+2 & p::Send {4}
+2 & j::Send {5}
+2 & k::Send {6}
+2 & l::Send {7}
 2 & `;::Send {8}
 2 & n::
 2 & m::Send {9} ;both m and n will fire 9
 2 & space::Send {0}
+; below is the old version, no longer used
+; 2 & j::Send {1}
+; 2 & k::Send {2}
+; 2 & l::Send {3}
+; 2 & u::Send {4}
+; 2 & i::Send {5}
+; 2 & o::Send {6}
+; 2 & h::Send {7}
+; 2 & `;::Send {8}
+; 2 & n::
+; 2 & m::Send {9} ;both m and n will fire 9
+; 2 & space::Send {0}
+
+
 
 /*
 Purpose:

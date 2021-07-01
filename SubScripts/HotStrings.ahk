@@ -16,7 +16,6 @@ Background Story:
 ; ::its::it's
 
 #Hotstring ? *
-
 ; ::qian::$
 ; ::baif::%
 ; ::tong::&
@@ -49,7 +48,7 @@ Background Story:
 ::'}::'s
 :://:://{space}
 */
-::cslg::console.log('');{left 3}
+::cslg::console.log(''){left 2}
 ::csdb::console.debug(){left}
 
 ; the following affects the hotkey in PotPlayer, so need not to work in PotPlayer
