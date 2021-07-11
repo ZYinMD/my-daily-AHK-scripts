@@ -90,8 +90,8 @@ Syntax:
   3. Also, when using MS PinYin, symbols like ? and ! will trigger the shift key and switch the input to English, the old method doesn't have this issue.
 */
 
-`; & q::Send `%
-`; & w::^
+`; & q::^
+`; & w::Send `%
 `; & e::&
 `; & r::*
 `; & a::{
