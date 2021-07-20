@@ -10,7 +10,8 @@
   return
 
 
-/*
+/* the code below was used when I triage songs when driving to Perficient. It's now disabled because it messes up with CapsLock as Ctrl in foobar2000.
+
 Purpose:
   The following operations in Foobar2000 are meant to be done in car with with one hand and no eyes:
 
@@ -20,7 +21,7 @@ Purpose:
 
   F12 is remapped to ScrollLock (only in Foobar2000) because of this.
 */
-
+/*
 Space::
   If GetKeyState("ScrollLock","t") {
     Send +{Delete}
@@ -40,4 +41,5 @@ Right::
 
 F12::ScrollLock
 
+*/
 #IfWinActive
