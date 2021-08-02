@@ -77,9 +77,7 @@ Purpose:
   4::4
 ; Alt ` to collapse all folders in the file explorer and then focus on it
 
-; !`::Send ^{F1}!{NumpadSub} ; focus on file explorer ;
-; ↑ this seems to have a problem after vscode update, use a simplified version instead. It will not collapse other folders.
-!`::Send ^+{E} ; focus on file explorer ;
+!`::Send ^{F1}!{NumpadSub} ; focus on file explorer ;
 
 ; to activate AceJump:
   `; & Space::
