@@ -8,11 +8,12 @@ Purpose:
 
 ; use ` as modifier key in VSCode to do things:
   ; `up and `down to move between panes
+  /*
   ` & Up::
   ` & =::Send ^{Numpad8}
   ` & down::
   ` & ]::Send ^{Numpad2}
-
+ */
   ; `Delete and `Backspace to toggle line comment and block comment
   ` & -::
   ` & Delete::Send ^/
@@ -96,9 +97,4 @@ AppsKey::
   Send ^+{8}
   return
 
-left::Send ^{PgUp}
-right::Send ^{PgDn}
-up::Send ^{Numpad8}
-down::Send ^{Numpad2}
-Delete::Send ^{w}
 #If
