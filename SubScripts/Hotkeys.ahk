@@ -185,7 +185,7 @@ Purpose:
 2 & l::Send {7}
 2 & `;::Send {8}
 2 & n::
-2 & m::Send {9} ;both m and n will fire 9
+2 & m::Send {Numpad9} ;both m and n will fire 9
 2 & space::Send {0}
 ; below is the old version, no longer used
 ; 2 & j::Send {1}
