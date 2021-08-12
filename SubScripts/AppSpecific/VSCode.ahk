@@ -14,6 +14,10 @@ Purpose:
   ` & down::
   ` & ]::Send ^{Numpad2}
  */
+  ; new: use up and down directly
+  up::Send ^{Numpad8}
+  down::Send ^{Numpad2}
+
   ; `Delete and `Backspace to toggle line comment and block comment
   ` & -::
   ` & Delete::Send ^/

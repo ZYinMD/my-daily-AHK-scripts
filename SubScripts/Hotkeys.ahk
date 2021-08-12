@@ -75,8 +75,6 @@ Syntax:
  */
 left::Send ^{PgUp}
 right::Send ^{PgDn}
-up::Send ^{Numpad8}
-down::Send ^{Numpad2}
 Ins::Send ^{w}
 
 
