@@ -77,7 +77,7 @@ left::Send ^{PgUp}
 right::Send ^{PgDn}
 up::Send ^{Numpad8}
 down::Send ^{Numpad2}
-Delete::Send ^{w}
+Ins::Send ^{w}
 
 
 /*
