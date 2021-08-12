@@ -78,7 +78,7 @@ Purpose:
   4::4
 ; Alt ` to collapse all folders in the file explorer and then focus on it
 
-!`::Send ^{F1}!{NumpadSub} ; focus on file explorer ;
+!`::Send !{NumpadSub} ; focus on file explorer ;
 
 ; to activate AceJump:
   `; & Space::
