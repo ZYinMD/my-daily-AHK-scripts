@@ -9,9 +9,9 @@ Purpose:
 ; use ` as modifier key in VSCode to do things:
   ; `up and `down to move between panes
   ` & Up::
-  ` & =::Send ^{Numpad8}
+  ` & =::Send ^{Numpad4}
   ` & down::
-  ` & ]::Send ^{Numpad2}
+  ` & ]::Send ^{Numpad6}
 
   ; `Delete and `Backspace to toggle line comment and block comment
   ` & -::

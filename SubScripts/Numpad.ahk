@@ -42,3 +42,15 @@ Numpad0 & NumpadAdd::
     WinActivate
   Else Run %PathToCalibre%
   Return
+
+/*
+Purpose: stuff to do with lefthand numpad
+*/
+
+NumpadDot::Send ^{w}
+Numpad1::Send ^{PgUp}
+Numpad3::Send ^{PgDn}
+Numpad5::Send {PgUp}
+Numpad2::Send {PgDn}
+Numpad4::Send ^{Numpad4}
+Numpad6::Send ^{Numpad6}
