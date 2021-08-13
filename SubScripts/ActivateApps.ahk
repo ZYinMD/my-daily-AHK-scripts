@@ -19,7 +19,7 @@ Syntax:
   Else Run %DirYoutubeDownloads%
   Return
 
-9::
+F1::
   IfWinExist ahk_exe ConEmu64.exe
     WinActivate
   Else Run %PathToConEmu%
