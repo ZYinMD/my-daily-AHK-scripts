@@ -63,7 +63,6 @@ Purpose:
 Syntax:
   Sometimes if there's mysterious bugs, add return in the end helps.
 */
-/*
   ` & Left::
   ` & [::
   Send ^{PgUp}
@@ -72,10 +71,6 @@ Syntax:
   ` & \::
   Send ^{PgDn}
   return
- */
-left::Send ^{PgUp}
-right::Send ^{PgDn}
-Ins::Send ^{w}
 
 
 /*
