@@ -46,7 +46,7 @@ Numpad0 & NumpadAdd::
 /*
 Purpose: stuff to do with lefthand numpad
 */
-
+/* disabled for now, try the 9-key keypad first. Come back to this if that's not successful, but may need to set up num lock switch, because I use the numpad to input number quite often.
 NumpadDot::Send ^{w}
 Numpad1::Send ^{PgUp}
 Numpad3::Send ^{PgDn}
@@ -54,3 +54,4 @@ Numpad5::Send {PgUp}
 Numpad2::Send {PgDn}
 Numpad4::Send ^{Numpad4}
 Numpad6::Send ^{Numpad6}
+ */
