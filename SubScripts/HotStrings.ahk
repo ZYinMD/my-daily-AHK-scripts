@@ -50,7 +50,7 @@ Background Story:
 :://:://{space}
 */
 ::cslg::console.log(''){left 2}
-::csdb::console.debug(){left}
+::cswn::console.warn(''){left 2}
 
 ; the following affects the hotkey in PotPlayer, so need not to work in PotPlayer
 #IfWinNotActive ahk_class PotPlayer64
