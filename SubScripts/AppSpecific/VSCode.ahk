@@ -75,12 +75,12 @@ Purpose:
   4 & ]::Send ^{j}
 
   4::4
+
 ; Alt ` to collapse all folders in the file explorer and then focus on it
 
-!`::Send !{NumpadSub} ; focus on file explorer ;
+; !`::Send !{NumpadSub} ; focus on file explorer ; I no longer need this because I defined alt ` natively in vscode
 
 ; to activate AceJump:
-  `; & Space::
   !Space::Send ^{F11}
 ; not successful, stopped trying
 ; ` & F5::
