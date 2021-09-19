@@ -1,17 +1,14 @@
 /*
 Purpose:
-  Win + z => Ctrl + PgUp
-  Win + x => Ctrl + PgDn
+  Use F3 to cycle through Explorer widnows on the Win-3 stack
 Syntax:
   hotkey::function call.
-  Key combination is allowed on the left side which is different from a remap.
+  Key combination is allowed which is different from a remap.
   ^ = Ctrl, ! = Alt, + = Shift, # = Win.
   Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
 */
 
-; disabled for now, as I never use them
-; #z::Send ^{PgUp}
-; #x::Send ^{PgDn}
+F3::Send ^#{3} ; #{3} is win-3, ^#{3} is ctr-win-3, which goes to the previous
 
 /*
 Purpose:
