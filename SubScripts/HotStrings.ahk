@@ -57,7 +57,7 @@ Background Story:
 ::<<::<>{left} ;output <|>
 ::>>::</>{left} ;output </|>
 ::<>::< />{left 3} ;output <| />
-::.,::。 ; I used to need this because I used to use English punctuations with Chinese input
+::.,.::。
 #IfWinNotActive
 
 #Hotstring *0
