@@ -51,6 +51,8 @@ Background Story:
 */
 ::cslg::console.log(''){left 2}
 ::cswn::console.warn(''){left 2}
+::dzc::douzhencang
+
 
 ; the following affects the hotkey in PotPlayer, so need not to work in PotPlayer
 #IfWinNotActive ahk_class PotPlayer64
