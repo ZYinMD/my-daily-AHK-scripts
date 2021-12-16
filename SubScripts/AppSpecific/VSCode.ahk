@@ -70,9 +70,9 @@ Purpose:
   4 & End::Send ^+!]
   ; 4Up and 4Down for finding errors:
   4 & Up::
-  4 & =::Send ^+{j}
+  4 & =::Send !{F8}
   4 & Down::
-  4 & ]::Send ^{j}
+  4 & ]::Send {F8}
 
   4::4
 
