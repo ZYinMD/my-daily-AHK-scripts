@@ -33,7 +33,7 @@ Numpad0 & NumpadSub::
   Return
 
 Numpad0 & NumpadEnter::
-  IfWinExist ahk_exe EXCEL.exe
+  IfWinExist ahk_exe calibre-parallel.exe
     WinActivate
   Return
 
