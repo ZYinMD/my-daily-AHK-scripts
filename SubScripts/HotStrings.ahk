@@ -25,7 +25,7 @@ Background Story:
 ::pozhehao::–
 ::maohao::：
 ::duihao::✔
-::cuohao::⨯
+; ::cuohao::⨯ ;在iOS上这个符号明确不如×好看, 所以depricate
 ::wujiao::★
 ::shalou::⏳
 ::zailai::⇆
