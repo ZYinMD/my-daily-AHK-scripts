@@ -15,3 +15,14 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn  ; Enable warnings to assist with detecting common errors.
+
+
+; below is for calibre. It has to auto execute, so I put them here.
+abstinence := 0
+increment() {
+  global abstinence
+  if (abstinence < 10)
+    abstinence++
+}
+
+SetTimer, increment, 300000 ; gain 1 abstinence every 5 minutes
