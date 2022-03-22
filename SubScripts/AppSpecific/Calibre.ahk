@@ -10,4 +10,8 @@ Space::
   }
   return
 
+PgDn::
+  MsgBox %abstinence%
+  return
+
 #IfWinActive
