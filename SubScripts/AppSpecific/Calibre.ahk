@@ -1,12 +1,15 @@
 #IfWinActive ahk_exe calibre-parallel.exe
 
 Space::
-  if GetKeyState("CapsLock","p") {
-    Send ^{Space}
-  } else if (abstinence > 0) {
+  if (abstinence > 0 And !locked) {
     Send {Space}
     abstinence --
-    ; MsgBox, %abstinence%
+  }
+  if (abstinence > 0 And locked) {
+    ; MsgBox Current abstinence: %abstinence%
+  }
+  if (abstinence = 0) {
+    locked = True
   }
   return
 

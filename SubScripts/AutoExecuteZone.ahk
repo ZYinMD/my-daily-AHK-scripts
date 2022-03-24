@@ -19,10 +19,15 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; below is for calibre. It has to auto execute, so I put them here.
 abstinence := 0
+locked := True
 increment() {
   global abstinence
-  if (abstinence < 10)
+  global locked
+  if (abstinence < 15) {
     abstinence++
+  } else {
+    locked := False
+  }
 }
 
-SetTimer, increment, 300000 ; gain 1 abstinence every 5 minutes
+SetTimer, increment, 180000 ; gain 1 abstinence every 3 minutes. Will max out on 45 minutes, which is one class.
