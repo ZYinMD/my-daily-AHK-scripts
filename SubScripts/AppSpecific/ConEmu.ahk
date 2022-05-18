@@ -34,9 +34,8 @@ Syntax:
 2 & RShift::Send ^k
 
 ; when pressing ctrl+w, type exit⏎ to exit properly. This ensures history is saved properly
-^w::Send exit{Enter} ; since my RCtrl is a remapped key, ^W doesn't really work. It only works in computers where CapsLock is remapped with KeyTweak
-
-;  for non-keytweaked computers, must use this ugly way. "p" means retrive the phisical state of the key
+^w::Send exit{Enter}
+; since my RCtrl is a remapped key, ^W doesn't really work. It only works in computers where CapsLock is remapped with KeyTweak. for non-keytweaked computers, must use this ugly way. "p" means retrive the phisical state of the key
 w::
   if GetKeyState("CapsLock","p")
     Send exit{Enter}
