@@ -21,9 +21,6 @@ cd.. and cd -
 2 & End::
 2 & RShift::Send ^k
 
-; wt doesn't have a ctrl-pgup ctrl-pgdn ctrl-tab ctrl-shift-tab as 4 different hotkeys as chrome does. It only has 2, ctrl-tab and ctrl-shift-tab. Ctrl-tab can be used to cycle through tabs. Ctrl-shift-tab is mapped to ctrl-pgup in WT.
-` & Right::
-` & \::Send ^{Tab}
 
 ; when pressing ctrl+w, type exit⏎ to exit properly. This ensures history is saved properly
 ^w::Send exit{Enter}
