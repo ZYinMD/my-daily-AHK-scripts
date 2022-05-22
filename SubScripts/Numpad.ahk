@@ -19,16 +19,19 @@ Numpad0 & Numpad9::Send ^#{9}
 Numpad0 & NumpadDot::Send #0
 Numpad0::Numpad0 ;restore Numpad0
 
-Numpad0 & NumpadDiv::Volume_Mute
+Numpad0 & NumpadSub::
+  IfWinExist ahk_exe SumatraPDF.exe
+    WinActivate
+  Return
 
-Numpad0 & NumpadMult::
+Numpad0 & NumpadDiv::
   IfWinExist ahk_exe Spotify.exe
     WinActivate
   Else Run %PathToSpotify%
   Return
 
 ` & f::
-Numpad0 & NumpadSub::
+Numpad0 & NumpadMult::
   IfWinExist ahk_exe foobar2000.exe
     WinActivate
   Else Run %PathToFoobar2000%
