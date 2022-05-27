@@ -17,4 +17,7 @@ PgDn::
   MsgBox %abstinence%
   return
 
+WheelDown::
+  return
+
 #IfWinActive
