@@ -14,7 +14,7 @@ Purpose:
 1 & a::
   IfWinExist Archive
     WinActivate
-  Else Run D:\Archive
+  Else Run A:\Archive
   Return
 
 1 & m::
@@ -32,7 +32,7 @@ Purpose:
 1 & s::
   IfWinExist Study
     WinActivate
-  Else Run D:\Archive\Study
+  Else Run A:\Archive\Study
   Return
 
 1 & d::
