@@ -1,15 +1,5 @@
 #IfWinActive ahk_exe WindowsTerminal.exe
 
-/*
-cd.. and cd -
- */
-!=::
-!Up::Send cd ..{Enter}
-
-![::
-!Left::Send cd -{Enter}
-
-
 ; use the native delete to line start and delete to line end (although the generic ones already work properly)
 2 & Left::
 2 & [::
@@ -20,17 +10,5 @@ cd.. and cd -
 2 & \::
 2 & End::
 2 & RShift::Send ^k
-
-
-; when pressing ctrl+w, type exit⏎ to exit properly. This ensures history is saved properly
-^w::Send exit{Enter}
-; since my RCtrl is a remapped key, ^W doesn't really work. It only works in computers where CapsLock is remapped with KeyTweak. for non-keytweaked computers, must use this ugly way. "p" means retrive the phisical state of the key
-w::
-  if GetKeyState("CapsLock","p")
-    Send exit{Enter}
-  else
-    Send w
-  Return
-
 
 #IfWinActive
