@@ -22,7 +22,7 @@ Background Story:
 ; ::xing::*
 ; :R:jier::^
 ::dunhao::、
-::pozhehao::–
+::pozhehao::—
 ::maohao::：
 ::duihao::✔
 ; ::cuohao::⨯ ;在iOS上这个符号明确不如×好看, 所以depricate
