@@ -243,4 +243,4 @@ To understand it, first read cheat sheet autohotkeys, then read doc about `clicb
 但需要先在Win11中设快捷键: Time & Language > Typing > Advanced keyboard settings > Input language hot keys. 我设为了Ctrl-Shift-7和Ctrl-Shift-8
  */
 ^j::Send ^+{7}
-^i::Send ^+{8}
+^h::Send ^+{8}
