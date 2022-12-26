@@ -90,10 +90,10 @@ Purpose:
 
 ; use Appskey to open up the lightbulb (mainly for auto correct of spell check)
 /::
-  Send ^+{8}
+  Send ^+{NumpadSub}
   return
 AppsKey::
-  Send ^+{8}
+  Send ^+{NumpadSub}
   return
 
 #If
