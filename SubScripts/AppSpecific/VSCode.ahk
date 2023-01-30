@@ -18,6 +18,8 @@ Purpose:
   ` & Delete::Send ^/
   ` & BackSpace::Send ^+/
 
+  ; Shift-F1 in vscode is toggle terminal pane, but it's a bit hard to press. Make it easier by using ` & F1
+  ` & F1:: Send +{F1}
 ; use 1 as modifier key for selection.
   ; 1Left and 1Right for expanding and shrinking selection
   1 & Left::
