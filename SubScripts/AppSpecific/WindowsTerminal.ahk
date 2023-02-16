@@ -11,4 +11,7 @@
 2 & End::
 2 & RShift::Send ^k
 
+; No need for the F1 hotkey when I'm already in wt, re-enable it. The pwsh doc says F1 is bound to some parameter intellisence, I tried but didn't work.
+F1::Send {F1}
+
 #IfWinActive
