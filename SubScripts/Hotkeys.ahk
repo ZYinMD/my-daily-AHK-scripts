@@ -225,6 +225,24 @@ return
 
 /*
 Purpose:
+  Sometimes some modifier keys get stuck, this will try to elease all of them.
+*/
+^!F11::
+  Send {RShift up}
+  Send {RCtrl up}
+  Send {RAlt up}
+  Send {CapsLock up}
+  Send {` up}
+  Send {; up}
+  Send {1 up}
+  Send {2 up}
+  Send {3 up}
+  Send {4 up}
+  Send (Numpad0 up)
+return
+
+/*
+Purpose:
   Simulate ctrl+ and ctrl- to zoom in and out. Since + and - have been remapped, I need to find a way to simulate them.
 */
 ^0::Send ^{=}
