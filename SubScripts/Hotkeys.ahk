@@ -225,7 +225,7 @@ return
 
 /*
 Purpose:
-  Sometimes some modifier keys get stuck, this will try to elease all of them.
+  Sometimes some modifier keys get stuck, this will try to release all of them.
 */
 ^!F11::
   Send {RShift up}
@@ -238,7 +238,7 @@ Purpose:
   Send {2 up}
   Send {3 up}
   Send {4 up}
-  Send (Numpad0 up)
+  Send {Numpad0 up}
 return
 
 /*
