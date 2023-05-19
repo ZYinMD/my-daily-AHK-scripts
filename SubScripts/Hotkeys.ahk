@@ -172,39 +172,6 @@ Syntax:
 
 /*
 Purpose:
-  2 + uiopjkl;m{space} => 1234567890
-*/
-
-; no longer used, in favor of the native number row (with stickers on 2 6 9)
-; 2 & u::Send {1}
-; 2 & i::Send {2}
-; 2 & o::Send {3}
-; 2 & p::Send {4}
-; 2 & j::Send {5}
-; 2 & k::Send {6}
-; 2 & l::Send {7}
-; 2 & `;::Send {8}
-; 2 & n::
-; 2 & m::Send {Numpad9} ;both m and n will fire 9
-; 2 & space::Send {0}
-
-; below is the old version, no longer used
-; 2 & j::Send {1}
-; 2 & k::Send {2}
-; 2 & l::Send {3}
-; 2 & u::Send {4}
-; 2 & i::Send {5}
-; 2 & o::Send {6}
-; 2 & h::Send {7}
-; 2 & `;::Send {8}
-; 2 & n::
-; 2 & m::Send {9} ;both m and n will fire 9
-; 2 & space::Send {0}
-
-
-
-/*
-Purpose:
   ` + space: pause and play foobar2000
   Ctrl+Alt+Shift+5 is set to be the global hotkey for this function in foobar2000, but I need a easier version in actuality
 */
