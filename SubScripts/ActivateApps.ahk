@@ -13,32 +13,9 @@ Syntax:
   Else Run %A_Desktop%
   Return
 
-1 & y::
-  If WinExist("youtube-dl one time download","Explorer.EXE")
-    WinActivate
-  Else Run %DirYoutubeDownloads%
-  Return
-
-` & t::
-  IfWinExist ahk_exe ConEmu64.exe
-    WinActivate
-  Else Run %PathToConEmu%
-  Return
-
 F1::
   IfWinExist ahk_exe WindowsTerminal.exe
     WinActivate
-  Return
-
-` & e::
-  IfWinExist ahk_exe Evernote.exe
-    WinActivate
-  Else Run Evernote
-  Return
-
-` & u::  ; µTorrent minimizes to tray, so need to WinShow first
-  WinShow µTorrent
-  WinActivate µTorrent
   Return
 
 ` & r::
@@ -124,11 +101,6 @@ F1::
     Return
   }
 */
-` & l::
-  IfWinExist Slack
-    WinActivate Slack
-  Else Run %PathToSlack%
-  Return
 
 <!a::
   IfWinExist Add
@@ -144,15 +116,5 @@ F1::
   Else IfWinExist Studio 3T
     WinActivate
   Else IfWinExist MySQL Workbench
-    WinActivate
-  Return
-
-` & o::
-  IfWinExist ahk_exe PotPlayerMini64.exe
-    WinActivate
-  Return
-
-` & p::
-  IfWinExist ahk_exe Postman.exe
     WinActivate
   Return
