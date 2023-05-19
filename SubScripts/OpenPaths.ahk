@@ -17,24 +17,6 @@ Purpose:
   Else Run A:\Archive
   Return
 
-1 & m::
-  IfWinExist Music
-    WinActivate
-  Else Run D:\Music\
-  Return
-
-1 & v::
-  IfWinExist Videos
-    WinActivate
-  Else Run D:\Videos
-  Return
-
-1 & s::
-  IfWinExist Study
-    WinActivate
-  Else Run A:\Archive\Study
-  Return
-
 1 & d::
   IfWinExist Dropbox
     WinActivate
@@ -51,10 +33,4 @@ Purpose:
   IfWinExist Google Drive
     WinActivate
   Else Run %HOME%\Google Drive
-  Return
-
-1 & h::
-  IfWinExist Zhi Yin
-    WinActivate
-  Else Run %HOME%
   Return
