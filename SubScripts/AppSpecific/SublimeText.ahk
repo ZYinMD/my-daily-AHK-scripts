@@ -5,8 +5,6 @@ Purpose:
 
 #IfWinActive ahk_exe sublime_text.exe
 
-; use alt space to call out the command palette:
-!Space::Send ^+p
 
 2 & ]::
 2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
@@ -37,17 +35,6 @@ Purpose:
 ; alt ` to focus the sidebar:
 !`::Send ^+{e}
 
-; alt + ↑↓←→ to move cursor fast (no longer used)
-/*
-!Left::
-![::Send {left 10}
-!Right::
-!\::Send {right 10}
-!Up::
-!=::Send {Up 4}
-!Down::
-!]::Send {Down 4}
- */
 ; When in Sublime, use 4 as modifier key to collapse, use ` to toggle
 4 & Left::
 4 & [::Send ^+[
