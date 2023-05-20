@@ -81,7 +81,7 @@ F1::
   }
 
 <!c::
-  IfWinExist ChatGPT -
+  IfWinExist ChatGPT
     WinActivate
   Return
 
