@@ -80,27 +80,10 @@ F1::
     Return
   }
 
-` & c::
-  IfWinExist ahk_exe calibre.exe
+<!c::
+  IfWinExist ChatGPT -
     WinActivate
   Return
-
-/* ; chrome还是用win-2吧
-<!c::
-` & c::
-  IfWinActive ahk_exe xnview.exe
-  {
-    Send !{c}
-    Return
-  }
-  Else {
-    IfWinExist ahk_exe chrome.exe
-      WinShow
-      WinActivate
-    ; Send #{2}
-    Return
-  }
-*/
 
 <!a::
   IfWinExist Add
