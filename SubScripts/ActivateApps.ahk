@@ -2,102 +2,87 @@
 Purpose:
   In order to use alt-tab as little as possible, the most frequently used apps should each have a shortcut.
 Syntax:
-  If more than one line of code needs to be triggered by a hotkey, add Return in the end.
-  Use %varname% to retrieve the value of a variable
-  If all parameters of WinActivate are omitted, the Last Found Window will be used.
+  - WinExist is complicated and the doc is hard to understand, but it seems I can use two criterias to match a window, e.g.:
+    If WinExist("Desktop","Explorer.EXE")
+    If WinExist("Add", "ahk_exe Anki.exe")
+      (this could be wrong, but it works for me for now)
+  - If no argument is passed into WinActivate, the Last Found Window will be used.
+  - Use %varname% to retrieve the value of a variable, e.g. `Run %PathToAnki%`
+  - If more than one line of code needs to be triggered by a hotkey, add Return in the end. (I end up always use Return)
 */
 
 #d::
-  If WinExist("Desktop","Explorer.EXE")
+  If WinExist("Desktop","Explorer.EXE") {
     WinActivate
-  Else Run %A_Desktop%
-  Return
+  } Else {
+    Run %A_Desktop%
+  }
+Return
 
 F1::
-  IfWinExist ahk_exe WindowsTerminal.exe
+  If WinExist("ahk_exe WindowsTerminal.exe") {
     WinActivate
-  Return
+  }
+Return
 
 ` & r::
-  IfWinExist Redux DevTools
+  If WinExist("Redux DevTools") {
     WinActivate
-  Return
+  }
+Return
 
 ` & s::
-  IfWinExist ahk_exe Code - Insiders.exe
+  If WinExist("ahk_exe Code - Insiders.exe") {
     WinActivate
-  Else Run %PathToVSCodeInsiders%
-  Return
-
-  ; ` & s used to be sublime↓, but now it's vscode insiders
-  ; IfWinExist ahk_exe sublime_text.exe
-  ;   WinActivate
-  ; Else Run %PathToSublime%
-  ; Return
+  } Else {
+    Run %PathToVSCodeInsiders%
+  }
+Return
 
 <!x::
-  IfWinExist ahk_exe firefox.exe
+  If WinExist("ahk_exe firefox.exe") {
     WinActivate
-  Else Run firefox
-  Return
+  } Else {
+    Run firefox ; this works if firefox is installed, kind of magical, but sure (it's not in path, btw)
+  }
+Return
 
 <!e::
-  IfWinExist ahk_exe msedge.exe
+  If WinExist("ahk_exe msedge.exe") {
     WinActivate
-  Else Run msedge
-  Return
-
-` & x::
-  IfWinExist ahk_exe EXCEL.exe
-    WinActivate
-  Return
-
-<!b::
-  IfWinExist ahk_exe brave.exe
-    WinActivate
-  Else Run brave
-  Return
-
-<!v::
-` & v::
-  IfWinExist ahk_exe vivaldi.exe
-    WinActivate
-  Else Run vivaldi
-  Return
+  } Else {
+    Run msedge ; this works if edge is installed, kind of magical, but sure (it's not in path, btw)
+  }
+Return
 
 <!s::
-  IfWinActive ahk_exe Code.exe
-  {
-    Send ^{p}
-    Return
+  If WinActive("ahk_exe Code.exe") {
+    Send !{s}
+  } Else If WinExist("ahk_exe Code.exe") {
+    WinActivate
+  } Else {
+    Run %ComSpec% /c "code --disable-gpu",,hide ; have to disable gpu, otherwise it flickers on full screen. This is equivalent to running `code --disable-gup` in CLI. %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
   }
-  Else {
-    IfWinExist ahk_exe Code.exe
-      WinActivate
-    Else Run %ComSpec% /c "code --disable-gpu",,hide
-      ; have to disable gpu, otherwise it flickers on full screen
-      ; this is equivalent to running `code --disable-gup` in CLI. %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
-    Return
-  }
+Return
 
 <!c::
-  IfWinExist ChatGPT
+  If WinActive("Google Tasks") {
+    Send !{c}
+  } Else If WinExist("ChatGPT") {
     WinActivate
-  Return
+  }
+Return
 
 <!a::
-  IfWinExist Add
+  If WinExist("Add", "ahk_exe Anki.exe") or WinExist("ahk_exe anki.exe") {
     WinActivate
-  Else IfWinExist ahk_exe anki.exe
-    WinActivate
-  Else Run %PathToAnki%
-  Return
+  } Else {
+    Run %PathToAnki%
+  }
+Return
 
 ` & q::
-  IfWinExist ahk_exe tableau.exe
+  If WinExist("ahk_exe tableau.exe") or WinExist("Studio 3T") or WinExist("MySQL Workbench") {
     WinActivate
-  Else IfWinExist Studio 3T
-    WinActivate
-  Else IfWinExist MySQL Workbench
-    WinActivate
-  Return
+  }
+Return
