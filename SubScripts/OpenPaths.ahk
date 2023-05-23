@@ -6,31 +6,41 @@ Purpose:
 1::1 ; restore 1
 
 1 & o::
-  IfWinExist Download
+  If WinExist("Download") {
     WinActivate
-  Else Run %DirDownloads%
-  Return
+  } Else{
+    Run %DirDownloads%
+  }
+Return
 
 1 & a::
-  IfWinExist Archive
+  If WinExist("Archive") {
     WinActivate
-  Else Run A:\Archive
-  Return
+  } Else {
+    Run A:\Archive
+  }
+Return
 
 1 & d::
-  IfWinExist Dropbox
+  If WinExist("Dropbox"){
     WinActivate
-  Else Run %DirDropbox%
-  Return
+  } Else {
+    Run %DirDropbox%
+  }
+Return
 
 1 & c::
-  IfWinExist Coding
+  If WinExist("Coding"){
     WinActivate
-  Else Run %DirDropbox%\Coding
-  Return
+  } Else {
+    Run %DirDropbox%\Coding
+  }
+Return
 
 1 & g::
-  IfWinExist Google Drive
+  If WinExist("Google Drive"){
     WinActivate
-  Else Run %HOME%\Google Drive
-  Return
+  } Else {
+    Run %HOME%\Google Drive
+  }
+Return
