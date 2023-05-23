@@ -60,15 +60,14 @@ Purpose:
 Syntax:
   Sometimes if there's mysterious bugs, add return in the end helps.
 */
-  ` & Left::
-  ` & [::
+` & Left::
+` & [::
   Send ^{PgUp}
-  return
-  ` & Right::
-  ` & \::
+return
+` & Right::
+` & \::
   Send ^{PgDn}
-  return
-
+return
 
 /*
 Purpose:
@@ -77,7 +76,6 @@ Explain:
   Since ` has become a modifier key, it no longer works when pressed, because the script is always waiting for the potential second key.
 */
 `::` ; Remap ` to itself, the script will know you want a restore, but it only fires on key up.
-
 
 /*
 Purpose:
@@ -155,45 +153,45 @@ Syntax:
   If more than one hotkey combinations are mapped to the same functions, stack them on the left side of ::
 */
 2 & Home::
-2 & Enter::Send +{Home}{Delete}
+  2 & Enter::Send +{Home}{Delete}
 2 & End::
-2 & RShift::Send +{End}{BackSpace}
+  2 & RShift::Send +{End}{BackSpace}
 
 2 & Left::
-2 & [::Send +{Home}{Delete}
+  2 & [::Send +{Home}{Delete}
 2 & Right::
-2 & \::Send +{End}{BackSpace}
+  2 & \::Send +{End}{BackSpace}
 
 2 & Up::
-2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentations
+  2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentations
 2 & Down::
-2 & ]::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentations
-2::2
+  2 & ]::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentations
+  2::2
 
-/*
-Purpose:
-  ` + space: pause and play foobar2000
-  Ctrl+Alt+Shift+5 is set to be the global hotkey for this function in foobar2000, but I need a easier version in actuality
-*/
+  /*
+  Purpose:
+    ` + space: pause and play foobar2000
+    Ctrl+Alt+Shift+5 is set to be the global hotkey for this function in foobar2000, but I need a easier version in actuality
+  */
 
-` & space::Send ^!+5
+  ` & space::Send ^!+5
 
-/*
-Purpose:
-  Restart the Script. Sometimes some modifier keys get stuck, restarting may help.
-  The following scripts were copied exactly from the doc.
-*/
+  /*
+  Purpose:
+    Restart the Script. Sometimes some modifier keys get stuck, restarting may help.
+    The following scripts were copied exactly from the doc.
+  */
 ^!F12::
   Reload
   Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
   MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
   IfMsgBox, Yes, Edit
-return
+    return
 
-/*
-Purpose:
-  Sometimes some modifier keys get stuck, this will try to release all of them.
-*/
+  /*
+  Purpose:
+    Sometimes some modifier keys get stuck, this will try to release all of them.
+  */
 ^!F11::
   Send {RShift up}
   Send {RCtrl up}

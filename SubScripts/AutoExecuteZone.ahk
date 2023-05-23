@@ -7,15 +7,14 @@ Syntax:
   This is called the Auto Execute Zone
 */
 
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+SendMode Input ; Recommended for new scripts due to its superior speed and reliability
+SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 ; The following things starting with a # are "directives", which will run no matter where you put them.
 ; But by tradition, they're also put in the Auto Execute Zone.
 #SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#Warn  ; Enable warnings to assist with detecting common errors.
-
+#NoEnv ; Recommended for performance and compatibility with future AutoHotkey releases.
+#Warn ; Enable warnings to assist with detecting common errors.
 
 ; below is for calibre. It has to auto execute, so I put them here.
 abstinence := 0
