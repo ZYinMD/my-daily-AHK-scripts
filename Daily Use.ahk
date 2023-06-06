@@ -13,7 +13,6 @@ If you don't know the syntax:
   Make sure to read the files in order from top to bottom, don't jump around.
 */
 
-
 ; #Include means import a file as if it's copied into the position of #Include.
 #Include SubScripts\AutoExecuteZone.ahk
 #Include SubScripts\Variables.ahk
@@ -35,3 +34,4 @@ If you don't know the syntax:
 #Include SubScripts\AppSpecific\Foobar2000.ahk
 #Include SubScripts\AppSpecific\WindowsTerminal.ahk
 #Include SubScripts\AppSpecific\Calibre.ahk
+#Include SubScripts\AppSpecific\Anki.ahk
