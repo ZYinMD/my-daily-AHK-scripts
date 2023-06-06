@@ -12,7 +12,7 @@ Syntax:
 */
 
 #d::
-  If WinExist("Desktop","Explorer.EXE") {
+  If WinExist("Desktop ahk_exe explorer.exe") { ; to narrow down the search result by with multiple lines displayed in spy, just put the together in one string
     WinActivate
   } Else {
     Run %A_Desktop%
@@ -74,7 +74,9 @@ Return
 Return
 
 <!a::
-  If WinExist("Add", "ahk_exe Anki.exe") or WinExist("ahk_exe anki.exe") {
+  If WinExist("Add ahk_exe Anki.exe") { ; to narrow down the search result by with multiple lines displayed in spy, just put the together in one string
+    WinActivate
+  } Else If WinExist("ahk_exe anki.exe") {
     WinActivate
   } Else {
     Run %PathToAnki%
