@@ -98,8 +98,8 @@ Purpose:
 Generate a random errLocator string
 */
 RandomErrLocator() {
-  Random, letter1, 97, 122 ; ASCII values for lowercase letters (a-z)
-  Random, letter2, 97, 122
+  Random, letter1, 65, 90 ; ASCII values for uppercase letters (A-Z)
+  Random, letter2, 97, 122 ; lowercase letters (a-z)
   Random, letter3, 97, 122
   Random, digit1, 0, 9
   Random, digit2, 0, 9
