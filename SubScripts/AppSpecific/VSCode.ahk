@@ -90,7 +90,7 @@ Purpose:
   return
 
   ; generate a random string to locate errors reported by `reportErr`:
-  !Numpad3:: SendInput % RandomErrLocator() ; % is used to call a function and send the result of the function. This line is equivalent to   errLocator := RandomErrLocator()    SendInput, %errLocator%
+  ^Numpad3:: SendInput % RandomErrLocator() ; % is used to call a function and send the result of the function. This line is equivalent to   errLocator := RandomErrLocator()    SendInput, %errLocator%
 
 #If
 
