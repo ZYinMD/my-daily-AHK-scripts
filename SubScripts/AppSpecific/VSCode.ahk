@@ -89,4 +89,21 @@ Purpose:
     Send ^+{NumpadSub}
   return
 
+  ; generate a random string to locate errors reported by `reportErr`:
+  !Numpad3:: SendInput % RandomErrLocator() ; % is used to call a function and send the result of the function. This line is equivalent to   errLocator := RandomErrLocator()    SendInput, %errLocator%
+
 #If
+
+/*
+Generate a random errLocator string
+*/
+RandomErrLocator() {
+  Random, letter1, 97, 122 ; ASCII values for lowercase letters (a-z)
+  Random, letter2, 97, 122
+  Random, letter3, 97, 122
+  Random, digit1, 0, 9
+  Random, digit2, 0, 9
+  Random, digit3, 0, 9
+  result := Chr(letter1) Chr(letter2) Chr(letter3) digit1 digit2 digit3 ; this concats. Can also use "." to explicitly concat
+  return result
+}
