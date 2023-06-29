@@ -1,4 +1,5 @@
-﻿; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
+﻿#Requires AutoHotkey v1.1.36
+; Important Note: If /* */ is used for comments, both /* and */ must appear at the beginning of line.
 
 /*
 Important Note:
