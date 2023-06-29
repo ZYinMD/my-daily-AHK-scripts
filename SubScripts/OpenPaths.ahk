@@ -8,7 +8,7 @@ Purpose:
 1 & o::
   If WinExist("Download") {
     WinActivate
-  } Else{
+  } Else {
     Run %DirDownloads%
   }
 Return
