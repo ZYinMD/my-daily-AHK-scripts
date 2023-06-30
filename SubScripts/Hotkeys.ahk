@@ -222,8 +222,17 @@ To understand it, first read cheat sheet autohotkeys, then read doc about `clicb
 #F12::Run, %PathToFoobar2000% "%clipboard%"
 
 /*
-用Ctrl J Ctrl I 来切换输入法
-但需要先在Win11中设快捷键: Time & Language > Typing > Advanced keyboard settings > Input language hot keys. 我设为了Ctrl-Shift-7和Ctrl-Shift-8
+用Ctrl J Ctrl O 来切换输入法
+本来我是用Win中设快捷键: Time & Language > Typing > Advanced keyboard settings > Input language hot keys. 我设为了Ctrl-Shift-7和Ctrl-Shift-8
+后来发现win10有bug, EN总是被重设位none, 所以我就换成了function call
  */
-^j::Send ^+{7}
-^o::Send ^+{8}
+; ^j::Send ^+{7}
+; ^o::Send ^+{8}
+^o::
+  zh := DllCall("LoadKeyboardLayout", "Str", "00000804", "Int", 1)
+  PostMessage 0x50, 0, %zh%,, A
+Return
+^j::
+  en := DllCall("LoadKeyboardLayout", "Str", "00000409", "Int", 1)
+  PostMessage 0x50, 0, %en%,, A
+Return
