@@ -45,6 +45,8 @@ Return
 Numpad0 & NumpadEnter::
   If WinExist("ahk_exe calibre-parallel.exe") {
     WinActivate
+  } else if WinExist("ahk_exe EXCEL.EXE") {
+    WinActivate
   }
 Return
 
