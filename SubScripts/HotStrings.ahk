@@ -53,13 +53,12 @@ Background Story:
 ::cswn::console.warn(''){left 2}
 ::dzc::douzhencang
 
-
 ; the following affects the hotkey in PotPlayer, so need not to work in PotPlayer
 #IfWinNotActive ahk_class PotPlayer64
-::<<::<>{left} ;output <|>
-::>>::</>{left} ;output </|>
-::<>::< />{left 3} ;output <| />
-::.,.::。
+  ::<<::<>{left} ;output <|>
+  ::>>::</>{left} ;output </|>
+  ::<>::< />{left 3} ;output <| />
+  ::.,.::。
 #IfWinNotActive
 
 #Hotstring *0
