@@ -39,6 +39,12 @@ Return
   }
 Return
 
+` & d::
+  If WinExist("ahk_exe Docker Desktop.exe") {
+    WinActivate
+  }
+Return
+
 <!x::
   If WinExist("ahk_exe firefox.exe") {
     WinActivate
