@@ -31,6 +31,12 @@ Return
   }
 Return
 
+` & e::
+  If WinExist("ahk_exe Evernote.exe") {
+    WinActivate
+  }
+Return
+
 ` & s::
   If WinExist("ahk_exe Code - Insiders.exe") {
     WinActivate
