@@ -31,12 +31,6 @@ Return
   }
 Return
 
-` & e::
-  If WinExist("ahk_exe Evernote.exe") {
-    WinActivate
-  }
-Return
-
 ` & s::
   If WinExist("ahk_exe Code - Insiders.exe") {
     WinActivate
@@ -56,6 +50,12 @@ Return
     WinActivate
   } Else {
     Run firefox ; this works if firefox is installed, kind of magical, but sure (it's not in path, btw)
+  }
+Return
+
+` & e::
+  If WinExist("ahk_exe Evernote.exe") {
+    WinActivate
   }
 Return
 
