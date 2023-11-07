@@ -2,10 +2,19 @@
 Purpose:
   In order to use alt-tab as little as possible, the most frequently used apps should each have a shortcut.
 Syntax:
-  - WinExist is complicated and the doc is hard to understand, but it seems I can use two criterias to match a window, e.g.:
-    If WinExist("Desktop","Explorer.EXE")
-    If WinExist("Add", "ahk_exe Anki.exe")
-      (this could be wrong, but it works for me for now)
+  WinExist is complicated and the doc is hard to understand, but over time I've accumulated some knowledge:
+  - The old function `IfWinExist` and `IfWinActive` are deprecated, now use `if WinExist()` and `If WinActive()` instead.
+  - When you use the spy to inspect a window, there are 3 usable lines:  (1) title (2) ahk_lass xxx(3) ahk_exe xxx. Each single one can be used for search. If you want to use multiple criteria, just put everything together in a single string, for example:
+
+    Desktop
+    ahk_class CabinetWClass
+    ahk_exe explorer.exe
+
+    Now if I want to limit narrow to the window that match both line1 and line3, I can just do:
+    If WinExist("Desktop ahk_exe explorer.exe")
+
+  - In the AutoExecute zone, I did `SetTitleMatchMode, RegEx` to set the search algorithm to regex. The default setting is "startWith', another setting is "includes", which sounds nice, but only works for the title, not the ahk_class or ahk_exe, so I picked regex.
+  - After using regex, the "one big string" approach still works, I have no idea why, but hey, it works.
   - If no argument is passed into WinActivate, the Last Found Window will be used.
   - Use %varname% to retrieve the value of a variable, e.g. `Run %PathToAnki%`
   - If more than one line of code needs to be triggered by a hotkey, add Return in the end. (I end up always use Return)
