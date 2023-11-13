@@ -20,6 +20,7 @@ Syntax:
   - If more than one line of code needs to be triggered by a hotkey, add Return in the end. (I end up always use Return)
 */
 
+/*
 #d::
   If WinExist("Desktop ahk_exe explorer.exe") { ; to narrow down the search result by with multiple lines displayed in spy, just put the together in one string
     WinActivate
@@ -27,7 +28,7 @@ Syntax:
     Run %A_Desktop%
   }
 Return
-
+*/
 F1::
   If WinExist("ahk_exe WindowsTerminal.exe") {
     WinActivate
