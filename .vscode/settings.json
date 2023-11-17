@@ -1,4 +1,8 @@
 {
   "files.eol": "\r\n",
-  "workbench.colorTheme": "One Monokai"
+  "workbench.colorTheme": "One Monokai",
+  "files.associations": {
+    "**/*.ahk": "ahk"
+    // "**/*.ahk": "ahk2"
+  }
 }

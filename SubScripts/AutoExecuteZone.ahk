@@ -30,4 +30,4 @@ increment() {
   }
 }
 
-SetTimer, increment, 180000 ; gain 1 abstinence every 3 minutes. Will max out on 45 minutes, which is one class.
+SetTimer, increment, 180000 ; gain 1 abstinence every 3 minutes. Will max out on 45 minutes
