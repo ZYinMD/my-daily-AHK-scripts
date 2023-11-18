@@ -194,8 +194,11 @@ Syntax:
   */
 ^!F11::
   Send {RShift up}
+  Send {LShift up}
   Send {RCtrl up}
+  Send {LCtrl up}
   Send {RAlt up}
+  Send {LAlt up}
   Send {CapsLock up}
   Send {` up}
   Send {; up}
