@@ -192,6 +192,7 @@ Syntax:
   Purpose:
     Sometimes some modifier keys get stuck, this will try to release all of them.
   */
+Insert::
 ^!F11::
   Send {RShift up}
   Send {LShift up}
