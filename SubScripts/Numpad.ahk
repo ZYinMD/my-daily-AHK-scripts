@@ -20,7 +20,7 @@ Numpad0 & NumpadDot::Send #0
 Numpad0::Numpad0 ;restore Numpad0
 
 Numpad0 & NumpadSub::
-  If WinExist("ahk_exe SumatraPDF.exe") {
+  If WinExist("SumatraPDF") {
     WinActivate
   }
 Return
