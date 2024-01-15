@@ -108,7 +108,7 @@ Return
 Return
 
 ` & q::
-  If WinExist("ahk_exe tableau.exe") or WinExist("Studio 3T") or WinExist("MySQL Workbench") {
+  If WinExist("ahk_exe DB Browser for SQLite.exe") or WinExist("ahk_exe tableau.exe") or WinExist("Studio 3T") or WinExist("MySQL Workbench") {
     WinActivate
   }
 Return
