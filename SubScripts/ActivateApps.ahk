@@ -83,7 +83,7 @@ Return
   } Else If WinExist("ahk_exe Code.exe") {
     WinActivate
   } Else {
-    Run %ComSpec% /c "code --disable-gpu",,hide ; have to disable gpu, otherwise it flickers on full screen. This is equivalent to running `code --disable-gup` in CLI. %ComSpec% is the environmental variable for cmd.exe, /c I don't know what it is. ,,hide means close the cmd window
+    Run %PathToVSCode%
   }
 Return
 
