@@ -92,6 +92,8 @@ Syntax:
 `; & r::*
 `; & a::{
 `; & s::}
+`; & m::{ ; I've been use do a & s, but m and . seems more logical, not sure if I'll change
+`; & .::}
 `; & u::[
 `; & o::]
 `; & j::Send {(}
