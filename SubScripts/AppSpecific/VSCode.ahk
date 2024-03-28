@@ -100,6 +100,10 @@ Purpose:
   ; generate a random string to locate errors reported by `reportErr`:
   ^Numpad3:: SendInput % RandomErrLocator() ; % is used to call a function and send the result of the function. This line is equivalent to   errLocator := RandomErrLocator()    SendInput, %errLocator%
 
+  /*
+  Alt L should still be Alt L in VSCode (it's mapped to Alt D in other places as "focus on address bar")
+   */
+  !l::Send !l
 #If
 
 /*
