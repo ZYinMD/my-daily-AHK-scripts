@@ -43,14 +43,14 @@ Syntax:
 /*
 Purpose:
   ` + Esc => Mute.
-  ` + 1 => Volume down.
-  ` + 2 => Volume up.
+  ` + f1 => Volume down.
+  ` + f2 => Volume up.
 Syntax:
   Same as above, but defines ` as a new modifier key.
 */
 ` & Esc::Send {Volume_Mute}
-` & 1::Send {Volume_Down}
-` & 2::Send {Volume_Up}
+` & f1::Send {Volume_Down}
+` & f2::Send {Volume_Up}
 
 /*
 Purpose:

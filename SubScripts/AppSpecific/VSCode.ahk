@@ -27,7 +27,6 @@ Purpose:
     }
   return
 
-  ` & F1::Send +{F1}
   ; use 1 as modifier key for selection.
   ; 1Left and 1Right for expanding and shrinking selection
   1 & Left::
