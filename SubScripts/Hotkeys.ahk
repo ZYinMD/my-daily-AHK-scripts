@@ -131,7 +131,7 @@ if GetKeyState("CapsLock","p")
 else
   Send {end}{;}
 Return
-;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way. "p" means retrive the phisical state of the key
+;since my RCtrl is a remapped key, >^ doesn't really work, so I have to use this ugly way. "p" means retrieve the physical state of the key
 */
 
 `;::; ; Restore ; in the normal way, after the block below was disabled (haven't been very useful, while causing other inconveniences).
@@ -216,13 +216,14 @@ return
 Purpose:
   Simulate ctrl+ and ctrl- to zoom in and out. Since + and - have been remapped, I need to find a way to simulate them.
 */
-^0::Send ^{=}
-^9::Send ^{-}
+; update: no longer used, because I use ctrl numpad +/-
+; ^0::Send ^{=}
+; ^9::Send ^{-}
 
 /*
-A demo of how to use clicpboard.
+A demo of how to use clipboard.
 To try, go to voidtools everything and find a mp3, then right click to copy full path. Then fire the hotkey.
-To understand it, first read cheat sheet autohotkeys, then read doc about `clicboard`, then read doc about `run`
+To understand it, first read cheat sheet autohotkeys, then read doc about `clipboard`, then read doc about `run`
 */
 
 #F12::Run, %PathToFoobar2000% "%clipboard%"
