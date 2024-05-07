@@ -16,7 +16,7 @@ Purpose:
   ; `Delete and `Backspace to toggle line comment and block comment
   ` & -::
     ` & Delete::Send ^/
-    ` & BackSpace::Send ^+/
+    ` & BackSpace::Send +!{a}
 
   ; Shift-F1 in vscode is toggle terminal pane, but it's a bit hard to press. Make it easier by using ` & F1
   F1::
@@ -35,9 +35,9 @@ Purpose:
     1 & \::Send +!{Left}
   ; 1up and 1down for line selection, I installed the plugin "Better Line Select"
   1 & Up::
-    1 & =::Send ^!l
+    1 & =::Send ^!l ; I set this keybinding with "better line select" extension
   1 & Down::
-    1 & ]::Send ^l
+    1 & ]::Send ^l ; this key binding is vscode native
 
   ; Use 2 to delete.
   ; 2left and 2right to delete words. This is already supported in generic programs.
