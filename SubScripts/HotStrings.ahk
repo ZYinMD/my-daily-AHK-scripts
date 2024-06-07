@@ -58,7 +58,6 @@ Background Story:
   ::<<::<>{left} ;output <|>
   ::>>::</>{left} ;output </|>
   ::<>::< />{left 3} ;output <| />
-  ::.,.::。
 #IfWinNotActive
 
 #Hotstring *0
