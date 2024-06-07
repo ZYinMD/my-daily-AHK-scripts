@@ -92,7 +92,7 @@ Return
     Send !{c}
   } Else If WinActive("Edit metadata ahk_exe calibre.exe") {
     Send !{c}
-  } Else If WinExist("NextChat") {
+  } Else If WinExist("ChatGPT") {
     WinActivate
   }
 Return
