@@ -25,14 +25,6 @@ Numpad0 & NumpadSub::
   }
 Return
 
-Numpad0 & NumpadDiv::
-  If WinExist("ahk_exe Spotify.exe") {
-    WinActivate
-  } Else {
-    Run %PathToSpotify%
-  }
-Return
-
 ` & f::
 Numpad0 & NumpadMult::
   If WinExist("ahk_exe foobar2000.exe") {
