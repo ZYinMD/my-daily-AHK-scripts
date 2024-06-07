@@ -253,9 +253,11 @@ Map Alt L to Alt D, which is the "focus on address bar" on Mac. It's a better se
 Right Control + Up: volume up
 Right Control + Down: volume down
 Right Control + Left: mute
+Right Control + Right: pause
 
 Note: I have remapped Right Control to PageDown with `RCtrl::PgDn` in "Remap.ahk"
 */
 RControl & Up::Send {Volume_Up}
 RControl & Down::Send {Volume_Down}
 RControl & Left::Send {Volume_Mute}
+RControl & Right::Send {Media_Play_Pause}
