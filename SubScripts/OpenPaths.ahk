@@ -5,7 +5,9 @@ Purpose:
 
 1::1 ; restore 1
 
-1 & o::
+; everything here is disabled, because I want to use the new F3 -> Ctrl-T -> Click muscle memory
+
+/* 1 & o::
   If WinExist("Download") {
     WinActivate
   } Else {
@@ -44,3 +46,4 @@ Return
     Run %HOME%\Google Drive
   }
 Return
+ */
