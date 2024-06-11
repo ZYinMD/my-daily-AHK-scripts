@@ -264,3 +264,6 @@ RControl & Right::Send {Media_Play_Pause}
 
 ; win+. to type 。
 #.::。
+
+; win+tab to focus on taskbar items
+#Tab::Send {LWin down}{t}
