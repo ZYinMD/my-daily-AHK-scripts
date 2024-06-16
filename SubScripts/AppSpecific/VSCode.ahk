@@ -80,7 +80,7 @@ Purpose:
   ; to activate AceJump:
   !Space::Send ^{F11}
 
-  ; use Appskey to open up the lightbulb (mainly for auto correct of spell check)
+  ; use Appskey for "quick fix" (= click the lightbulb) (mainly for auto correct of spell check)
   /::
     Send ^+{NumpadSub}
   return
