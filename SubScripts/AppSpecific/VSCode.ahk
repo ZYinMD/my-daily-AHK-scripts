@@ -9,35 +9,27 @@ Purpose:
   ; use ` as modifier key in VSCode to do things:
   ; `up and `down to move between panes
   ` & Up::
-    ` & =::Send ^{Numpad4}
+  ` & =::Send ^{Numpad4}
   ` & down::
-    ` & ]::Send ^{Numpad6}
+  ` & ]::Send ^{Numpad6}
 
   ; `Delete and `Backspace to toggle line comment and block comment
   ` & -::
-    ` & Delete::Send ^/
-    ` & BackSpace::Send +!{a}
+  ` & Delete::Send ^/
 
-  ; Shift-F1 in vscode is toggle terminal pane, but it's a bit hard to press. Make it easier by using ` & F1
-  F1::
-    if WinActive("Dev Container") {
-      Send +{F1}
-    } else If WinExist("ahk_exe WindowsTerminal.exe") {
-      WinActivate
-    }
-  return
+  ` & BackSpace::Send +!{a}
 
   ; use 1 as modifier key for selection.
   ; 1Left and 1Right for expanding and shrinking selection
   1 & Left::
-    1 & [::Send +!{Right}
+  1 & [::Send +!{Right}
   1 & Right::
-    1 & \::Send +!{Left}
+  1 & \::Send +!{Left}
   ; 1up and 1down for line selection, I installed the plugin "Better Line Select"
   1 & Up::
-    1 & =::Send ^!l ; I set this keybinding with "better line select" extension
+  1 & =::Send ^!l ; I set this keybinding with "better line select" extension
   1 & Down::
-    1 & ]::Send ^l ; this key binding is vscode native
+  1 & ]::Send ^l ; this key binding is vscode native
 
   ; Use 2 to delete.
   ; 2left and 2right to delete words. This is already supported in generic programs.
@@ -47,46 +39,46 @@ Purpose:
   2 & Right::
   2 & \::
   2 & End::
-    2 & RShift::Send ^+{Delete}
+  2 & RShift::Send ^+{Delete}
 
   ; 2up and 2down to delete line
   2 & ]::
-    2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
+  2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
   2 & =::
-    2 & Up:: Send ^+k{Up}
+  2 & Up:: Send ^+k{Up}
 
   ; Use 3 as a modifier key to move texts around.
   3 & Left::
-    3 & [::Send ^[
+  3 & [::Send ^[
   3 & Right::
-    3 & \::Send ^]
+  3 & \::Send ^]
   3 & Up::
-    3 & =::Send ^!+{Up}
+  3 & =::Send ^!+{Up}
   3 & Down::
-    3 & ]::Send ^!+{Down}
-    3::3 ; restore 3
+  3 & ]::Send ^!+{Down}
+  3::3 ; restore 3
 
   ; use 4 as modifier key in VSCode to fold:
   ; 4left and 4right for folding:
   4 & Left::
-    4 & [::Send ^+[
+  4 & [::Send ^+[
   4 & Right::
-    4 & \::Send ^+]
+  4 & \::Send ^+]
   ; 4Home to fold all, 4End to unfold all
   4 & Enter::
-    4 & Home::Send ^+!u
+  4 & Home::Send ^+!u
   4 & RShift::
-    4 & End::Send ^+!]
+  4 & End::Send ^+!]
   ; 4Up and 4Down for finding errors:
   4 & Up::
-    4 & =::Send !{F8}
+  4 & =::Send !{F8}
   4 & Down::
-    4 & ]::Send {F8}
+  4 & ]::Send {F8}
 
-    4::4
+  4::4
 
-    ; to activate AceJump:
-    !Space::Send ^{F11}
+  ; to activate AceJump:
+  !Space::Send ^{F11}
 
   ; use Appskey to open up the lightbulb (mainly for auto correct of spell check)
   /::
