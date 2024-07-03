@@ -62,11 +62,21 @@ Syntax:
 */
 ` & Left::
 ` & [::
-  Send ^{PgUp}
+  If WinActive("ahk_class CabinetWClass") {
+    Send ^+{Tab}
+  } Else {
+    Send ^{PgUp}
+  }
+
 return
+
 ` & Right::
 ` & \::
-  Send ^{PgDn}
+  If WinActive("ahk_class CabinetWClass") {
+    Send ^{Tab}
+  } Else {
+    Send ^{PgDn}
+  }
 return
 
 /*
