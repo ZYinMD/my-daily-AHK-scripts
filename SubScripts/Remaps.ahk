@@ -55,6 +55,12 @@ Syntax:
 
 #If
 
-; all custom modifiers:
+/*
+Purpose:
+  We will create some custom modifiers keys.
+Explain:
+  If a key become a modifier key, it will no longer work when pressed, because the script is always waiting for the potential second key. To fix this, we remap a key to itself, so the script will know you want a restore, the key will fire on key up.
+*/
+`::`
 F1::F1
 F2::F2

@@ -81,14 +81,6 @@ return
 
 /*
 Purpose:
-  Restore the original function of ` key
-Explain:
-  Since ` has become a modifier key, it no longer works when pressed, because the script is always waiting for the potential second key.
-*/
-`::` ; Remap ` to itself, the script will know you want a restore, but it only fires on key up.
-
-/*
-Purpose:
   Use ; as a modifier to type symbols
 Syntax:
   1. Unless appears right after another character, ; needs ` as an escape char.
