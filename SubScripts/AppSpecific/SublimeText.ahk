@@ -11,6 +11,7 @@ Purpose:
   2 & Up:: Send ^+k{Up}
 
   ; When in Sublime, use 1 as a modifier key to help selection
+  1::1 ; restore 1
   1 & Right::
   1 & \::Send ^d
   1 & Down::

@@ -22,7 +22,6 @@ If you don't know the syntax:
 #Include SubScripts\Hotkeys.ahk
 #Include SubScripts\HotStrings.ahk
 #Include SubScripts\ActivateApps.ahk
-#Include SubScripts\OpenPaths.ahk
 #Include SubScripts\Numpad.ahk
 #Include SubScripts\SQL.ahk
 #Include SubScripts\MouseClick.ahk
