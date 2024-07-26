@@ -5,10 +5,10 @@ Purpose:
 
 #IfWinActive ahk_exe sublime_text.exe
 
-  2 & ]::
-  2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
-  2 & =::
-  2 & Up:: Send ^+k{Up}
+  F2 & ]::
+  F2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
+  F2 & =::
+  F2 & Up:: Send ^+k{Up}
 
   ; When in Sublime, use 1 as a modifier key to help selection
   f1 & Right::

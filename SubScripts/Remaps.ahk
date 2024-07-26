@@ -57,3 +57,4 @@ Syntax:
 
 ; all custom modifiers:
 F1::F1
+F2::F2

@@ -154,31 +154,30 @@ $;::Send {end}{;} ; `$` means prevent the hotkey to trigger itself;
 
 /*
 Purpose:
-  2 + Home => backspace to line beginning
-  2 + End => delete to line end
-  2 + ← => same as 2 + Home
-  2 + → => same as 2 + End
-  2 + ↑ => delete line and move to previous line end
-  2 + ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
+  F2 + Home => backspace to line beginning
+  F2 + End => delete to line end
+  F2 + ← => same as F2 + Home
+  F2 + → => same as F2 + End
+  F2 + ↑ => delete line and move to previous line end
+  F2 + ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
 Syntax:
   Since = [ ] \ were remapped, it wouldn't work, so remap them separately.
   If more than one hotkey combinations are mapped to the same functions, stack them on the left side of ::
 */
-2 & Home::
-2 & Enter::Send +{Home}{Delete}
-2 & End::
-2 & RShift::Send +{End}{BackSpace}
+F2 & Home::
+F2 & Enter::Send +{Home}{Delete}
+F2 & End::
+F2 & RShift::Send +{End}{BackSpace}
 
-2 & Left::
-2 & [::Send +{Home}{Delete}
-2 & Right::
-2 & \::Send +{End}{BackSpace}
+F2 & Left::
+F2 & [::Send +{Home}{Delete}
+F2 & Right::
+F2 & \::Send +{End}{BackSpace}
 
-2 & Up::
-2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentations
-2 & Down::
-2 & ]::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentations
-2::2
+F2 & Up::
+F2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentations
+F2 & Down::
+F2 & ]::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentations
 
 /*
 Purpose:

@@ -31,21 +31,21 @@ Purpose:
   f1 & Down::
   f1 & ]::Send ^l ; this key binding is vscode native
 
-  ; Use 2 to delete.
-  ; 2left and 2right to delete words. This is already supported in generic programs.
+  ; Use F2 to delete.
+  ; F2left and F2right to delete words. This is already supported in generic programs.
 
-  ; 2home and 2end to backspace to line start and delete to line end. The vscode's native 2end is better than mine:
+  ; F2home and F2end to backspace to line start and delete to line end. The vscode's native F2end is better than mine:
   ; I set "Delete all left" and "Delete all right" to ^+Backspace and ^+Delete. It's turned off by default
-  2 & Right::
-  2 & \::
-  2 & End::
-  2 & RShift::Send ^+{Delete}
+  F2 & Right::
+  F2 & \::
+  F2 & End::
+  F2 & RShift::Send ^+{Delete}
 
   ; 2up and 2down to delete line
-  2 & ]::
-  2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
-  2 & =::
-  2 & Up:: Send ^+k{Up}
+  F2 & ]::
+  F2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
+  F2 & =::
+  F2 & Up:: Send ^+k{Up}
 
   ; Use 3 as a modifier key to move texts around.
   3 & Left::
