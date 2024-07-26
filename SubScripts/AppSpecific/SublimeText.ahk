@@ -11,15 +11,14 @@ Purpose:
   2 & Up:: Send ^+k{Up}
 
   ; When in Sublime, use 1 as a modifier key to help selection
-  1::1 ; restore 1
-  1 & Right::
-  1 & \::Send ^d
-  1 & Down::
-  1 & ]::Send ^l
-  1 & Left::
-  1 & [::Send ^+s
-  1 & Up::
-  1 & =::Send ^+a
+  f1 & Right::
+  f1 & \::Send ^d
+  f1 & Down::
+  f1 & ]::Send ^l
+  f1 & Left::
+  f1 & [::Send ^+s
+  f1 & Up::
+  f1 & =::Send ^+a
 
   ; When in Sublime, use 3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
   3 & Left::

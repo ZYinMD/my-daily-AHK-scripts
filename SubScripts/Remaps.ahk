@@ -17,40 +17,43 @@ Syntax:
 
 #If !(A_ComputerName = "ZHI-MI")
 
-/*
-Purpose:
-  Remap CapsLock to RCtrl. (Has to be RCtrl, because LCtrl will have different jobs.)
-Syntax:
-  key::targetKey
-  This means a remap, effect holds even when in combinations with other keys.
-*/
-CapsLock::RControl
+  /*
+  Purpose:
+    Remap CapsLock to RCtrl. (Has to be RCtrl, because LCtrl will have different jobs.)
+  Syntax:
+    key::targetKey
+    This means a remap, effect holds even when in combinations with other keys.
+  */
+  CapsLock::RControl
 
-/*
-Purpose:
-  Similarly, remap the following:
-  + => ↑
-  [ => ←
-  ] => ↓
-  \ => →
-  - => Delete
-  ' => Enter
-  Enter => Home
-  RShift => End
-  RAlt => PgUp
-  RCtrl => PgDn
-  / => AppsKey
-*/
-=::Up
-[::Left
-]::Down
-\::Right
--::Delete
-'::Enter
-Enter::Home
-RShift::End
-RAlt::PgUp
-RCtrl::PgDn
-/::AppsKey
+  /*
+  Purpose:
+    Similarly, remap the following:
+    + => ↑
+    [ => ←
+    ] => ↓
+    \ => →
+    - => Delete
+    ' => Enter
+    Enter => Home
+    RShift => End
+    RAlt => PgUp
+    RCtrl => PgDn
+    / => AppsKey
+  */
+  =::Up
+  [::Left
+  ]::Down
+  \::Right
+  -::Delete
+  '::Enter
+  Enter::Home
+  RShift::End
+  RAlt::PgUp
+  RCtrl::PgDn
+  /::AppsKey
 
 #If
+
+; all custom modifiers:
+F1::F1

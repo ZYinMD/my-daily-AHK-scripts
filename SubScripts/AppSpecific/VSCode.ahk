@@ -20,16 +20,16 @@ Purpose:
   ` & BackSpace::Send +!{a}
 
   ; use 1 as modifier key for selection.
-  ; 1Left and 1Right for expanding and shrinking selection
-  1 & Left::
-  1 & [::Send +!{Right}
-  1 & Right::
-  1 & \::Send +!{Left}
-  ; 1up and 1down for line selection, I installed the plugin "Better Line Select"
-  1 & Up::
-  1 & =::Send ^!l ; I set this keybinding with "better line select" extension
-  1 & Down::
-  1 & ]::Send ^l ; this key binding is vscode native
+  ; F1Left and F1Right for expanding and shrinking selection
+  f1 & Left::
+  f1 & [::Send +!{Right}
+  f1 & Right::
+  f1 & \::Send +!{Left}
+  ; f1up and f1down for line selection, I installed the plugin "Better Line Select"
+  f1 & Up::
+  f1 & =::Send ^!l ; I set this keybinding with "better line select" extension
+  f1 & Down::
+  f1 & ]::Send ^l ; this key binding is vscode native
 
   ; Use 2 to delete.
   ; 2left and 2right to delete words. This is already supported in generic programs.
