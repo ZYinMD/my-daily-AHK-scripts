@@ -10,5 +10,3 @@ PathToVSCodeInsiders := APPDATA . "\Local\Programs\Microsoft VS Code Insiders\Co
 PathToAnki := APPDATA . "\Local\Programs\Anki\anki.exe"
 PathToFoobar2000 := HOME . "\apps\foobar2000\foobar2000.exe"
 PathToCalibre := DirPortables . "\Calibre\calibre-portable.exe"
-
-Sql := false ; This is a global variable for writing SQL queries, see SQL.ahk
