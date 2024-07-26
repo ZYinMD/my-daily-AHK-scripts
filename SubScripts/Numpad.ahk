@@ -17,7 +17,6 @@ Numpad0 & Numpad8::Send ^#{8}
 Numpad0 & Numpad9::Send ^#{9}
 
 Numpad0 & NumpadDot::Send #0
-Numpad0::Numpad0 ;restore Numpad0
 
 Numpad0 & NumpadSub::
   If WinExist("SumatraPDF") {
