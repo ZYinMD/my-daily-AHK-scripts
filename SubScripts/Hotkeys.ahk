@@ -109,12 +109,12 @@ Syntax:
 `; & g::Send {?}
 `; & c::/
 `; & v::\
-`; & `::~
 `; & 1::Send {!}
 `; & 2::@
 `; & 3::#
 `; & 4::$
 `; & t::Send {|}
+; `; & `::~ ; this is commented out it's not well supported on Mac, see my own post: https://www.reddit.com/r/Karabiner/comments/1ds4kam/struggling_to_find_a_way_to_define_some_custom/
 
 /*
 Purpose:

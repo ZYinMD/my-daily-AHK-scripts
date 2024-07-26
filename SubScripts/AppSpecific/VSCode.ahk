@@ -77,7 +77,7 @@ Purpose:
   ; to activate AceJump:
   !Space::Send ^{F11}
 
-  ; use Appskey for "quick fix" (= click the lightbulb) (mainly for auto correct of spell check)
+  ; use AppsKey for "quick fix" (= click the lightbulb) (mainly for auto correct of spell check)
   /::
     Send ^+{NumpadSub}
   return
@@ -104,6 +104,6 @@ RandomErrLocator() {
   Random, digit1, 0, 9
   Random, digit2, 0, 9
   Random, digit3, 0, 9
-  result := Chr(letter1) Chr(letter2) Chr(letter3) digit1 digit2 digit3 ; this concats. Can also use "." to explicitly concat
+  result := Chr(letter1) Chr(letter2) Chr(letter3) digit1 digit2 digit3 ; this is concat. Can also use "." to explicitly concat
   return result
 }

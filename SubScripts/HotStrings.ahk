@@ -2,30 +2,24 @@
 
 /*
 Goal:
-  Hotstrings and auto-replace
+  HotStrings and auto-replace
 Syntax:
   ::what you type::what it'll turn into
   Triggers after an "ending character" is typed, which includes space and enter and punctuations.
   Add O between the first two colons means don't display the ending character
   Add * between the first two colons means fire immediately without waiting for the ending character.
-  Add ? between the first two colons means fire even when the hotstring is inside another word
+  Add ? between the first two colons means fire even when the HotString is inside another word
   # and ^ and + needs an R as escape char, forgot why.
 Background Story:
-  The hotstrings are inspired by Chinese
+  The HotStrings are inspired by Chinese
 */
 ; ::its::it's
 
 #Hotstring ? *
-; ::qian::$
-; ::baif::%
-; ::tong::&
-; ::xing::*
-; :R:jier::^
 ::dunhao::、
 ::pozhehao::–
 ::maohao::꞉
 ::duihao::✔
-; ::cuohao::⨯ ;在iOS上这个符号明确不如×好看, 所以depricate
 ::wujiao::★
 ::shalou::⏳
 ::zailai::⇆
@@ -33,7 +27,6 @@ Background Story:
 ::chilun::⚙️
 ::chengyi::×
 ::fangge::□
-; :R:yyy::${props => props.theme.test}
 ::shangmian::↑
 ::xiamian::↓
 ::zuomian::←
@@ -43,12 +36,7 @@ Background Story:
 ::chaping::👎
 ::dotdotdot::⋮
 ::shuminghao::《》{left} ; I used to need this because I used to use English punctuations with Chinese input
-/* It's very tricky to make these three work↓. Gave up.
-::'|::'t
-::']::'r
-::'}::'s
-:://:://{space}
-*/
+
 ::cslg::console.log(''){left 2}
 ::cswn::console.warn(''){left 2}
 ::dzc::douzhencang
