@@ -33,15 +33,14 @@ Purpose:
   ; alt ` to focus the sidebar:
   !`::Send ^+{e}
 
-  ; When in Sublime, use 4 as modifier key to collapse, use ` to toggle comments
-  4 & Left::
-  4 & [::Send ^+[
-  4 & Right::
-  4 & \::Send ^+]
+  ; When in Sublime, use F4 as modifier key to collapse, use ` to toggle comments
+  F4 & Left::
+  F4 & [::Send ^+[
+  F4 & Right::
+  F4 & \::Send ^+]
   ` & BackSpace::
   ` & '::Send ^+/
   ` & -::
   ` & Delete::Send ^/
-  4::4
 
 #IfWinActive

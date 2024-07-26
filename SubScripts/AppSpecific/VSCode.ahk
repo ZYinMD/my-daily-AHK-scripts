@@ -57,24 +57,22 @@ Purpose:
   F3 & Down::
   F3 & ]::Send ^!+{Down}
 
-  ; use 4 as modifier key in VSCode to fold:
-  ; 4left and 4right for folding:
-  4 & Left::
-  4 & [::Send ^+[
-  4 & Right::
-  4 & \::Send ^+]
-  ; 4Home to fold all, 4End to unfold all
-  4 & Enter::
-  4 & Home::Send ^+!u
-  4 & RShift::
-  4 & End::Send ^+!]
-  ; 4Up and 4Down for finding errors:
-  4 & Up::
-  4 & =::Send !{F8}
-  4 & Down::
-  4 & ]::Send {F8}
-
-  4::4
+  ; use F4 as modifier key in VSCode to fold:
+  ; F4left and F4right for folding:
+  F4 & Left::
+  F4 & [::Send ^+[
+  F4 & Right::
+  F4 & \::Send ^+]
+  ; F4Home to fold all, F4End to unfold all
+  F4 & Enter::
+  F4 & Home::Send ^+!u
+  F4 & RShift::
+  F4 & End::Send ^+!]
+  ; F4Up and F4Down for finding errors:
+  F4 & Up::
+  F4 & =::Send !{F8}
+  F4 & Down::
+  F4 & ]::Send {F8}
 
   ; to activate AceJump:
   !Space::Send ^{F11}
