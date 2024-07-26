@@ -49,8 +49,8 @@ Syntax:
   Same as above, but defines ` as a new modifier key.
 */
 ` & Esc::Send {Volume_Mute}
-` & f1::Send {Volume_Down}
-` & f2::Send {Volume_Up}
+` & 1::Send {Volume_Down}
+` & 2::Send {Volume_Up}
 
 /*
 Purpose:
