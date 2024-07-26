@@ -47,16 +47,15 @@ Purpose:
   F2 & =::
   F2 & Up:: Send ^+k{Up}
 
-  ; Use 3 as a modifier key to move texts around.
-  3 & Left::
-  3 & [::Send ^[
-  3 & Right::
-  3 & \::Send ^]
-  3 & Up::
-  3 & =::Send ^!+{Up}
-  3 & Down::
-  3 & ]::Send ^!+{Down}
-  3::3 ; restore 3
+  ; Use F3 as a modifier key to move texts around.
+  F3 & Left::
+  F3 & [::Send ^[
+  F3 & Right::
+  F3 & \::Send ^]
+  F3 & Up::
+  F3 & =::Send ^!+{Up}
+  F3 & Down::
+  F3 & ]::Send ^!+{Down}
 
   ; use 4 as modifier key in VSCode to fold:
   ; 4left and 4right for folding:

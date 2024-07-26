@@ -20,16 +20,15 @@ Purpose:
   f1 & Up::
   f1 & =::Send ^+a
 
-  ; When in Sublime, use 3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
-  3 & Left::
-  3 & [::Send ^[
-  3 & Right::
-  3 & \::Send ^]
-  3 & Up::
-  3 & =::Send ^+{Up}
-  3 & Down::
-  3 & ]::Send ^+{Down}
-  3::3 ; restore 3
+  ; When in Sublime, use F3 as a modifier key to move texts around. The original idea was to use tab, but couldn't solve the shift-tab-tab-tab issue
+  F3 & Left::
+  F3 & [::Send ^[
+  F3 & Right::
+  F3 & \::Send ^]
+  F3 & Up::
+  F3 & =::Send ^+{Up}
+  F3 & Down::
+  F3 & ]::Send ^+{Down}
 
   ; alt ` to focus the sidebar:
   !`::Send ^+{e}
