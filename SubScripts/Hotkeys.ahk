@@ -282,3 +282,8 @@ RControl & Right::Send {Media_Play_Pause}
       Send ^t
     return
   }
+
+; activate screensaver
+F1 & S::
+  RunWait, scrnsave.scr /s
+return
