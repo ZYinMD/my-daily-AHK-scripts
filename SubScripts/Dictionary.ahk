@@ -20,6 +20,8 @@ search_calibre_full_text() {
 look_up_word() {
   Send ^c ; copy
   Sleep 100
+  Run, https://www.iciba.com/word?w=%clipboard%
+  Sleep 100
   Run, https://www.google.com/search?q=%clipboard%&udm=2
   Sleep 100
   Run, https://www.google.com/search?q=pronounce+%clipboard%
