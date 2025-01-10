@@ -77,13 +77,23 @@ Return
   }
 Return
 
-<!s::
+<!v::
   If WinActive("ahk_exe Code.exe") {
-    Send !{s}
+    Send !{v}
   } Else If WinExist("ahk_exe Code.exe") {
     WinActivate
   } Else {
     Run %PathToVSCode%
+  }
+Return
+
+<!s::
+  If WinActive("ahk_exe Cursor.exe") {
+    Send !{s}
+  } Else If WinExist("ahk_exe Cursor.exe") {
+    WinActivate
+  } Else {
+    Run %PathToCursor%
   }
 Return
 
