@@ -4,7 +4,7 @@ Purpose:
 */
 
 ; Different than the other apps, #If is used instead of #IfWinActive here, because I need an expression
-#If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe")
+#If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe") or WinActive("ahk_exe Cursor.exe")
 
   ; use ` as modifier key in VSCode to do things:
   ; `up and `down to move between panes
@@ -29,7 +29,7 @@ Purpose:
   f1 & Up::
   f1 & =::Send ^!l ; I set this keybinding with "better line select" extension
   f1 & Down::
-  f1 & ]::Send ^l ; this key binding is vscode native
+  f1 & ]::Send ^{Numpad2} ; I set this in vscode settings
 
   ; Use F2 to delete.
   ; F2left and F2right to delete words. This is already supported in generic programs.
