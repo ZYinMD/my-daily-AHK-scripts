@@ -45,7 +45,7 @@ Purpose:
   F2 & ]::
   F2 & Down::Send ^{NumpadDot} ; native line delete is better than my line delete (when next line is indented)
   F2 & =::
-  F2 & Up:: Send ^{NumpadDot}{Up}
+  F2 & Up:: Send ^+k{Up}
 
   ; Use F3 as a modifier key to move texts around.
   F3 & Left::
