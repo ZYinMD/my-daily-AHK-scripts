@@ -27,7 +27,7 @@ Purpose:
   f1 & \::Send +!{Left}
   ; f1up and f1down for line selection, I installed the plugin "Better Line Select"
   f1 & Up::
-  f1 & =::Send ^!l ; I set this keybinding with "better line select" extension
+  f1 & =::Send ^{Numpad8} ; I set this keybinding with "better line select" extension
   f1 & Down::
   f1 & ]::Send ^{Numpad2} ; I set this in vscode settings
 
@@ -43,9 +43,9 @@ Purpose:
 
   ; 2up and 2down to delete line
   F2 & ]::
-  F2 & Down::Send ^+k ; native line delete is better than my line delete (when next line is indented)
+  F2 & Down::Send ^{NumpadDot} ; native line delete is better than my line delete (when next line is indented)
   F2 & =::
-  F2 & Up:: Send ^+k{Up}
+  F2 & Up:: Send ^{NumpadDot}{Up}
 
   ; Use F3 as a modifier key to move texts around.
   F3 & Left::
