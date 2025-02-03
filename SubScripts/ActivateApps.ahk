@@ -99,16 +99,6 @@ Return
   }
 Return
 
-<!c::
-  If WinActive("Google Tasks") {
-    Send !{c}
-  } Else If WinActive("Edit metadata ahk_exe calibre.exe") {
-    Send !{c}
-  } Else If WinExist("ChatGPT") {
-    WinActivate
-  }
-Return
-
 <!a::
   If WinExist("Add ahk_exe Anki.exe") { ; to narrow down the search result by with multiple lines displayed in spy, just put the together in one string
     WinActivate
