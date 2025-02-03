@@ -14,8 +14,7 @@ search_calibre_full_text() {
   Sleep 150
   Send ^v ; paste
   Sleep 150
-  Click 2300, 150 ; click the search button. I choose not to use Enter, because if the word has been searched before, a dropdown will pop, then Enter will select the word from the dropdown, and search won't be performed until another Enter is pressed.
-
+  Send !{s}
 }
 
 look_up_word() {

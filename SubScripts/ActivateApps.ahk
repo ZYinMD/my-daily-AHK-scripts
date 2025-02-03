@@ -88,7 +88,9 @@ Return
 Return
 
 <!s::
-  If WinActive("ahk_exe Cursor.exe") {
+  If WinActive("Search the text of all books in the library") {
+    Send !{s}
+  } Else If WinActive("ahk_exe Cursor.exe") {
     Send !{s}
   } Else If WinExist("ahk_exe Cursor.exe") {
     WinActivate
