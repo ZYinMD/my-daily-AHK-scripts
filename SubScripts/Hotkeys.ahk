@@ -211,6 +211,11 @@ Insert::
   Send {3 up}
   Send {4 up}
   Send {Numpad0 up}
+  Send {F1 up}
+  Send {F2 up}
+  Send {F3 up}
+  Send {F4 up}
+
 return
 
 /*
