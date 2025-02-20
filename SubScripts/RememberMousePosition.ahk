@@ -4,55 +4,55 @@ Purpose:
 */
 NumpadIns & NumpadEnd::
   MouseGetPos, x1, y1
-  return
+return
 NumpadEnd::
   MouseMove, x1, y1
-  return
+return
 NumpadIns & NumpadDown::
   MouseGetPos, x2, y2
-  return
+return
 NumpadDown::
   MouseMove, x2, y2
-  return
+return
 NumpadIns & NumpadPgdn::
   MouseGetPos, x3, y3
-  return
+return
 NumpadPgdn::
   MouseMove, x3, y3
-  return
+return
 NumpadIns & NumpadLeft::
   MouseGetPos, x4, y4
-  return
+return
 NumpadLeft::
   MouseMove, x4, y4
-  return
+return
 NumpadIns & NumpadClear::
   MouseGetPos, x5, y5
-  return
+return
 NumpadClear::
   MouseMove, x5, y5
-  return
+return
 NumpadIns & NumpadRight::
   MouseGetPos, x6, y6
-  return
+return
 NumpadRight::
   MouseMove, x6, y6
-  return
+return
 NumpadIns & NumpadHome::
   MouseGetPos, x7, y7
-  return
+return
 NumpadHome::
   MouseMove, x7, y7
-  return
+return
 NumpadIns & NumpadUp::
   MouseGetPos, x8, y8
-  return
+return
 NumpadUp::
   MouseMove, x8, y8
-  return
+return
 NumpadIns & NumpadPgup::
   MouseGetPos, x9, y9
-  return
+return
 NumpadPgup::
   MouseMove, x9, y9
-  return
+return
