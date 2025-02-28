@@ -7,6 +7,8 @@ search_calibre_full_text() {
     MsgBox % "Full text search window not open"
     Return
   }
+  ; remove trailing spaces from clipboard
+  Clipboard := RegExReplace(Clipboard, "\s+$")
   Sleep 150
   Click 150, 150 ; click on the search box
   Sleep 150
@@ -20,13 +22,18 @@ search_calibre_full_text() {
 look_up_word() {
   Send ^c ; copy
   Sleep 150
+  ; remove trailing spaces from clipboard
+  Clipboard := RegExReplace(Clipboard, "\s+$")
+  Sleep 150
   Run, https://www.iciba.com/word?w=%clipboard%
+  Sleep 150
+  Run, https://youglish.com/pronounce/%clipboard%/english
   Sleep 150
   Run, https://www.google.com/search?q=%clipboard%&udm=2
   Sleep 150
   Run, https://www.google.com/search?q=pronounce+%clipboard%
   Sleep 150
-  Run, https://www.collinsdictionary.com/dictionary/english-word/%clipboard%
+  Run, https://www.collinsdictionary.com/dictionary/english/%clipboard%
 }
 
 ; on win+s, search the current selected word in calibre full text index
