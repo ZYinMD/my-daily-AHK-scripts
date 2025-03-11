@@ -19,14 +19,10 @@ SetTitleMatchMode, RegEx ; This applies to window title matching functions like 
 
 ; below is for calibre. It has to auto execute, so I put them here.
 abstinence := 0
-locked := True
 increment() {
   global abstinence
-  global locked
   if (abstinence < 15) {
     abstinence++
-  } else {
-    locked := False
   }
 }
 

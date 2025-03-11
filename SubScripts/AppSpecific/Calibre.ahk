@@ -1,14 +1,8 @@
 #IfWinActive ahk_exe calibre-parallel.exe
   Space::
-    if (abstinence > 0 And !locked) {
+    if (abstinence > 0 ) {
       Send {Space}
       abstinence --
-    }
-    if (abstinence > 0 And locked) {
-      ; MsgBox Current abstinence: %abstinence%
-    }
-    if (abstinence = 0) {
-      locked = True
     }
   Return
 
