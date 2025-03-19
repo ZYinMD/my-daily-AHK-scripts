@@ -42,9 +42,23 @@ Numpad0 & NumpadEnter::
 Return
 
 Numpad0 & NumpadAdd::
-  If WinExist("ahk_exe calibre.exe"){
+  /*
+  if calibre main window exist but not active, activate it.
+  if main window is already active, switch to the full text search window (if it exists)
+  if main window doesn't exist, launch calibre
+  ↑ The pseudocode looks nice, but the actually might be a bit too clever down here ↓.
+  The key thing to understand is, when WinExist() and WinActive() return truthy, it'll update the `Last Found Window`.
+  */
+  main_window_title := "calibre —"
+  full_text_search_window_title := "Search the text of all books in the library"
+  If WinExist(main_window_title) {
+    If WinActive(main_window_title) {
+      If WinExist(full_text_search_window_title) {
+        WinActivate
+      }
+    }
     WinActivate
-  } Else {
+  } else {
     Run %PathToCalibre%
   }
 Return
