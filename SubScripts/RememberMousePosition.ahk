@@ -1,3 +1,5 @@
+; this file is currently not imported into `Daily Use.ahk`.
+
 /*
 Purpose:
   For video recording purposes, when NumLock is off, press numlock 0+x to remember current mouse positions, press x to resume positions

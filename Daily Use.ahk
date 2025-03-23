@@ -33,5 +33,5 @@ If you don't know the syntax:
 #Include SubScripts\AppSpecific\VSCode.ahk
 #Include SubScripts\AppSpecific\Foobar2000.ahk
 #Include SubScripts\AppSpecific\WindowsTerminal.ahk
-#Include SubScripts\AppSpecific\Calibre.ahk
+; #Include SubScripts\AppSpecific\Calibre.ahk
 #Include SubScripts\AppSpecific\Anki.ahk

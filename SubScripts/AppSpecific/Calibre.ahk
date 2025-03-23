@@ -1,3 +1,5 @@
+; this file is currently not imported into `Daily Use.ahk`.
+
 #IfWinActive ahk_exe calibre-parallel.exe
   Space::
     if (abstinence > 0 ) {
@@ -14,5 +16,3 @@
   return
 
 #IfWinActive
-
-; Search in calibre full text index:
