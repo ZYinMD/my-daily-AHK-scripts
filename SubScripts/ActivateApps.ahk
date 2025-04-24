@@ -90,12 +90,15 @@ Return
 <!s::
   If WinActive("Search the text of all books in the library") {
     Send !{s}
-  } Else If WinActive("ahk_exe Cursor.exe") {
+  } Else If WinActive("ahk_exe Code.exe") {
+    ; } Else If WinActive("ahk_exe Cursor.exe") {
     Send !{s}
-  } Else If WinExist("ahk_exe Cursor.exe") {
+  } Else If WinExist("ahk_exe Code.exe") {
+    ; } Else If WinExist("ahk_exe Cursor.exe") {
     WinActivate
   } Else {
-    Run %PathToCursor%
+    Run %PathToVSCode%
+    ; Run %PathToCursor%
   }
 Return
 
