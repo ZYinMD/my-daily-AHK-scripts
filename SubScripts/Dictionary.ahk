@@ -39,7 +39,7 @@ look_up_word() {
   Send #0 ; switch to grok (10th on taskbar)
   Sleep 150
   Click 3450, 75 ; create a new chat
-  input = I'm learning English. Please explain the meaning of "%clipboard%", with example sentences. Also, are there some linguistic facts that can help me remember it?
+  input = I'm learning English. Please explain the meaning of "%clipboard%", with collocations and example sentences. Also, are there some linguistic facts that can help me learn it?
   Clipboard = %input%
   Sleep 500
   Send ^v ; paste. Wait a big longer because the input box isn't immediately ready after creating new chat
@@ -55,7 +55,7 @@ look_up_word() {
     Sleep 250
     PostMessage 0x50, 0, DllCall("LoadKeyboardLayout", "Str", "00000409", "Int", 1),, As ; switch to english input
     Sleep 250
-    SendInput I'm learning English. Please explain the meaning of "%clipboard%", with example sentences. Also, are there some linguistic facts that can help me remember it?
+    SendInput I'm learning English. Please explain the meaning of "%clipboard%", with example sentences. Also, are there some linguistic facts that can help me learn it?
   }
   */
 
