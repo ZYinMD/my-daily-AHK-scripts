@@ -1,6 +1,6 @@
 /*
 Purpose:
-  Use F3 to cycle through Explorer widnows on the Win-3 stack
+  Use F3 to cycle through Explorer windows on the Win-3 stack
 Syntax:
   hotkey::function call.
   Key combination is allowed which is different from a remap.

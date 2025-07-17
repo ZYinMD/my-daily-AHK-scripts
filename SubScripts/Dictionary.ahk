@@ -26,9 +26,9 @@ look_up_word() {
   ; remove trailing spaces from clipboard
   Clipboard := RegExReplace(Clipboard, "\s+$")
   Sleep 150
-  Run, https://www.iciba.com/word?w=%clipboard%
-  Sleep 150
   Run, https://youglish.com/pronounce/%clipboard%/english
+  Sleep 150
+  Run, https://www.iciba.com/word?w=%clipboard%
   Sleep 150
   Run, https://www.google.com/search?q=%clipboard%&udm=2
   Sleep 150
