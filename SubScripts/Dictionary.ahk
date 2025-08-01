@@ -38,7 +38,7 @@ look_up_word() {
   Sleep 150
   Send #0 ; switch to grok (10th on taskbar)
   Sleep 150
-  Click 3450, 75 ; create a new chat
+  Click 3300, 75 ; create a new chat
   input = I'm learning English. Please explain the meaning of "%clipboard%", with collocations and example sentences. Also, are there some linguistic facts that can help me learn it?
   Clipboard = %input%
   Sleep 500
