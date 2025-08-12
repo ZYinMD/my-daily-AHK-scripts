@@ -8,7 +8,18 @@ Syntax:
   Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
 */
 
-F3::Send ^#{3} ; #{3} is win-3, ^#{3} is ctr-win-3, which goes to the previous
+; F3::Send ^#{3} ; #{3} is win-3, ^#{3} is ctr-win-3, which goes to the previous
+
+F3::
+
+  If WinActive("more tabs - File Explorer") {
+    WinActivate
+  } Else If WinExist("File Explorer") {
+    WinActivate
+  } Else {
+    Send #{3}
+  }
+Return
 
 /*
 Purpose:
