@@ -8,7 +8,7 @@ TakeScreenshotAndMoveRight() {
   Sleep 500
 }
 Launch_App2:: {
-  Loop 20 {
+  Loop 16 {
     TakeScreenshotAndMoveRight()
   }
 }
