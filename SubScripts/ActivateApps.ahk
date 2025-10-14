@@ -117,3 +117,9 @@ Return
     WinActivate
   }
 Return
+
+` & t::
+  If WinExist("TradingView") {
+    WinActivate
+  }
+Return
