@@ -1,7 +1,7 @@
 ; on pressing printscreen, wait 100ms, then send alt+printscreen (to take screenshot of active window), then wait 100ms, then send the right arrow, then wait 100ms, then play a beep sound.
 
 TakeScreenshotAndMoveRight() {
-  Sleep 1000 ; goal: 1. wait for the page-turning animation to finish 2. wait some time for the initial hotkey up 3. libby preload 2 pages ahead, so after pressing right arrow, the preload of next next page starts. I need to slow down the overall pace of page turning to 1.5s, to give the pages enough time to load.
+  Sleep 1500 ; goal: 1. wait for the page-turning animation to finish 2. wait some time for the initial hotkey up 3. libby preload 2 pages ahead, so after pressing right arrow, the preload of next next page starts. I need to slow down the overall pace of page turning to 2s, to give the pages enough time to load.
   Send "#{PrintScreen}"
   Sleep 500 ; wait for the screenshot to be taken before moving to next page
   Send "{Right}"
