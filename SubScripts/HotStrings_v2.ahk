@@ -29,7 +29,7 @@ ask_ai_for_stock_analysis() {
 
     4. Is this a growth company, if so, how does it grow, is it fast or slow growth? Is it likely to grow by increasing penetration in existing market? Is it likely to grow by taking competitor's market share? Is it likely to grow by introducing new products or services that they haven't sold before? Is it likely to grow by expanding into new regions? Speaking of regions, how much of the company's sale is domestic and how much is international?
 
-    5. Is the company capital intensive? Is it high in ROE? Does it constantly require large amount of reinvestment of retained earnings? Does it constantly need to invest new next generation products to avoid falling behind? Has reinvestment turned out to generate good returns? Is it a high or low debt business model? Is the company generating a healthy cashflow or under cash pressure? Does the company aggressively buy back shares or pay dividends?
+    5. Analyze the capital intensity of the company, including: Is it capex heavy? Is it high in ROE? Does it constantly require large amount of reinvestment of retained earnings? Does it constantly need to invest in next generation technology to avoid falling behind? Has previous reinvestment generated good returns? (btw there's a type of businesses that are historically capex heavy but now has finished infrastructure build-out and is in the cash return phase, which is also worth buying even though it shows a low ROIC / ROE). Is the company generating a healthy cashflow? Is under cash pressure? Is it a high or low debt business model? Does the company aggressively buy back shares or pay dividends?
 
     6. Does the company have pricing power, can it raise prices and the customers still buy? Is the company free to raise price in response to inflation? Is it a commodity business or does brand matter? Is sales cyclical? If cyclical, is it currently in peak or trough? Upward or downward? How much does macro economic environments like affect this industry (things like recession, bull/bear market, interest rate, tariff, oil price, etc)?
 
@@ -55,7 +55,7 @@ ask_ai_for_stock_analysis() {
 
     4. 该公司处于增长期吗? 如果是, 如何增长, 快速还是慢速增长? 从现在的情况看, 这家公司是否可以通过"在现有市场内增加客户"的形式来实现增长? 是否可以通过抢占竞争对手的市场份额来增长? 是否可以通过扩产来增长? 是否可以通过推出新产品或新服务来增长? 是否可以通过进入新地区或出海来增长? 说到出海, 这家公司有多少业务在国内, 多少业务在海外? (有时一些供应链上游的公司自己生产的零件不直接销往海外, 但下游组装成产品后却大幅销往海外, 如果符合这种情况也算)
 
-    5. 该公司一家资本密集型的企业吗？净资产回报率高吗? 是否需要持续用大量留存收益进行再投资？是否需要不断的研发下一代产品与技术以避免落后? 过去的再投资是否带来了良好的回报？公司的商业模式是高负债还是低负债？公司现金流是否健康？还是面临现金压力？公司是否有积极进行股票回购或支付股息？
+    5. 分析该公司的资本密集程度, 包括: 净资产还是重资产？净资产回报率高吗? 是否需要持续用大量留存收益进行再投资？是否需要不断的研发下一代产品与技术以避免落后? 过去的再投资是否带来了良好的回报？(另外, 有一类公司虽然历史上长期重资本, 但现在基础建设已结束, 已进入了现金回报阶段, 所以ROIC和ROE低也没关系, 这种也可以买) 公司的现金流是否健康？是否面临现金压力？公司的运行模式是高负债还是低负债？公司是否有积极进行股票回购或支付股息？
 
     6. 该公司是否有定价权? 是否有品牌溢价? 如果提价客户是否仍愿意购买？如果发生通胀, 公司能否随通胀提价？公司的营收是否具有周期性？如果有周期性, 现在是顶还是底, 上行还是下行? 公司所在产业受宏观经济环境影响大吗(例如经济景气程度, 股市熊牛, 银行利率, 油价, 关税, 等等)?
 
