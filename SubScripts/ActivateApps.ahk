@@ -36,14 +36,6 @@ Return
   }
 Return
 
-` & s::
-  If WinExist("ahk_exe Code - Insiders.exe") {
-    WinActivate
-  } Else {
-    Run %PathToVSCodeInsiders%
-  }
-Return
-
 ` & d::
   If WinExist("ahk_exe Docker Desktop.exe") {
     WinActivate

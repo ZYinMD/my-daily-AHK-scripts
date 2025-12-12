@@ -30,5 +30,10 @@ F1:: {
   }
 }
 
+` & s::  {
+  If WinExist("ahk_exe Code - Insiders.exe") {
+    WinActivate()
+  } Else {
+    Run(PathToVSCodeInsiders)
   }
 }
