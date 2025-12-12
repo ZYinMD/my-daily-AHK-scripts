@@ -9,3 +9,4 @@ PathToVSCodeInsiders := APPDATA . "\Local\Programs\Microsoft VS Code Insiders\Co
 PathToAnki := APPDATA . "\Local\Programs\Anki\anki.exe"
 PathToFoobar2000 := DirPortables . "\foobar2000\foobar2000.exe"
 PathToCalibre := DirPortables . "\Calibre\calibre-portable.exe"
+PathToFirefox := "C:\Program Files\Mozilla Firefox\firefox.exe"
