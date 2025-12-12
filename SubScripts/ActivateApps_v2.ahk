@@ -14,20 +14,23 @@ When F1 is pressed:
 
 F1:: {
   if WinActive("ahk_exe WindowsTerminal.exe") {
-    if hwnd := WinExist("ahk_exe warp.exe") {
-      WinActivate(hwnd)
-      return
+    if WinExist("ahk_exe warp.exe") {
+      WinActivate()
     }
+    return
   }
   if WinActive("ahk_exe warp.exe") {
-    if hwnd := WinExist("ahk_exe WindowsTerminal.exe") {
-      WinActivate(hwnd)
-      return
+    if WinExist("ahk_exe WindowsTerminal.exe") {
+      WinActivate()
     }
+    return
   }
-  if hwnd := WinExist("ahk_exe warp.exe") {
-    WinActivate(hwnd)
-  } else if hwnd := WinExist("ahk_exe WindowsTerminal.exe") {
-    WinActivate(hwnd)
+  if WinExist("ahk_exe warp.exe") {
+    WinActivate()
+  } else if WinExist("ahk_exe WindowsTerminal.exe") {
+    WinActivate()
+  }
+}
+
   }
 }
