@@ -63,6 +63,44 @@ Purpose:
 }
 
 /*
+Purpose:
+  Use ; as a modifier to type symbols
+Syntax:
+  1. Unless appears right after another character, ; needs ` as an escape char.
+  2. The Send {keyname} was the traditional syntax, and the bare key name is the new syntax introduced after 2018 version. However, I found it creates a bug where j; / l; / d; etc doesn't output the semicolon if you press too fast. So the old syntax is more reliable.
+  3. Also, when using MS PinYin, symbols like ? and ! will trigger the shift key and switch the input to English, the old method doesn't have this issue.
+*/
+
+`; & q::^
+`; & w::SendText("%")
+`; & e::&
+`; & r::*
+`; & a::SendText("{")
+`; & s::SendText("}")
+`; & u::[
+`; & o::]
+`; & j::SendText("(")
+`; & l::SendText(")")
+`; & d::SendText("=")
+`; & f::SendText("-")
+`; & i::SendText('"')
+`; & k::SendText("'")
+`; & z::_
+`; & x::SendText("+")
+`; & g::SendText("?")
+`; & c::/
+`; & v::\
+`; & 1::SendText("!")
+`; & 2::@
+`; & 3::#
+`; & 4::$
+`; & t::SendText("|")
+
+; `; & `::~ ; remap semicolon+backtick to tilde. It's commented out it's not well supported on Mac, so I don't want this muscle memory. See my own post: https://www.reddit.com/r/Karabiner/comments/1ds4kam/struggling_to_find_a_way_to_define_some_custom/
+`;::; ; Restore ;
+/*
+
+/*
 For taking screenshots for Libby books
 */
 TakeScreenshotAndMoveRight() {
