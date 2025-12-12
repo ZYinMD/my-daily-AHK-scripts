@@ -10,10 +10,7 @@ Syntax:
     Now if I want to limit to match both line1 and line3, I can just do:
     If WinExist("Desktop ahk_exe explorer.exe")
 
-  - In the AutoExecute zone, I did `SetTitleMatchMode, RegEx` to set the search algorithm to regex. The default setting is "startWith', another setting is "includes", which sounds nice, but only works for the title, not the ahk_class or ahk_exe, so I picked regex.
-  - After using regex, the "one big string" approach still works, I have no idea why, but hey, it works.
-  - If no argument is passed into WinActivate, the Last Found Window will be used.
-  - Use varname to retrieve the value of a variable, e.g. `Run(PathToAnki)`
+    - If no argument is passed into WinActivate, the Last Found Window will be used.
 */
 
 /*
@@ -96,5 +93,29 @@ On pressing alt + s:
   } Else {
     Run %PathToVSCode%
     ; Run %PathToCursor%
+  }
+}
+/*
+Alt+a to activate anki. If the "add new card" window is open, prioritize that
+*/
+<!a:: {
+  If WinExist("Add ahk_exe Anki.exe") { ; to narrow down the search result by with multiple lines displayed in spy, just put the together in one string
+    WinActivate
+  } Else If WinExist("ahk_exe anki.exe") {
+    WinActivate
+  } Else {
+    Run %PathToAnki%
+  }
+}
+
+` & q::{
+  If WinExist("ahk_exe DB Browser for SQLite.exe") or WinExist("ahk_exe tableau.exe") or WinExist("Studio 3T") or WinExist("MySQL Workbench") {
+    WinActivate
+  }
+}
+
+` & t::{
+  If WinExist("TradingView") {
+    WinActivate
   }
 }

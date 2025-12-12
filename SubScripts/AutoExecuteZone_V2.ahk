@@ -9,7 +9,6 @@ New in V2:
   When migrating to V2, I have removed lots of things that's no longer needed. So if a line is present in V1 but not in V2, it's because I removed it.
 */
 
-SetTitleMatchMode "RegEx" ; by default,
 ; The following things starting with a # are "directives", which will run no matter where you put them.
 ; But by tradition, they're also put in the Auto Execute Zone.
 #SingleInstance force ;if this script is run twice, auto replace the previous one with the new one.
