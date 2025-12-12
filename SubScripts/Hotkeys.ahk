@@ -1,23 +1,5 @@
 /*
 Purpose:
-  Alt + , => right arrow once then comma then space.
-  Alt + ; => right arrow once then colon then space.
-  Alt + . => right arrow once then period.
-  These are often useful in JS and JSON.
-*/
-!,::Send {right},{space}
-!;::Send {right}:{space}
-!.::Send {right}.
-
-/*
-Purpose:
-  Win + CapsLock => CapsLock
-  Since CapsLock is remapped to Ctrl, there needs to be a way to press it.
-*/
-#CapsLock::CapsLock
-
-/*
-Purpose:
   LCtrl + enter => new line below
   LCtrl + shift + enter => new line above
 Why do this:
