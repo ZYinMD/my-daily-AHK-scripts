@@ -1,5 +1,4 @@
 /*
-pseudocode:
 When F1 is pressed:
   If Windows Terminal is the active window:
     Activate Warp if it's running
@@ -11,7 +10,6 @@ When F1 is pressed:
     If Warp is running activate warp
     else activate Windows Terminal if it's running
 */
-
 F1:: {
   if WinActive("ahk_exe WindowsTerminal.exe") {
     if WinExist("ahk_exe warp.exe") {
