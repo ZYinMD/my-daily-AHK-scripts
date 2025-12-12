@@ -18,7 +18,7 @@ If you don't know the syntax:
 #Include SubScripts\AutoExecuteZone.ahk
 #Include SubScripts\Variables.ahk
 ; #Include SubScripts\CycleInstances.ahk
-#Include SubScripts\Remaps.ahk
+; #Include SubScripts\Remaps.ahk
 #Include SubScripts\Hotkeys.ahk
 #Include SubScripts\HotStrings.ahk
 #Include SubScripts\ActivateApps.ahk
