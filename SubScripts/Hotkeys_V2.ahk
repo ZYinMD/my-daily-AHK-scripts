@@ -72,36 +72,35 @@ Syntax:
 */
 
 `; & q::^
-`; & w::SendText("%")
+`; & w::%
 `; & e::&
 `; & r::*
 `; & a::SendText("{")
 `; & s::SendText("}")
 `; & u::[
 `; & o::]
-`; & j::SendText("(")
-`; & l::SendText(")")
-`; & d::SendText("=")
-`; & f::SendText("-")
-`; & i::SendText('"')
-`; & k::SendText("'")
+`; & j::(
+`; & l::)
+`; & d::=
+`; & f::-
+`; & i::"
+`; & k::'
 `; & z::_
-`; & x::SendText("+")
-`; & g::SendText("?")
+`; & x::+
+`; & g::?
 `; & c::/
 `; & v::\
-`; & 1::SendText("!")
+`; & 1::!
 `; & 2::@
 `; & 3::#
 `; & 4::$
-`; & t::SendText("|")
+`; & t::|
 
 ; `; & `::~ ; remap semicolon+backtick to tilde. It's commented out it's not well supported on Mac, so I don't want this muscle memory. See my own post: https://www.reddit.com/r/Karabiner/comments/1ds4kam/struggling_to_find_a_way_to_define_some_custom/
 `;::; ; Restore ;
 /*
 
-/*
-For taking screenshots for Libby books
+/* For taking screenshots for Libby books
 */
 TakeScreenshotAndMoveRight() {
   ; Wait for page animation and input-up
