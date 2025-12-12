@@ -1,28 +1,5 @@
 /*
 Purpose:
-  Use F3 to cycle through Explorer windows on the Win-3 stack
-Syntax:
-  hotkey::function call.
-  Key combination is allowed which is different from a remap.
-  ^ = Ctrl, ! = Alt, + = Shift, # = Win.
-  Send is a built-in function. Curly braces means a key. Without curly braces it'll be sent as string input.
-*/
-
-; F3::Send ^#{3} ; #{3} is win-3, ^#{3} is ctr-win-3, which goes to the previous
-
-F3::
-
-  If WinActive("more tabs - File Explorer") {
-    WinActivate
-  } Else If WinExist("File Explorer") {
-    WinActivate
-  } Else {
-    Send #{3}
-  }
-Return
-
-/*
-Purpose:
   Alt + , => right arrow once then comma then space.
   Alt + ; => right arrow once then colon then space.
   Alt + . => right arrow once then period.

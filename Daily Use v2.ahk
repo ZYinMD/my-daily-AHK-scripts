@@ -19,4 +19,5 @@ If you don't know the syntax:
 #Include SubScripts\Remaps_V2.ahk
 #Include SubScripts\Hotkeys_V2.ahk
 #Include SubScripts\HotStrings_v2.ahk
-#Include SubScripts\ActivateApps_v2.ahk
+#Include SubScripts\ActivateApps_V2.ahk
+#Include SubScripts\Numpad_V2.ahk
