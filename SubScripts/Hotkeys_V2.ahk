@@ -39,6 +39,30 @@ Purpose:
 #CapsLock::CapsLock
 
 /*
+Purpose:
+  ` + left / right to move between tabs
+  ` + left => Ctrl + PgUp
+  ` + right=> Ctrl + PgDn
+*/
+` & Left::
+` & [::{
+  If WinActive("ahk_class CabinetWClass") {
+    Send("^+{Tab}")
+  } Else {
+    Send("^{PgUp}")
+  }
+}
+
+` & Right::
+` & \:: {
+  If WinActive("ahk_class CabinetWClass") {
+    Send("^{Tab}")
+  } Else {
+    Send("^{PgDn}")
+  }
+}
+
+/*
 For taking screenshots for Libby books
 */
 TakeScreenshotAndMoveRight() {

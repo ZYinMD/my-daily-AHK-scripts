@@ -1,17 +1,5 @@
 /*
 Purpose:
-  LCtrl + enter => new line below
-  LCtrl + shift + enter => new line above
-Why do this:
-  To mimic the Sublime Text behavior in other apps, but with LCtrl only, because RCtrl + Enter in other apps needs to be reserved for their own settings.
-Syntax:
-  In the following case, <^ means LCtrl, >^ means RCtrl.
-*/
-<^'::Send {End}{Enter} ; Remember, Enter is already remapped to '
-<^+'::Send {Home}{Enter}{Up}
-
-/*
-Purpose:
   ` + Esc => Mute.
   ` + f1 => Volume down.
   ` + f2 => Volume up.
@@ -21,33 +9,6 @@ Syntax:
 ` & Esc::Send {Volume_Mute}
 ` & 1::Send {Volume_Down}
 ` & 2::Send {Volume_Up}
-
-/*
-Purpose:
-  ` + left / right to move between tabs
-  ` + left => Ctrl + PgUp
-  ` + right=> Ctrl + PgDn
-Syntax:
-  Sometimes if there's mysterious bugs, add return in the end helps.
-*/
-` & Left::
-` & [::
-  If WinActive("ahk_class CabinetWClass") {
-    Send ^+{Tab}
-  } Else {
-    Send ^{PgUp}
-  }
-
-return
-
-` & Right::
-` & \::
-  If WinActive("ahk_class CabinetWClass") {
-    Send ^{Tab}
-  } Else {
-    Send ^{PgDn}
-  }
-return
 
 /*
 Purpose:
