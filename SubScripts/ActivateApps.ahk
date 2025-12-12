@@ -29,11 +29,6 @@ Syntax:
   }
 Return
 */
-F1::
-  If WinExist("ahk_exe WindowsTerminal.exe") {
-    WinActivate
-  }
-Return
 
 ` & r::
   If WinExist("Redux DevTools") {

@@ -17,3 +17,4 @@ If you don't know the syntax:
 #Include SubScripts\AutoExecuteZone_V2.ahk
 #Include SubScripts\Hotkeys_V2.ahk
 #Include SubScripts\HotStrings_v2.ahk
+#Include SubScripts\ActivateApps_v2.ahk
