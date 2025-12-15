@@ -6,17 +6,6 @@ Purpose:
 ; Different than the other apps, #If is used instead of #IfWinActive here, because I need an expression
 #If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe") or WinActive("ahk_exe Cursor.exe")
 
-  ; to activate AceJump:
-  !Space::Send ^{F11}
-
-  ; use AppsKey for "quick fix" (= click the lightbulb) (mainly for auto correct of spell check)
-  /::
-    Send ^+{NumpadSub}
-  return
-  AppsKey::
-    Send ^+{NumpadSub}
-  return
-
   ; generate a random string to locate errors reported by `reportErr`:
   ^Numpad3:: SendInput % RandomErrLocator() ; % is used to call a function and send the result of the function. This line is equivalent to   errLocator := RandomErrLocator()    SendInput, %errLocator%
 

@@ -69,4 +69,11 @@ F4 & =::Send("!{F8}")
 F4 & Down::
 F4 & ]::Send("{F8}")
 
+; to activate AceJump:
+!Space::Send("^{F11}")
+
+; use AppsKey for "quick fix" (= click the lightbulb) (mainly for auto correct of spell check)
+/::
+AppsKey::Send ("^+{NumpadSub}")
+
 #HotIf
