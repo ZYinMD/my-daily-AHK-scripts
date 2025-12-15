@@ -161,6 +161,23 @@ Insert::
   Send("{F4 up}")
 }
 
+/*
+用Ctrl J Ctrl O 来切换输入法
+本来我是用Win中设快捷键: Time & Language > Typing > Advanced keyboard settings > Input language hot keys. 我设为了Ctrl-Shift-7和Ctrl-Shift-8
+后来发现win10有bug, EN总是被重设位none, 所以我就换成了function call
+ */
+^o:: {
+  ; Load Chinese (Simplified) keyboard layout and request the active window to change to it
+  zh := DllCall("LoadKeyboardLayout", "Str", "00000804", "UInt", 1, "Ptr")
+  ; WM_INPUTLANGCHANGEREQUEST = 0x50
+  PostMessage(0x50, 0, zh, , "A")
+}
+^j:: {
+  ; Load English (US) keyboard layout and request the active window to change to it
+  en := DllCall("LoadKeyboardLayout", "Str", "00000409", "UInt", 1, "Ptr")
+  PostMessage(0x50, 0, en, , "A")
+}
+
 /* For taking screenshots for Libby books
 */
 TakeScreenshotAndMoveRight() {
