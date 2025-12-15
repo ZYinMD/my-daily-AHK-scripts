@@ -25,3 +25,4 @@ If you don't know the syntax:
 ; App specific hotkeys: hotkeys that work only inside certain apps
 #Include SubScripts\AppSpecific\FileExplorer_V2.ahk
 #Include SubScripts\AppSpecific\VSCode_V2.ahk
+#Include SubScripts\AppSpecific\SublimeText_V2.ahk
