@@ -1,32 +1,5 @@
 /*
 Purpose:
-  F2 + Home => backspace to line beginning
-  F2 + End => delete to line end
-  F2 + ← => same as F2 + Home
-  F2 + → => same as F2 + End
-  F2 + ↑ => delete line and move to previous line end
-  F2 + ↓ => delete line and move next line up (same as Ctrl-Shift-K in Sublime Text)
-Syntax:
-  Since = [ ] \ were remapped, it wouldn't work, so remap them separately.
-  If more than one hotkey combinations are mapped to the same functions, stack them on the left side of ::
-*/
-F2 & Home::
-F2 & Enter::Send +{Home}{Delete}
-F2 & End::
-F2 & RShift::Send +{End}{BackSpace}
-
-F2 & Left::
-F2 & [::Send +{Home}{Delete}
-F2 & Right::
-F2 & \::Send +{End}{BackSpace}
-
-F2 & Up::
-F2 & =::Send {End}+{Home}+{Home}{Delete}{BackSpace} ; shift home twice to clear indentations
-F2 & Down::
-F2 & ]::Send {space}{End}+{Home}+{Home}{Delete}{Delete} ; shift home twice to clear indentations
-
-/*
-Purpose:
   ` + space: pause and play foobar2000
   Ctrl+Alt+Shift+5 is set to be the global hotkey for this function in foobar2000, but I need a easier version in actuality
 */
