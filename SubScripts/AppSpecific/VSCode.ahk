@@ -6,33 +6,6 @@ Purpose:
 ; Different than the other apps, #If is used instead of #IfWinActive here, because I need an expression
 #If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Code - Insiders.exe") or WinActive("ahk_exe Cursor.exe")
 
-  ; Use F3 as a modifier key to move texts around.
-  F3 & Left::
-  F3 & [::Send ^[
-  F3 & Right::
-  F3 & \::Send ^]
-  F3 & Up::
-  F3 & =::Send ^!+{Up}
-  F3 & Down::
-  F3 & ]::Send ^!+{Down}
-
-  ; use F4 as modifier key in VSCode to fold:
-  ; F4left and F4right for folding:
-  F4 & Left::
-  F4 & [::Send ^+[
-  F4 & Right::
-  F4 & \::Send ^+]
-  ; F4Home to fold all, F4End to unfold all
-  F4 & Enter::
-  F4 & Home::Send ^+!u
-  F4 & RShift::
-  F4 & End::Send ^+!]
-  ; F4Up and F4Down for finding errors:
-  F4 & Up::
-  F4 & =::Send !{F8}
-  F4 & Down::
-  F4 & ]::Send {F8}
-
   ; to activate AceJump:
   !Space::Send ^{F11}
 
