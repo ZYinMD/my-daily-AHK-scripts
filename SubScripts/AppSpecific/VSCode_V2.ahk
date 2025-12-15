@@ -76,4 +76,29 @@ F4 & ]::Send("{F8}")
 /::
 AppsKey::Send ("^+{NumpadSub}")
 
+/*
+Alt L should still be Alt L in VSCode (it's mapped to Alt D in other places as "focus on address bar")
+ */
+!l::Send("!l")
+
+; press ctrl - numpad3 to generate a random string (something like Sjt394) to locate errors reported by `reportErr` in myfaveTT and douzhencang:
+^Numpad3:: {
+  errLocator := RandomErrLocator()
+  SendText(errLocator)
+}
+
+/*
+Generate a random errLocator string
+*/
+RandomErrLocator() {
+  letter1 := Random(65, 90) ; ASCII values for uppercase letters (A-Z) is 65-90
+  letter2 := Random(97, 122) ; lowercase letters (a-z) is 97-122
+  letter3 := Random(97, 122)
+  digit1 := Random(0, 9)
+  digit2 := Random(0, 9)
+  digit3 := Random(0, 9)
+  result := Chr(letter1) . Chr(letter2) . Chr(letter3) . digit1 . digit2 . digit3 ; dot is concatenation
+  return result
+}
+
 #HotIf

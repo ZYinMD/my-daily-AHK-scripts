@@ -7,11 +7,6 @@ To understand it, first read cheat sheet autohotkeys, then read doc about `clipb
 #F12::Run, %PathToFoobar2000% "%clipboard%"
 
 /*
-Map Alt L to Alt D, which is the "focus on address bar" on Mac. It's a better setup because it's always followed by two-hand typing'. On windows, we can free up Alt D to something more important.
- */
-!l::!d
-
-/*
 Right Control + Up: volume up
 Right Control + Down: volume down
 Right Control + Left: mute

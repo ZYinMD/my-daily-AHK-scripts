@@ -178,6 +178,11 @@ Insert::
   PostMessage(0x50, 0, en, , "A")
 }
 
+/*
+Map Alt L to Alt D, which is the "focus on address bar" on Mac. It's a better setup because it's always followed by two-hand typing'. On windows, we can free up Alt D to something more important.
+ */
+!l::!d
+
 /* For taking screenshots for Libby books
 */
 TakeScreenshotAndMoveRight() {
