@@ -1,52 +1,5 @@
 /*
 Purpose:
-  ` + space: pause and play foobar2000
-  Ctrl+Alt+Shift+5 is set to be the global hotkey for this function in foobar2000, but I need a easier version in actuality
-*/
-
-` & space::Send ^!+5
-
-/*
-Purpose:
-  Restart the Script. Sometimes some modifier keys get stuck, restarting may help.
-  The following scripts were copied exactly from the doc.
-*/
-^!+F12::
-  Reload
-  Sleep 1000 ; If successful, the reload will close this instance during the Sleep, so the line below will never be reached.
-  MsgBox, 4,, The script could not be reloaded. Would you like to open it for editing?
-  IfMsgBox, Yes, Edit
-    return
-
-  /*
-  Purpose:
-    Sometimes some modifier keys get stuck, this will try to release all of them.
-  */
-Insert::
-^!F11::
-  Send {RShift up}
-  Send {LShift up}
-  Send {RCtrl up}
-  Send {LCtrl up}
-  Send {RAlt up}
-  Send {LAlt up}
-  Send {CapsLock up}
-  Send {` up}
-  Send {; up}
-  Send {1 up}
-  Send {2 up}
-  Send {3 up}
-  Send {4 up}
-  Send {Numpad0 up}
-  Send {F1 up}
-  Send {F2 up}
-  Send {F3 up}
-  Send {F4 up}
-
-return
-
-/*
-Purpose:
   Simulate ctrl+ and ctrl- to zoom in and out. Since + and - have been remapped, I need to find a way to simulate them.
 */
 ; update: no longer used, because I use ctrl numpad +/-

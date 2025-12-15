@@ -127,6 +127,40 @@ F2 & =::Send("{End}+{Home}+{Home}{Delete}{BackSpace}") ; shift home twice to cle
 F2 & Down::
 F2 & ]::Send("{space}{End}+{Home}+{Home}{Delete}{Delete}") ; shift home twice to clear indentations
 
+/*
+Purpose:
+  ` + space: pause and play foobar2000
+  Ctrl+Alt+Shift+5 is set to be the global hotkey for this function in foobar2000, but I need a easier version in actuality
+*/
+
+` & space::Send("^!+5")
+
+/*
+Purpose:
+  Sometimes some modifier keys get stuck, this will try to release all of them.
+*/
+Insert::
+^!F11::{
+  Send("{RShift up}")
+  Send("{LShift up}")
+  Send("{RCtrl up}")
+  Send("{LCtrl up}")
+  Send("{RAlt up}")
+  Send("{LAlt up}")
+  Send("{CapsLock up}")
+  Send("{` up}")
+  Send("{; up}")
+  Send("{1 up}")
+  Send("{2 up}")
+  Send("{3 up}")
+  Send("{4 up}")
+  Send("{Numpad0 up}")
+  Send("{F1 up}")
+  Send("{F2 up}")
+  Send("{F3 up}")
+  Send("{F4 up}")
+}
+
 /* For taking screenshots for Libby books
 */
 TakeScreenshotAndMoveRight() {
