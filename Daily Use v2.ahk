@@ -26,3 +26,4 @@ If you don't know the syntax:
 #Include SubScripts\AppSpecific\FileExplorer_V2.ahk
 #Include SubScripts\AppSpecific\VSCode_V2.ahk
 #Include SubScripts\AppSpecific\SublimeText_V2.ahk
+#Include SubScripts\AppSpecific\Foobar2000_V2.ahk
