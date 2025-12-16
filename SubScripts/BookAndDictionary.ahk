@@ -1,21 +1,25 @@
-search_calibre_full_text() {
+get_current_selection(){
+  Sleep(150)
   Send("^c") ; copy
   Sleep(150)
+  result := RegExReplace(A_Clipboard, "\s+$") ; remove trailing spaces
+  Return result
+}
+
+search_calibre_full_text(text) {
   If WinExist("Search the text of all books in the library") {
     WinActivate()
   } else {
     MsgBox("Full text search window not open")
     Return
   }
-  ; remove trailing spaces from clipboard
-  A_Clipboard := RegExReplace(A_Clipboard, "\s+$")
   Sleep(150)
   Click(200, 90) ; click on the search box
   Sleep(150)
   Send("^a") ; select all
   Sleep(150)
   ; Send("^v") ; paste
-  SendText(A_Clipboard)
+  SendText(text)
   Sleep(150)
   Send("!{s}") ; alt s to hit the search button
 }
@@ -47,7 +51,10 @@ look_up_word() {
 }
 
 ; on win+s, search the current selected word in calibre full text index
-<#s::search_calibre_full_text()
+<#s::{
+  selected_word := get_current_selection()
+  search_calibre_full_text(selected_word)
+}
 
 ; on win+c, search the current selected word in collins dictionary + google pronunciation + google image
 <#c::look_up_word()
