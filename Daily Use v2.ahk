@@ -21,6 +21,7 @@ If you don't know the syntax:
 #Include SubScripts\HotStrings_v2.ahk
 #Include SubScripts\ActivateApps_V2.ahk
 #Include SubScripts\Numpad_V2.ahk
+#Include SubScripts\BookAndDictionary.ahk
 
 ; App specific hotkeys: hotkeys that work only inside certain apps
 #Include SubScripts\AppSpecific\FileExplorer_V2.ahk
