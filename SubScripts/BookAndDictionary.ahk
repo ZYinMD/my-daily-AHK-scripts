@@ -58,7 +58,7 @@ look_up_word(word) {
   Sleep(150)
   Send("#0") ; switch to grok (10th on taskbar)
   Sleep(500)
-  Send("<^j") ; ctrl j to create a new chat. Use left control, because right control+j is mapped to switching input method
+  Send("^j") ; ctrl j to create a new chat. Use left control, because right control+j is mapped to switching input method
   input := "I'm learning English. Please explain the meaning of '" . word . "', with collocations and example sentences. Also, are there some linguistic facts that can help me learn it?" ; "" is escaped " inside string
   Sleep(400) ; Wait a big longer because the input box isn't immediately ready after creating new chat
   A_Clipboard := input ; put the input into clipboard, paste later. Use paste instead of SendText because it's less buggy
