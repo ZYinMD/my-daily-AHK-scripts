@@ -91,8 +91,8 @@ On pressing alt + s:
     ; } Else If WinExist("ahk_exe Cursor.exe") {
     WinActivate
   } Else {
-    Run %PathToVSCode%
-    ; Run %PathToCursor%
+    Run(PathToVSCode)
+    ; Run(PathToCursor)
   }
 }
 /*
@@ -104,7 +104,7 @@ Alt+a to activate anki. If the "add new card" window is open, prioritize that
   } Else If WinExist("ahk_exe anki.exe") {
     WinActivate
   } Else {
-    Run %PathToAnki%
+    Run(PathToAnki)
   }
 }
 
