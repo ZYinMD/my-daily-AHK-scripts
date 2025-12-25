@@ -1,27 +1,3 @@
-/*
-A demo of how to use clipboard.
-To try, go to voidtools everything and find a mp3, then right click to copy full path. Then fire the hotkey.
-To understand it, first read cheat sheet autohotkeys, then read doc about `clipboard`, then read doc about `run`
-*/
-
-#F12::Run, %PathToFoobar2000% "%clipboard%"
-
-/*
-Right Control + Up: volume up
-Right Control + Down: volume down
-Right Control + Left: mute
-Right Control + Right: pause
-
-Note: I have remapped Right Control to PageDown with `RCtrl::PgDn` in "Remap.ahk"
-*/
-RControl & Up::Send {Volume_Up}
-RControl & Down::Send {Volume_Down}
-RControl & Left::Send {Volume_Mute}
-RControl & Right::Send {Media_Play_Pause}
-
-; win+. to type 。
-#.::。
-
 ; win+tab to focus on taskbar items
 #Tab::Send {LWin down}{t}
 
