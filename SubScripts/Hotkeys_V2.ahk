@@ -224,3 +224,9 @@ RControl & Right::Send("{Media_Play_Pause}")
 
 ; win+. to type 。
 #.::。
+
+; activate screensaver
+F1 & S:: RunWait("scrnsave.scr /s")
+
+; win+tab to focus on taskbar items
+#Tab::Send "{LWin down}{t}"
